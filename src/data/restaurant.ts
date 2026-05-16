@@ -26,7 +26,7 @@ export const restaurant = {
   coordinates: { lat: 15.3647, lng: 75.1240 },
   rating: 3.8,
   reviewCount: 33,
-  googleMapsUrl: 'https://maps.app.goo.gl/A2yU4R3XBgWVwSWU7',
+  googleMapsUrl: 'https://maps.app.goo.gl/hiUgSoT8rGALv9YK8',
   googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.9219!2d75.124!3d15.3647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d4d2a7b3b4b7%3A0x0!2sEmpire+Family+Restaurant!5e0!3m2!1sen!2sin!4v1234567890',
   domain: 'https://empirefamilyrestaurant.in',
 
