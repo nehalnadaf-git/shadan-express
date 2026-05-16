@@ -17,11 +17,11 @@ export default function Footer() {
   return (
     <footer style={{ background: 'var(--color-charcoal)', color: 'var(--color-ivory)', position: 'relative', overflow: 'hidden' }}>
 
-      {/* Top signature-sand border */}
-      <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.6), transparent)' }} />
+      {/* Top brass border */}
+      <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.6), transparent)' }} />
 
-      {/* Ambient glow */}
-      <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '70%', height: '60%', background: 'radial-gradient(ellipse at top, rgba(203,152,115,0.05) 0%, transparent 65%)', pointerEvents: 'none' }} />
+      {/* Ambient teal glow */}
+      <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '70%', height: '60%', background: 'radial-gradient(ellipse at top, rgba(0,0,0,0.08) 0%, transparent 65%)', pointerEvents: 'none' }} />
 
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '88px 48px 52px', position: 'relative', zIndex: 1 }}>
 
@@ -38,13 +38,13 @@ export default function Footer() {
           <div>
             {/* Logo wordmark */}
             <div style={{ fontFamily: 'var(--font-display)', fontSize: '56px', fontWeight: 700, color: 'var(--color-gold)', lineHeight: 1, letterSpacing: '4px', marginBottom: '4px' }}>
-              HAYAT
+              EMPIRE
             </div>
-            <div style={{ fontFamily: 'var(--font-body)', fontSize: '10px', color: 'rgba(250,246,240,0.35)', letterSpacing: '5px', textTransform: 'uppercase', marginBottom: '6px' }}>
+            <div style={{ fontFamily: 'var(--font-body)', fontSize: '10px', color: 'rgba(247,245,240,0.35)', letterSpacing: '5px', textTransform: 'uppercase', marginBottom: '6px' }}>
               Family Restaurant
             </div>
             <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '15px', color: 'var(--color-gold)', opacity: 0.65, marginBottom: '28px', letterSpacing: '0.5px' }}>
-              Lazeez Pakwan
+              Where Taste Meets Tradition
             </div>
 
             {/* Gold rule */}
@@ -52,7 +52,7 @@ export default function Footer() {
 
             {/* Tagline */}
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-ivory-muted)', lineHeight: 1.9, marginBottom: '36px', maxWidth: '460px' }}>
-              {restaurant.tagline} — Authentic Mughal, North Indian &amp; Tandoor cuisine, served with royal warmth in the heart of Hubballi.
+              A modern family dining destination in Hubballi — serving North Indian, Mughlai, Chinese, Dum Biryani, Mandi Specials, and Tandoori cuisine with warm hospitality. Open daily 11 AM – 11 PM near Hubballi Railway Station.
             </p>
 
             {/* Contact details */}
@@ -84,20 +84,20 @@ export default function Footer() {
             {/* Footer CTAs */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '36px' }}>
               <a 
-                href="https://wa.me/919740271679?text=Hii%20Hayat%20family%20restaurant"
+                href="https://wa.me/919986600860?text=Hii%20EMPIRE%20family%20restaurant"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', background: 'var(--color-navy)', border: '1px solid var(--color-gold)', borderRadius: '2px', fontFamily: 'var(--font-body)', fontSize: '12px', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-gold)', textDecoration: 'none', transition: 'all 250ms ease' }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'rgba(203,152,115,0.15)' }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'rgba(0,0,0,0.25)' }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'var(--color-navy)' }}
               >
                 <MessageCircle size={14} /> whatsapp
               </a>
 
               <a href={restaurant.googleMapsUrl} target="_blank" rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', border: '1px solid rgba(203,152,115,0.38)', borderRadius: '2px', fontFamily: 'var(--font-body)', fontSize: '12px', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-gold)', textDecoration: 'none', transition: 'all 250ms ease' }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'rgba(203,152,115,0.10)'; el.style.borderColor = 'rgba(203,152,115,0.7)' }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'transparent'; el.style.borderColor = 'rgba(203,152,115,0.38)' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', border: '1px solid rgba(198,168,124,0.38)', borderRadius: '2px', fontFamily: 'var(--font-body)', fontSize: '12px', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-gold)', textDecoration: 'none', transition: 'all 250ms ease' }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'rgba(0,0,0,0.15)'; el.style.borderColor = 'rgba(198,168,124,0.7)' }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'transparent'; el.style.borderColor = 'rgba(198,168,124,0.38)' }}
               >
                 <Navigation size={13} /> Get Directions
               </a>
@@ -126,7 +126,7 @@ export default function Footer() {
                   onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--color-gold)'; el.style.gap = '16px' }}
                   onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--color-ivory-muted)'; el.style.gap = '12px' }}
                 >
-                  <span style={{ width: '5px', height: '1px', background: 'rgba(203,152,115,0.55)', display: 'block', flexShrink: 0, transition: 'width 200ms' }} />
+                  <span style={{ width: '5px', height: '1px', background: 'rgba(198,168,124,0.55)', display: 'block', flexShrink: 0, transition: 'width 200ms' }} />
                   {l.label}
                 </Link>
               ))}
@@ -137,10 +137,10 @@ export default function Footer() {
 
         {/* ── Bottom bar ── */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '28px', display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'space-between', alignItems: 'center' }}>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: 'rgba(203,152,115,0.35)', letterSpacing: '0.3px' }}>
-            © 2026 Hayat Family Restaurant Lazeez Pakwan, Hubballi. All rights reserved.
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: 'rgba(198,168,124,0.35)', letterSpacing: '0.3px' }}>
+            © 2026 EMPIRE Family Restaurant Where Taste Meets Tradition, Hubballi. All rights reserved.
           </p>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: 'rgba(250,246,240,0.18)', letterSpacing: '0.3px' }}>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: 'rgba(247,245,240,0.18)', letterSpacing: '0.3px' }}>
             Shah Bazar Road, Behind Jamiya Masjid, Hubballi — 580028
           </p>
         </div>

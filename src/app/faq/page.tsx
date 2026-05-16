@@ -3,9 +3,9 @@ import FAQClient from './FAQClient'
 import { faqs } from '@/data/faqs'
 
 export const metadata: Metadata = {
-  title: 'FAQ | Hayat Family Restaurant Hubballi',
-  description: 'Frequently asked questions about Hayat Family Restaurant Lazeez Pakwan — location, hours, booking, cuisine, bulk orders and more.',
-  alternates: { canonical: 'https://hayatfamilyrestaurant.in/faq' },
+  title: 'FAQ | Empire Family Restaurant Hubballi',
+  description: 'Frequently asked questions about Empire Family Restaurant — location, hours, booking, cuisine, bulk orders and more.',
+  alternates: { canonical: 'https://empirefamilyrestaurant.in/faq' },
 }
 
 const faqSchema = {
@@ -28,7 +28,7 @@ export default function FAQPage() {
         <p className="eyebrow" style={{ marginBottom: '16px' }}>Got Questions?</p>
         <h1 className="heading-hero" style={{ fontSize: 'clamp(40px,7vw,72px)', color: 'var(--color-ivory)' }}>FAQ</h1>
         <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'var(--color-ivory-muted)', marginTop: '16px', maxWidth: '480px', margin: '16px auto 0', lineHeight: 1.7 }}>
-          Everything you need to know before your visit to Hayat Family Restaurant
+          Everything you need to know before your visit to Empire Family Restaurant
         </p>
       </section>
 

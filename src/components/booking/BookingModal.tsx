@@ -23,7 +23,7 @@ const PARTY_SIZES = ['1', '2', '3', '4', '5', '6', '7', '8+']
 const today = new Date().toISOString().split('T')[0]
 const maxDate = new Date(Date.now() + 60 * 86_400_000).toISOString().split('T')[0]
 
-const PHONE = '919740271679'
+const PHONE = '919986600860'
 
 /* ── Field wrapper ───────────────────────────────────────── */
 function Field({ label, icon, error, children }: { label: string; icon: React.ReactNode; error?: string; children: React.ReactNode }) {
@@ -54,7 +54,7 @@ const inputStyle = (error?: string): React.CSSProperties => ({
   fontSize: '15px',
   color: 'var(--color-ink)',
   background: '#FDFAF6',
-  border: `1.5px solid ${error ? '#c0392b' : 'rgba(18,12,7,0.14)'}`,
+  border: `1.5px solid ${error ? '#c0392b' : 'rgba(45,50,52,0.14)'}`,
   borderRadius: '6px',
   outline: 'none',
   boxSizing: 'border-box',
@@ -108,7 +108,7 @@ export default function BookingModal() {
     const dateStr = `${d.getDate()}/${d.getMonth() + 1}/${String(d.getFullYear()).slice(2)}`
     const timeLabel = TIME_SLOTS.find(t => t.value === form.time)?.label ?? form.time
     const msg = [
-      'HAYAT FAMILY RESTAURANT',
+      'Empire Family Restaurant',
       'Table Reservation Request',
       '--------------------------------',
       '',
@@ -176,13 +176,13 @@ export default function BookingModal() {
 
         {/* ── Dark header ── */}
         <div style={{
-          background: 'linear-gradient(135deg, #1C120A 0%, #2E1A0C 100%)',
+          background: 'linear-gradient(135deg, #101213 0%, #1a1f21 100%)',
           padding: '28px 24px 24px',
           flexShrink: 0,
           position: 'relative',
         }}>
           {/* Gold top line */}
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.8), transparent)' }} />
+          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.8), transparent)' }} />
 
           {/* Close button */}
           <button
@@ -192,7 +192,7 @@ export default function BookingModal() {
             style={{
               position: 'absolute', top: '16px', right: '16px',
               width: '34px', height: '34px',
-              background: hoverClose ? 'rgba(203,152,115,0.18)' : 'rgba(255,255,255,0.08)',
+              background: hoverClose ? 'rgba(198,168,124,0.18)' : 'rgba(255,255,255,0.08)',
               border: '1px solid rgba(255,255,255,0.14)',
               borderRadius: '50%',
               cursor: 'pointer',
@@ -208,9 +208,9 @@ export default function BookingModal() {
           <p className="booking-modal-header-eyebrow" style={{
             fontFamily: 'var(--font-body)', fontSize: '10px', fontWeight: 700,
             letterSpacing: '4px', textTransform: 'uppercase',
-            color: 'rgba(203,152,115,0.85)', margin: '0 0 10px',
+            color: 'rgba(198,168,124,0.85)', margin: '0 0 10px',
           }}>
-            HAYAT Family Restaurant
+            Empire Family Restaurant
           </p>
 
           {/* Heading */}
@@ -241,7 +241,7 @@ export default function BookingModal() {
             flexDirection: 'column',
             gap: '20px',
             scrollbarWidth: 'thin',
-            scrollbarColor: 'rgba(203,152,115,0.3) transparent',
+            scrollbarColor: 'rgba(198,168,124,0.3) transparent',
           }}
         >
           {/* Name + Phone row */}
@@ -253,7 +253,7 @@ export default function BookingModal() {
                 onChange={e => set('name', e.target.value)}
                 style={inputStyle(errors.name)}
                 onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')}
-                onBlur={e => (e.currentTarget.style.borderColor = errors.name ? '#c0392b' : 'rgba(18,12,7,0.14)')}
+                onBlur={e => (e.currentTarget.style.borderColor = errors.name ? '#c0392b' : 'rgba(45,50,52,0.14)')}
               />
             </Field>
             <Field label="Phone Number" icon={<Phone size={13} />} error={errors.phone}>
@@ -264,7 +264,7 @@ export default function BookingModal() {
                 onChange={e => set('phone', e.target.value)}
                 style={inputStyle(errors.phone)}
                 onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')}
-                onBlur={e => (e.currentTarget.style.borderColor = errors.phone ? '#c0392b' : 'rgba(18,12,7,0.14)')}
+                onBlur={e => (e.currentTarget.style.borderColor = errors.phone ? '#c0392b' : 'rgba(45,50,52,0.14)')}
               />
             </Field>
           </div>
@@ -280,7 +280,7 @@ export default function BookingModal() {
                 onChange={e => set('date', e.target.value)}
                 style={inputStyle(errors.date)}
                 onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')}
-                onBlur={e => (e.currentTarget.style.borderColor = errors.date ? '#c0392b' : 'rgba(18,12,7,0.14)')}
+                onBlur={e => (e.currentTarget.style.borderColor = errors.date ? '#c0392b' : 'rgba(45,50,52,0.14)')}
               />
             </Field>
             <Field label="Time" icon={<Clock size={13} />} error={errors.time}>
@@ -289,7 +289,7 @@ export default function BookingModal() {
                 onChange={e => set('time', e.target.value)}
                 style={{ ...inputStyle(errors.time), paddingRight: '32px', cursor: 'pointer', backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9963E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 14px center', backgroundSize: '10px', WebkitAppearance: 'none' }}
                 onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')}
-                onBlur={e => (e.currentTarget.style.borderColor = errors.time ? '#c0392b' : 'rgba(18,12,7,0.14)')}
+                onBlur={e => (e.currentTarget.style.borderColor = errors.time ? '#c0392b' : 'rgba(45,50,52,0.14)')}
               >
                 <option value="">Select time</option>
                 {TIME_SLOTS.map(t => (
@@ -311,8 +311,8 @@ export default function BookingModal() {
                     height: '40px', minWidth: '44px', padding: '0 12px',
                     fontFamily: 'var(--font-body)', fontSize: '14px', fontWeight: 600,
                     borderRadius: '6px', cursor: 'pointer',
-                    border: form.guests === size ? '1.5px solid var(--color-copper)' : '1.5px solid rgba(18,12,7,0.14)',
-                    background: form.guests === size ? 'rgba(203,152,115,0.1)' : '#FDFAF6',
+                    border: form.guests === size ? '1.5px solid var(--color-copper)' : '1.5px solid rgba(45,50,52,0.14)',
+                    background: form.guests === size ? 'rgba(198,168,124,0.1)' : '#FDFAF6',
                     color: form.guests === size ? 'var(--color-copper)' : 'var(--color-ink-muted)',
                     transition: 'all 180ms ease',
                   }}
@@ -340,7 +340,7 @@ export default function BookingModal() {
                 fontSize: '15px',
               }}
               onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')}
-              onBlur={e => (e.currentTarget.style.borderColor = 'rgba(18,12,7,0.14)')}
+              onBlur={e => (e.currentTarget.style.borderColor = 'rgba(45,50,52,0.14)')}
             />
           </Field>
 
@@ -348,14 +348,14 @@ export default function BookingModal() {
           <div className="booking-trust-badges" style={{
             display: 'flex', gap: '6px', flexWrap: 'wrap',
             padding: '14px', borderRadius: '8px',
-            background: 'rgba(203,152,115,0.07)',
-            border: '1px solid rgba(203,152,115,0.18)',
+            background: 'rgba(198,168,124,0.07)',
+            border: '1px solid rgba(198,168,124,0.18)',
           }}>
             {['No booking fee', 'Open daily 11AM–11PM', 'Instant WhatsApp confirm'].map(t => (
               <span key={t} style={{
                 fontFamily: 'var(--font-body)', fontSize: '11px', fontWeight: 600,
                 color: 'var(--color-copper)', letterSpacing: '0.5px',
-                background: 'rgba(203,152,115,0.12)', borderRadius: '4px',
+                background: 'rgba(198,168,124,0.12)', borderRadius: '4px',
                 padding: '4px 10px',
               }}>
                 ✓ {t}
@@ -367,7 +367,7 @@ export default function BookingModal() {
         {/* ── Footer CTA ── */}
         <div className="booking-modal-footer" style={{
           padding: '16px 24px 20px',
-          borderTop: '1px solid rgba(18,12,7,0.08)',
+          borderTop: '1px solid rgba(45,50,52,0.08)',
           background: '#FFFDF9',
           flexShrink: 0,
         }}>

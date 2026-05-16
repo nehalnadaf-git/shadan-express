@@ -25,7 +25,7 @@ const serwist = new Serwist({
         request.destination === 'image' &&
         (url.pathname.startsWith('/images/') || url.pathname.startsWith('/favicon/')),
       handler: new CacheFirst({
-        cacheName: 'hayat-images',
+        cacheName: 'Empire-images',
         plugins: [
           new ExpirationPlugin({
             maxEntries: 80,
@@ -40,7 +40,7 @@ const serwist = new Serwist({
     {
       matcher: ({ request }) => request.destination === 'image',
       handler: new CacheFirst({
-        cacheName: 'hayat-next-images',
+        cacheName: 'Empire-next-images',
         plugins: [
           new ExpirationPlugin({
             maxEntries: 60,
@@ -57,7 +57,7 @@ const serwist = new Serwist({
         url.origin === 'https://fonts.googleapis.com' ||
         url.origin === 'https://fonts.gstatic.com',
       handler: new CacheFirst({
-        cacheName: 'hayat-fonts',
+        cacheName: 'Empire-fonts',
         plugins: [
           new ExpirationPlugin({
             maxEntries: 10,
@@ -72,7 +72,7 @@ const serwist = new Serwist({
     {
       matcher: ({ request }) => request.mode === 'navigate',
       handler: new NetworkFirst({
-        cacheName: 'hayat-pages',
+        cacheName: 'Empire-pages',
         networkTimeoutSeconds: 3,
         plugins: [
           new ExpirationPlugin({

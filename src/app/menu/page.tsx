@@ -4,9 +4,9 @@ import Image from 'next/image'
 import { menuCategories } from '@/data/menu'
 
 export const metadata: Metadata = {
-  title: 'Our Full Menu | Hayat Family Restaurant Hubballi',
-  description: "Explore Hayat Family Restaurant's full menu — Beef Biryani, Tandoori Kababs, Chicken Starters, Mutton, Veg Mains, Soups & more. Authentic Mughal cuisine in Hubballi.",
-  alternates: { canonical: 'https://hayatfamilyrestaurant.in/menu' },
+  title: 'Our Full Menu | Empire Family Restaurant Hubballi',
+  description: "Explore Empire Family Restaurant's full menu — Beef Biryani, Tandoori Kababs, Chicken Starters, Mutton, Veg Mains, Soups & more. Authentic Mughal cuisine in Hubballi.",
+  alternates: { canonical: 'https://empirefamilyrestaurant.in/menu' },
 }
 
 export default function MenuPage() {
@@ -27,7 +27,7 @@ export default function MenuPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             {menuCategories.map((cat) => (
               <Link key={cat.slug} href={`/menu/${cat.slug}`} style={{ textDecoration: 'none' }}>
-                <div className="category-card" style={{ borderRadius: '4px', overflow: 'hidden', border: '1px solid rgba(212,168,83,0.3)', boxShadow: '0 4px 20px rgba(18,12,7,0.08)' }}>
+                <div className="category-card" style={{ borderRadius: '4px', overflow: 'hidden', border: '1px solid rgba(212,168,83,0.3)', boxShadow: '0 4px 20px rgba(45,50,52,0.08)' }}>
                   <div style={{ position: 'relative', aspectRatio: '4/3', background: 'var(--color-charcoal)' }}>
                     <Image src={cat.image} alt={cat.name} fill sizes="(max-width:768px) 90vw, 33vw" style={{ objectFit: 'cover', opacity: 0.7 }} />
                     <div className="card-overlay" />

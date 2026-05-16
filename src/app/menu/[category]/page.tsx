@@ -18,16 +18,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = menuCategories.find(c => c.slug === category)
   if (!cat) return {}
   return {
-    title: `${cat.name} | Hayat Family Restaurant Hubballi`,
-    description: `Explore our ${cat.name} menu — ${cat.tagline}. Authentic Mughal cuisine at Hayat Family Restaurant, Hubballi.`,
-    alternates: { canonical: `https://hayatfamilyrestaurant.in/menu/${category}` },
+    title: `${cat.name} | Empire Family Restaurant Hubballi`,
+    description: `Explore our ${cat.name} menu — ${cat.tagline}. Authentic Mughal cuisine at Empire Family Restaurant, Hubballi.`,
+    alternates: { canonical: `https://empirefamilyrestaurant.in/menu/${category}` },
   }
 }
 
 const categorySchema = (cat: typeof menuCategories[0]) => ({
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: `${cat.name} — Hayat Family Restaurant`,
+  name: `${cat.name} — Empire Family Restaurant`,
   itemListElement: cat.items.map((item, i) => ({
     '@type': 'ListItem',
     position: i + 1,
@@ -43,9 +43,9 @@ const breadcrumbSchema = (cat: typeof menuCategories[0]) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://hayatfamilyrestaurant.in' },
-    { '@type': 'ListItem', position: 2, name: 'Menu', item: 'https://hayatfamilyrestaurant.in/menu' },
-    { '@type': 'ListItem', position: 3, name: cat.name, item: `https://hayatfamilyrestaurant.in/menu/${cat.slug}` },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://empirefamilyrestaurant.in' },
+    { '@type': 'ListItem', position: 2, name: 'Menu', item: 'https://empirefamilyrestaurant.in/menu' },
+    { '@type': 'ListItem', position: 3, name: cat.name, item: `https://empirefamilyrestaurant.in/menu/${cat.slug}` },
   ],
 })
 
@@ -77,7 +77,7 @@ export default async function CategoryPage({ params }: Props) {
           />
         </div>
         {/* Gold bottom line */}
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(201,150,62,0.3), transparent)', zIndex: 1 }} />
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.30), transparent)', zIndex: 1 }} />
 
         <div style={{ position: 'relative', zIndex: 2 }}>
 
@@ -105,19 +105,19 @@ export default async function CategoryPage({ params }: Props) {
       </section>
 
       {/* Breadcrumb */}
-      <div style={{ background: 'var(--color-charcoal)', padding: '14px clamp(24px,5vw,80px)', borderBottom: '1px solid rgba(201,150,62,0.12)' }}>
+      <div style={{ background: 'var(--color-charcoal)', padding: '14px clamp(24px,5vw,80px)', borderBottom: '1px solid rgba(198,168,124,0.12)' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-body)', fontSize: '12px' }}>
           <Link href="/" style={{ color: 'var(--color-gold)', textDecoration: 'none', letterSpacing: '0.3px' }}>Home</Link>
-          <ChevronRight size={13} style={{ color: 'rgba(250,246,240,0.3)' }} />
+          <ChevronRight size={13} style={{ color: 'rgba(247,245,240,0.3)' }} />
           <Link href="/menu" style={{ color: 'var(--color-gold)', textDecoration: 'none', letterSpacing: '0.3px' }}>Menu</Link>
-          <ChevronRight size={13} style={{ color: 'rgba(250,246,240,0.3)' }} />
-          <span style={{ color: 'rgba(250,246,240,0.5)', letterSpacing: '0.3px' }}>{cat.name}</span>
+          <ChevronRight size={13} style={{ color: 'rgba(247,245,240,0.3)' }} />
+          <span style={{ color: 'rgba(247,245,240,0.50)', letterSpacing: '0.3px' }}>{cat.name}</span>
         </div>
       </div>
 
       {/* Items Grid */}
       <section style={{
-        background: 'linear-gradient(160deg, #FDF8F2 0%, #F8F0E4 60%, #F4EAD5 100%)',
+        background: 'linear-gradient(160deg, var(--color-linen) 0%, var(--color-parchment) 60%, var(--color-parchment-deep) 100%)',
         padding: 'clamp(48px,6vw,88px) clamp(24px,5vw,80px)',
         minHeight: '60vh',
       }}>
@@ -141,7 +141,7 @@ export default async function CategoryPage({ params }: Props) {
           {/* Premium Card Grid */}
           <style>{`
             .dish-card { transition: transform 280ms cubic-bezier(0.16,1,0.3,1), box-shadow 280ms ease; }
-            .dish-card:hover { transform: translateY(-6px) !important; box-shadow: 0 20px 56px rgba(44,26,14,0.14) !important; }
+            .dish-card:hover { transform: translateY(-6px) !important; box-shadow: 0 20px 56px rgba(45,50,52,0.14) !important; }
             .dish-card:hover .dish-img { transform: scale(1.05); }
             .dish-img { transition: transform 500ms cubic-bezier(0.16,1,0.3,1); }
             @media (max-width: 640px) {
@@ -163,9 +163,9 @@ export default async function CategoryPage({ params }: Props) {
                 style={{
                   borderRadius: '6px',
                   overflow: 'hidden',
-                  border: '1px solid rgba(201,150,62,0.18)',
+                  border: '1px solid rgba(198,168,124,0.18)',
                   background: 'white',
-                  boxShadow: '0 2px 12px rgba(44,26,14,0.06)',
+                  boxShadow: '0 2px 12px rgba(45,50,52,0.06)',
                   cursor: 'default',
                 }}
               >
@@ -183,13 +183,13 @@ export default async function CategoryPage({ params }: Props) {
                     {/* Gradient overlay */}
                     <div style={{
                       position: 'absolute', inset: 0,
-                      background: 'linear-gradient(to top, rgba(30,17,9,0.55) 0%, rgba(30,17,9,0.1) 45%, transparent 100%)',
+                      background: 'linear-gradient(to top, rgba(45,50,52,0.55) 0%, rgba(45,50,52,0.10) 45%, transparent 100%)',
                     }} />
                     {/* Veg/Non-veg badge */}
                     <div style={{
                       position: 'absolute', top: '10px', left: '10px',
                       display: 'flex', alignItems: 'center', gap: '5px',
-                      background: 'rgba(10,6,2,0.62)',
+                      background: 'rgba(26,31,33,0.65)',
                       backdropFilter: 'blur(8px)',
                       WebkitBackdropFilter: 'blur(8px)',
                       borderRadius: '100px',
@@ -201,7 +201,7 @@ export default async function CategoryPage({ params }: Props) {
                         fontFamily: 'var(--font-body)',
                         fontSize: '9px',
                         fontWeight: 700,
-                        color: 'rgba(250,246,240,0.9)',
+                        color: 'rgba(247,245,240,0.90)',
                         letterSpacing: '0.8px',
                         textTransform: 'uppercase',
                       }}>
@@ -221,7 +221,7 @@ export default async function CategoryPage({ params }: Props) {
                     {/* Subtle gold dots pattern */}
                     <div style={{
                       position: 'absolute', inset: 0,
-                      backgroundImage: 'radial-gradient(circle, rgba(201,150,62,0.12) 1px, transparent 1px)',
+                      backgroundImage: 'radial-gradient(circle, rgba(198,168,124,0.12) 1px, transparent 1px)',
                       backgroundSize: '20px 20px',
                     }} />
 
@@ -236,7 +236,7 @@ export default async function CategoryPage({ params }: Props) {
                         fontFamily: 'var(--font-body)',
                         fontSize: '9px',
                         fontWeight: 700,
-                        color: 'rgba(250,246,240,0.85)',
+                        color: 'rgba(247,245,240,0.85)',
                         letterSpacing: '0.8px',
                         textTransform: 'uppercase',
                       }}>
@@ -291,7 +291,7 @@ export default async function CategoryPage({ params }: Props) {
                   <div style={{
                     marginTop: '10px',
                     height: '1px',
-                    background: 'linear-gradient(to right, rgba(201,150,62,0.3), transparent)',
+                    background: 'linear-gradient(to right, rgba(198,168,124,0.30), transparent)',
                   }} />
                 </div>
               </div>

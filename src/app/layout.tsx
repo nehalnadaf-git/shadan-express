@@ -26,29 +26,37 @@ const dmSans = DM_Sans({
 })
 
 export const viewport: Viewport = {
-  themeColor: '#1a0800',
+  themeColor: '#1A1F21',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hayatfamilyrestaurant.in'),
-  applicationName: 'Hayat Family Restaurant',
-  title: { default: 'Hayat Family Restaurant Hubballi | Authentic Mughal & Tandoor Cuisine', template: '%s | Hayat Family Restaurant Hubballi' },
-  description: 'Hayat Family Restaurant Lazeez Pakwan in Hubballi serves authentic Mughal, North Indian & Tandoor cuisine — Beef Biryani, Tandoori Chicken, Kababs, Beef Gravies & more. Open daily 11 AM–11 PM, Shah Bazar Road.',
-  keywords: ['Hayat Family Restaurant', 'Hubballi restaurant', 'best biryani Hubballi', 'Mughal cuisine Hubli', 'beef biryani Hubballi', 'tandoori chicken Hubballi', 'halal restaurant Hubballi', 'Lazeez Pakwan', 'Shah Bazar Road restaurant'],
+  metadataBase: new URL('https://empirefamilyrestaurant.in'),
+  applicationName: 'Empire Family Restaurant',
+  title: { default: 'Empire Family Restaurant Hubballi | Biryani, Mandi, Kabab & Family Dining', template: '%s | Empire Family Restaurant Hubballi' },
+  description: 'Empire Family Restaurant in Hubballi — a modern family dining destination near Railway Station offering North Indian, Mughlai, Chinese, Dum Biryanis, Mandi Specials, Tandoori & Kabab platters. Open daily 11 AM–11 PM.',
+  keywords: [
+    'Empire Family Restaurant', 'Hubballi restaurant', 'family restaurant Hubli',
+    'best biryani Hubballi', 'Chicken Dum Biryani Hubballi', 'Mutton Biryani Hubballi',
+    'Mandi Hubballi', 'Chicken Mandi Hubballi', 'Tandoori Chicken Hubballi',
+    'Mughlai restaurant Hubballi', 'North Indian restaurant Hubballi',
+    'Chinese food Hubballi', 'Kabab restaurant Hubballi', 'Nihari Hubballi',
+    'Railway Station Road restaurant Hubli', 'J C Nagar restaurant Hubballi',
+    'family dining Hubballi', 'dine-in restaurant Hubli', 'Paneer Tikka Hubballi',
+  ],
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'Hayat',
+    title: 'Empire',
   },
   formatDetection: { telephone: false },
   openGraph: {
-    siteName: 'Hayat Family Restaurant',
+    siteName: 'Empire Family Restaurant',
     locale: 'en_IN',
     type: 'website',
-    images: [{ url: '/images/og/og-homepage.jpg', width: 1200, height: 630, alt: 'Hayat Family Restaurant Hubballi — Authentic Mughal & Tandoor Cuisine' }],
+    images: [{ url: '/images/restaurant/2new.webp', width: 1200, height: 630, alt: 'Empire Family Restaurant Hubballi — Family Dining, Biryani & Mandi' }],
   },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
@@ -57,16 +65,16 @@ export const metadata: Metadata = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'Restaurant',
-  name: 'Hayat Family Restaurant Lazeez Pakwan',
-  description: 'Premium Mughal, North Indian and Tandoor cuisine restaurant in Hubballi.',
-  telephone: '+919740271679',
-  url: 'https://hayatfamilyrestaurant.in',
+  name: 'Empire Family Restaurant',
+  description: 'Modern family dining restaurant in Hubballi offering North Indian, Mughlai, Chinese, Biryani, Mandi, Tandoori and Kabab cuisine. Family-friendly ambiance with hygienic food preparation.',
+  telephone: '+919986600860',
+  url: 'https://empirefamilyrestaurant.in',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Bhandiwad Base, Shah Bazar Road, Behind Jamiya Masjid, Durgad Bail, New Hubli',
+    streetAddress: 'Ground Floor, Shringar Palace, Opposite Railway Station Road, J C Nagar, New Hubli',
     addressLocality: 'Hubballi',
     addressRegion: 'Karnataka',
-    postalCode: '580028',
+    postalCode: '580020',
     addressCountry: 'IN',
   },
   geo: { '@type': 'GeoCoordinates', latitude: 15.3647, longitude: 75.1240 },
@@ -76,11 +84,17 @@ const schemaOrg = {
     opens: '11:00',
     closes: '23:00',
   }],
-  servesCuisine: ['Mughal', 'North Indian', 'Tandoor', 'Biryani', 'Kebab'],
+  servesCuisine: ['North Indian', 'Mughlai', 'Chinese', 'Biryani', 'Mandi', 'Tandoori', 'Kabab', 'Indo-Chinese', 'Family Dining'],
   priceRange: '₹₹',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.5', reviewCount: '48' },
-  hasMenu: 'https://hayatfamilyrestaurant.in/menu',
-  image: 'https://hayatfamilyrestaurant.in/images/og/og-homepage.jpg',
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '3.8', reviewCount: '33' },
+  amenityFeature: [
+    { '@type': 'LocationFeatureSpecification', name: 'Family Dining', value: true },
+    { '@type': 'LocationFeatureSpecification', name: 'Dine-In', value: true },
+    { '@type': 'LocationFeatureSpecification', name: 'Takeaway', value: true },
+    { '@type': 'LocationFeatureSpecification', name: 'Group Dining', value: true },
+  ],
+  hasMenu: 'https://empirefamilyrestaurant.in/menu',
+  image: 'https://empirefamilyrestaurant.in/images/restaurant/2new.webp',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -89,10 +103,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://maps.googleapis.com" />
-        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Empire" />
+        <link rel="manifest" href="/site.webmanifest" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}

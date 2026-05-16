@@ -6,7 +6,7 @@ import { MessageCircle, Cake, Users, Briefcase } from 'lucide-react'
 const occasions = [
   {
     Icon: Cake,
-    title: 'Birthdays & Anniversaries',
+    title: 'Parties & Milestones',
     desc: 'Make your special day unforgettable with our curated setups, personalised decorations, and a custom menu crafted just for you.',
   },
   {
@@ -35,19 +35,47 @@ export default function SpecialOccasionsSection() {
 
   return (
     <section ref={sectionRef} style={{
-      background: 'linear-gradient(150deg, #1E1209 0%, #241608 50%, #1C1008 100%)',
+      background: 'linear-gradient(135deg, #0e1112 0%, #171b1d 50%, #0e1112 100%)',
       padding: 'clamp(80px, 10vw, 140px) clamp(24px, 5vw, 80px)',
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Decorative gold lines */}
-      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.3), transparent)' }} />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.18), transparent)' }} />
-      {/* Ambient radial top glow */}
-      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 0%, rgba(203,152,115,0.07) 0%, transparent 55%)', pointerEvents: 'none' }} />
-      {/* Side glows */}
-      <div style={{ position: 'absolute', top: '30%', left: '-5%', width: '35%', height: '50%', background: 'radial-gradient(ellipse, rgba(203,152,115,0.03) 0%, transparent 70%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', top: '30%', right: '-5%', width: '35%', height: '50%', background: 'radial-gradient(ellipse, rgba(203,152,115,0.03) 0%, transparent 70%)', pointerEvents: 'none' }} />
+      {/* Ultra-Premium Smooth Organic Curves (Liquid Gold / Silk Effect) */}
+      <svg viewBox="0 0 1440 800" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.35, pointerEvents: 'none' }} preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gold-silk-occ" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="var(--color-gold)" stopOpacity="0.0" />
+            <stop offset="40%" stopColor="var(--color-gold-light)" stopOpacity="0.8" />
+            <stop offset="60%" stopColor="var(--color-gold)" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="var(--color-gold-muted)" stopOpacity="0.0" />
+          </linearGradient>
+          <filter id="soft-glow-occ" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
+        </defs>
+
+        <g fill="none" stroke="url(#gold-silk-occ)" filter="url(#soft-glow-occ)">
+          <path d="M-100,150 C400,0 700,500 1540,100" strokeWidth="0.5" />
+          <path d="M-100,180 C420,40 720,460 1540,140" strokeWidth="1" />
+          <path d="M-100,210 C440,80 740,420 1540,180" strokeWidth="2.5" />
+          <path d="M-100,240 C460,120 760,380 1540,220" strokeWidth="1" />
+          <path d="M-100,270 C480,160 780,340 1540,260" strokeWidth="0.5" />
+
+          <path d="M-100,600 C300,900 900,400 1540,750" strokeWidth="0.5" />
+          <path d="M-100,630 C320,860 920,440 1540,770" strokeWidth="1" />
+          <path d="M-100,660 C340,820 940,480 1540,790" strokeWidth="3" />
+          <path d="M-100,690 C360,780 960,520 1540,810" strokeWidth="1" />
+          <path d="M-100,720 C380,740 980,560 1540,830" strokeWidth="0.5" />
+          
+          <path d="M500,-100 C800,200 1000,500 1300,900" strokeWidth="1.5" opacity="0.6" />
+          <path d="M540,-100 C840,200 1040,500 1340,900" strokeWidth="0.5" opacity="0.4" />
+        </g>
+      </svg>
+
+      {/* Heavy Cinematic Ambient Light Overlays */}
+      <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '60%', height: '80%', background: 'radial-gradient(ellipse, rgba(198,168,124,0.06) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
+      <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50%', height: '70%', background: 'radial-gradient(ellipse, rgba(58, 96, 104, 0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
 
       <div style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
         {/* Header */}
@@ -60,8 +88,8 @@ export default function SpecialOccasionsSection() {
             <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Special Moments</em>{' '}
             With Us
           </h2>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'rgba(200,184,154,0.75)', maxWidth: '540px', margin: '20px auto 0', lineHeight: 1.85 }}>
-            From birthday celebrations to anniversary dinners, family gatherings to corporate lunches — Hayat Family Restaurant is your perfect venue for every occasion.
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'var(--color-ivory-muted)', maxWidth: '540px', margin: '20px auto 0', lineHeight: 1.85 }}>
+            From private parties to family gatherings and corporate lunches — Empire Family Restaurant is your perfect venue for every occasion.
           </p>
         </div>
 
@@ -71,7 +99,7 @@ export default function SpecialOccasionsSection() {
             <div key={o.title} className="fade-up" style={{ transitionDelay: `${i * 100}ms` }}>
               <div style={{
                 background: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(203,152,115,0.18)',
+                border: '1px solid rgba(198,168,124,0.18)',
                 borderRadius: '4px',
                 padding: '36px 28px',
                 height: '100%',
@@ -80,14 +108,14 @@ export default function SpecialOccasionsSection() {
               }}
                 onMouseEnter={e => {
                   const el = e.currentTarget as HTMLElement
-                  el.style.borderColor = 'rgba(203,152,115,0.45)'
-                  el.style.background = 'rgba(203,152,115,0.05)'
+                  el.style.borderColor = 'rgba(198,168,124,0.45)'
+                  el.style.background = 'rgba(198,168,124,0.05)'
                   el.style.boxShadow = '0 20px 60px rgba(0,0,0,0.35)'
                   el.style.transform = 'translateY(-4px)'
                 }}
                 onMouseLeave={e => {
                   const el = e.currentTarget as HTMLElement
-                  el.style.borderColor = 'rgba(203,152,115,0.18)'
+                  el.style.borderColor = 'rgba(198,168,124,0.18)'
                   el.style.background = 'rgba(255,255,255,0.03)'
                   el.style.boxShadow = 'none'
                   el.style.transform = 'translateY(0)'
@@ -96,15 +124,15 @@ export default function SpecialOccasionsSection() {
                 {/* Icon container */}
                 <div style={{
                   width: '52px', height: '52px', borderRadius: '50%',
-                  background: 'rgba(203,152,115,0.1)',
-                  border: '1px solid rgba(203,152,115,0.25)',
+                  background: 'rgba(198,168,124,0.1)',
+                  border: '1px solid rgba(198,168,124,0.25)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   marginBottom: '24px',
                 }}>
                   <o.Icon size={22} color="var(--color-gold-light)" strokeWidth={1.5} />
                 </div>
                 <h3 className="heading-card" style={{ color: 'var(--color-gold-light)', marginBottom: '12px' }}>{o.title}</h3>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'rgba(200,184,154,0.72)', lineHeight: 1.75 }}>{o.desc}</p>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-ivory-muted)', lineHeight: 1.75 }}>{o.desc}</p>
               </div>
             </div>
           ))}

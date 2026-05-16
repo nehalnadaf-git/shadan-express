@@ -10,7 +10,7 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
 }
 
-const DISMISSED_KEY = 'hayat_pwa_install_dismissed'
+const DISMISSED_KEY = 'empire_pwa_install_dismissed'
 
 export default function InstallBanner() {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
@@ -126,7 +126,7 @@ export default function InstallBanner() {
                   letterSpacing: '0.01em',
                   fontFamily: 'var(--font-display)',
                 }}>
-                  Install Hayat App
+                  Install Empire App
                 </p>
                 <p style={{
                   margin: '0.2rem 0 0',

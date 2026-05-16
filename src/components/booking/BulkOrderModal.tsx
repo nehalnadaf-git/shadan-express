@@ -65,7 +65,7 @@ function QtyRow({ label, price, qty, onInc, onDec, onSet }: {
     <div style={{
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       padding: '12px 0',
-      borderBottom: '1px solid rgba(18,12,7,0.07)',
+      borderBottom: '1px solid rgba(45,50,52,0.07)',
     }}>
       <div style={{ flex: 1, minWidth: 0 }}>
         <p style={{
@@ -90,16 +90,16 @@ function QtyRow({ label, price, qty, onInc, onDec, onSet }: {
             height: '36px', padding: '0 18px', flexShrink: 0, marginLeft: '12px',
             fontFamily: 'var(--font-body)', fontSize: '12px', fontWeight: 700,
             color: 'var(--color-copper)', letterSpacing: '0.5px',
-            background: 'rgba(203,152,115,0.07)',
-            border: '1.5px dashed rgba(203,152,115,0.38)',
+            background: 'rgba(198,168,124,0.07)',
+            border: '1.5px dashed rgba(198,168,124,0.38)',
             borderRadius: '6px', cursor: 'pointer', transition: 'all 180ms',
           }}
           onMouseEnter={e => {
-            (e.currentTarget).style.background = 'rgba(203,152,115,0.15)'
+            (e.currentTarget).style.background = 'rgba(198,168,124,0.15)'
             ;(e.currentTarget).style.borderStyle = 'solid'
           }}
           onMouseLeave={e => {
-            (e.currentTarget).style.background = 'rgba(203,152,115,0.07)'
+            (e.currentTarget).style.background = 'rgba(198,168,124,0.07)'
             ;(e.currentTarget).style.borderStyle = 'dashed'
           }}
         >+ Add</button>
@@ -111,8 +111,8 @@ function QtyRow({ label, price, qty, onInc, onDec, onSet }: {
             onClick={onDec}
             style={{
               width: '36px', height: '36px', borderRadius: '6px 0 0 6px',
-              background: 'rgba(203,152,115,0.1)',
-              border: '1.5px solid rgba(203,152,115,0.35)', borderRight: 'none',
+              background: 'rgba(198,168,124,0.1)',
+              border: '1.5px solid rgba(198,168,124,0.35)', borderRight: 'none',
               cursor: 'pointer', fontSize: '20px',
               color: 'var(--color-copper)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -143,8 +143,8 @@ function QtyRow({ label, price, qty, onInc, onDec, onSet }: {
                 textAlign: 'center', paddingRight: '16px',
                 fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: 700,
                 color: 'var(--color-copper)',
-                background: 'rgba(203,152,115,0.06)',
-                border: '1.5px solid rgba(203,152,115,0.35)',
+                background: 'rgba(198,168,124,0.06)',
+                border: '1.5px solid rgba(198,168,124,0.35)',
                 borderLeft: 'none', borderRight: 'none',
                 outline: 'none', boxSizing: 'border-box',
               }}
@@ -152,7 +152,7 @@ function QtyRow({ label, price, qty, onInc, onDec, onSet }: {
             <span style={{
               position: 'absolute', right: '5px', top: '50%', transform: 'translateY(-50%)',
               fontFamily: 'var(--font-body)', fontSize: '9px', fontWeight: 700,
-              color: 'rgba(203,152,115,0.55)', letterSpacing: '0.3px',
+              color: 'rgba(198,168,124,0.55)', letterSpacing: '0.3px',
               pointerEvents: 'none',
             }}>kg</span>
           </div>
@@ -162,8 +162,8 @@ function QtyRow({ label, price, qty, onInc, onDec, onSet }: {
             onClick={onInc}
             style={{
               width: '36px', height: '36px', borderRadius: '0 6px 6px 0',
-              background: 'rgba(203,152,115,0.14)',
-              border: '1.5px solid rgba(203,152,115,0.35)', borderLeft: 'none',
+              background: 'rgba(198,168,124,0.14)',
+              border: '1.5px solid rgba(198,168,124,0.35)', borderLeft: 'none',
               cursor: 'pointer', fontSize: '20px',
               color: 'var(--color-copper)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -180,7 +180,7 @@ function QtyRow({ label, price, qty, onInc, onDec, onSet }: {
 const inputStyle = (err?: string): React.CSSProperties => ({
   width: '100%', height: '48px', padding: '0 14px',
   fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-ink)',
-  background: '#FDFAF6', border: `1.5px solid ${err ? '#c0392b' : 'rgba(18,12,7,0.14)'}`,
+  background: '#FDFAF6', border: `1.5px solid ${err ? '#c0392b' : 'rgba(45,50,52,0.14)'}`,
   borderRadius: '6px', outline: 'none', boxSizing: 'border-box',
   transition: 'border-color 200ms', WebkitAppearance: 'none',
 })
@@ -283,7 +283,7 @@ export default function BulkOrderModal() {
     const d = new Date(form.date + 'T12:00:00')
     const dateStr = `${d.getDate()}/${d.getMonth() + 1}/${String(d.getFullYear()).slice(2)}`
     const lines: string[] = [
-      'HAYAT FAMILY RESTAURANT',
+      'Empire Family Restaurant',
       'Bulk Catering Order',
       '--------------------------------',
       '',
@@ -326,7 +326,7 @@ export default function BulkOrderModal() {
     lines.push('', 'Kindly confirm this order and share the final quotation at your earliest convenience.', '', 'Thank you.')
 
     const msg = lines.join('\n')
-    window.open(`https://wa.me/919740271679?text=${encodeURIComponent(msg)}`, '_blank')
+    window.open(`https://wa.me/919986600860?text=${encodeURIComponent(msg)}`, '_blank')
     closeModal()
     setForm({ name: '', phone: '', date: '', guests: '', delivery: 'venue', address: '', notes: '' })
     setErrors({})
@@ -366,14 +366,14 @@ export default function BulkOrderModal() {
       >
         {/* ── HEADER ── */}
         <div className="bulk-modal-header" style={{
-          background: 'linear-gradient(135deg, #1C120A 0%, #2E1A0C 100%)',
+          background: 'linear-gradient(135deg, #101213 0%, #1a1f21 100%)',
           padding: '28px 28px 24px', flexShrink: 0, position: 'relative',
         }}>
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.8), transparent)' }} />
+          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.8), transparent)' }} />
           <button onClick={closeModal} onMouseEnter={() => setHoverClose(true)} onMouseLeave={() => setHoverClose(false)} style={{
             position: 'absolute', top: '16px', right: '16px',
             width: '34px', height: '34px', borderRadius: '50%', cursor: 'pointer',
-            background: hoverClose ? 'rgba(203,152,115,0.18)' : 'rgba(255,255,255,0.08)',
+            background: hoverClose ? 'rgba(198,168,124,0.18)' : 'rgba(255,255,255,0.08)',
             border: '1px solid rgba(255,255,255,0.14)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: 'rgba(255,255,255,0.7)', transition: 'background 200ms',
@@ -383,13 +383,13 @@ export default function BulkOrderModal() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <div className="bulk-modal-header-icon" style={{
               width: '48px', height: '48px', borderRadius: '10px', flexShrink: 0,
-              background: 'rgba(203,152,115,0.18)', border: '1px solid rgba(203,152,115,0.35)',
+              background: 'rgba(198,168,124,0.18)', border: '1px solid rgba(198,168,124,0.35)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
             }}>
               <Package size={22} color="var(--color-gold-light)" strokeWidth={1.4} />
             </div>
             <div>
-              <p className="bulk-modal-header-eyebrow" style={{ fontFamily: 'var(--font-body)', fontSize: '10px', fontWeight: 700, letterSpacing: '3.5px', textTransform: 'uppercase', color: 'rgba(203,152,115,0.8)', margin: '0 0 5px' }}>HAYAT Family Restaurant</p>
+              <p className="bulk-modal-header-eyebrow" style={{ fontFamily: 'var(--font-body)', fontSize: '10px', fontWeight: 700, letterSpacing: '3.5px', textTransform: 'uppercase', color: 'rgba(198,168,124,0.8)', margin: '0 0 5px' }}>Empire Family Restaurant</p>
               <h2 className="bulk-modal-header-title" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(19px,3.5vw,25px)', fontWeight: 600, color: '#FAF6F0', margin: 0, lineHeight: 1.2 }}>
                 Bulk Order &amp; Catering
               </h2>
@@ -404,7 +404,7 @@ export default function BulkOrderModal() {
         <div className="bulk-modal-body" style={{
           flex: 1, overflowY: 'auto', padding: '24px 28px',
           display: 'flex', flexDirection: 'column', gap: '28px',
-          scrollbarWidth: 'thin', scrollbarColor: 'rgba(203,152,115,0.3) transparent',
+          scrollbarWidth: 'thin', scrollbarColor: 'rgba(198,168,124,0.3) transparent',
         }}>
 
           {/* ── Section label ── */}
@@ -413,19 +413,19 @@ export default function BulkOrderModal() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }} className="bulk-two-col">
               <Field label="Your Name" icon={<User size={13} />} error={errors.name}>
                 <input placeholder="e.g. Ahmed Khan" value={form.name} onChange={e => set('name', e.target.value)} style={inputStyle(errors.name)}
-                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = errors.name ? '#c0392b' : 'rgba(18,12,7,0.14)')} />
+                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = errors.name ? '#c0392b' : 'rgba(45,50,52,0.14)')} />
               </Field>
               <Field label="Phone Number" icon={<Phone size={13} />} error={errors.phone}>
                 <input type="tel" placeholder="+91 98765 43210" value={form.phone} onChange={e => set('phone', e.target.value)} style={inputStyle(errors.phone)}
-                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = errors.phone ? '#c0392b' : 'rgba(18,12,7,0.14)')} />
+                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = errors.phone ? '#c0392b' : 'rgba(45,50,52,0.14)')} />
               </Field>
               <Field label="Event Date" icon={<Calendar size={13} />} error={errors.date}>
                 <input type="date" min={today} max={maxDate} value={form.date} onChange={e => set('date', e.target.value)} style={inputStyle(errors.date)}
-                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = errors.date ? '#c0392b' : 'rgba(18,12,7,0.14)')} />
+                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = errors.date ? '#c0392b' : 'rgba(45,50,52,0.14)')} />
               </Field>
               <Field label="No. of Guests" icon={<Users size={13} />} error={errors.guests}>
                 <input type="number" min="1" placeholder="e.g. 200" value={form.guests} onChange={e => set('guests', e.target.value)} style={inputStyle(errors.guests)}
-                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = errors.guests ? '#c0392b' : 'rgba(18,12,7,0.14)')} />
+                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = errors.guests ? '#c0392b' : 'rgba(45,50,52,0.14)')} />
               </Field>
             </div>
           </div>
@@ -442,8 +442,8 @@ export default function BulkOrderModal() {
                   flex: 1, height: '44px', padding: '0 12px', cursor: 'pointer',
                   fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: 600,
                   borderRadius: '6px', transition: 'all 180ms',
-                  border: form.delivery === opt.value ? '1.5px solid var(--color-copper)' : '1.5px solid rgba(18,12,7,0.14)',
-                  background: form.delivery === opt.value ? 'rgba(203,152,115,0.1)' : '#FDFAF6',
+                  border: form.delivery === opt.value ? '1.5px solid var(--color-copper)' : '1.5px solid rgba(45,50,52,0.14)',
+                  background: form.delivery === opt.value ? 'rgba(198,168,124,0.1)' : '#FDFAF6',
                   color: form.delivery === opt.value ? 'var(--color-copper)' : 'var(--color-ink-muted)',
                 }}>
                   {opt.label}
@@ -453,7 +453,7 @@ export default function BulkOrderModal() {
             {form.delivery === 'doorstep' && (
               <Field label="Delivery Address" icon={<Home size={13} />} error={errors.address}>
                 <input placeholder="Full delivery address with landmark" value={form.address} onChange={e => set('address', e.target.value)} style={inputStyle(errors.address)}
-                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = errors.address ? '#c0392b' : 'rgba(18,12,7,0.14)')} />
+                  onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = errors.address ? '#c0392b' : 'rgba(45,50,52,0.14)')} />
               </Field>
             )}
           </div>
@@ -462,7 +462,7 @@ export default function BulkOrderModal() {
           <div>
             <SectionLabel icon={<Package size={13} />} label="Select Menu Items" />
             <div style={{
-              background: 'rgba(203,152,115,0.06)', border: '1px solid rgba(203,152,115,0.2)',
+              background: 'rgba(198,168,124,0.06)', border: '1px solid rgba(198,168,124,0.2)',
               borderRadius: '8px', padding: '4px 16px 0', display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '16px', width: '100%', boxSizing: 'border-box',
             }}>
               <Star size={11} color="var(--color-copper)" />
@@ -472,8 +472,8 @@ export default function BulkOrderModal() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {bulkMenu.map((cat, catIdx) => (
-                <div key={cat.category} style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(18,12,7,0.1)' }}>
-                  <div className="bulk-cat-header" style={{ background: 'linear-gradient(135deg,#1C120A,#2E1A0C)', padding: '10px 16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div key={cat.category} style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(45,50,52,0.1)' }}>
+                  <div className="bulk-cat-header" style={{ background: 'linear-gradient(135deg, #101213 0%, #1a1f21 100%)', padding: '10px 16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <Star size={11} color="var(--color-gold)" strokeWidth={2} />
                     <span style={{ fontFamily: 'var(--font-body)', fontSize: '10px', fontWeight: 700, color: 'var(--color-gold)', letterSpacing: '2px', textTransform: 'uppercase' }}>
                       {cat.category}
@@ -499,15 +499,15 @@ export default function BulkOrderModal() {
 
           {/* ── Order Summary ── */}
           {selectedItems.length > 0 && (
-            <div style={{ borderRadius: '8px', border: '1.5px solid rgba(203,152,115,0.35)', overflow: 'hidden' }}>
-              <div style={{ background: 'rgba(203,152,115,0.1)', padding: '10px 16px', borderBottom: '1px solid rgba(203,152,115,0.2)' }}>
+            <div style={{ borderRadius: '8px', border: '1.5px solid rgba(198,168,124,0.35)', overflow: 'hidden' }}>
+              <div style={{ background: 'rgba(198,168,124,0.1)', padding: '10px 16px', borderBottom: '1px solid rgba(198,168,124,0.2)' }}>
                 <span style={{ fontFamily: 'var(--font-body)', fontSize: '10px', fontWeight: 700, color: 'var(--color-copper)', letterSpacing: '2px', textTransform: 'uppercase' }}>
                   Order Summary
                 </span>
               </div>
               <div style={{ padding: '12px 16px', background: '#FFFDF9' }}>
                 {selectedItems.map(item => (
-                  <div key={item.name + item.category} style={{ display: 'flex', justifyContent: 'space-between', padding: '5px 0', borderBottom: '1px solid rgba(18,12,7,0.05)' }}>
+                  <div key={item.name + item.category} style={{ display: 'flex', justifyContent: 'space-between', padding: '5px 0', borderBottom: '1px solid rgba(45,50,52,0.05)' }}>
                     <span style={{ fontFamily: 'var(--font-body)', fontSize: '13px', color: 'var(--color-ink)' }}>
                       {item.name} <span style={{ color: 'var(--color-ink-muted)', fontWeight: 400 }}>× {item.qty}kg</span>
                     </span>
@@ -516,7 +516,7 @@ export default function BulkOrderModal() {
                     </span>
                   </div>
                 ))}
-                <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '10px', marginTop: '4px', borderTop: '1.5px solid rgba(203,152,115,0.25)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '10px', marginTop: '4px', borderTop: '1.5px solid rgba(198,168,124,0.25)' }}>
                   <span style={{ fontFamily: 'var(--font-body)', fontSize: '14px', fontWeight: 700, color: 'var(--color-ink)' }}>Estimated Total</span>
                   <span style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 700, color: 'var(--color-copper)', fontStyle: 'italic' }}>{fmt(grandTotal)}</span>
                 </div>
@@ -531,13 +531,13 @@ export default function BulkOrderModal() {
           <Field label="Special Instructions" icon={<MessageCircle size={13} />}>
             <textarea placeholder="Delivery time, venue details, specific requests, dietary requirements…" value={form.notes} onChange={e => set('notes', e.target.value)} rows={3}
               style={{ ...inputStyle(), height: 'auto', padding: '12px 14px', resize: 'none', lineHeight: 1.5, fontFamily: 'var(--font-body)', fontSize: '15px' }}
-              onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = 'rgba(18,12,7,0.14)')} />
+              onFocus={e => (e.currentTarget.style.borderColor = 'var(--color-copper)')} onBlur={e => (e.currentTarget.style.borderColor = 'rgba(45,50,52,0.14)')} />
           </Field>
 
           {/* Trust row */}
-          <div className="bulk-trust-badges" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', padding: '14px', borderRadius: '8px', background: 'rgba(203,152,115,0.06)', border: '1px solid rgba(203,152,115,0.18)' }}>
+          <div className="bulk-trust-badges" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', padding: '14px', borderRadius: '8px', background: 'rgba(198,168,124,0.06)', border: '1px solid rgba(198,168,124,0.18)' }}>
             {['No advance required', '50–5000+ guests', 'Doorstep delivery', 'Fresh & daily-made'].map(t => (
-              <span key={t} style={{ fontFamily: 'var(--font-body)', fontSize: '11px', fontWeight: 600, color: 'var(--color-copper)', background: 'rgba(203,152,115,0.12)', borderRadius: '4px', padding: '4px 10px' }}>
+              <span key={t} style={{ fontFamily: 'var(--font-body)', fontSize: '11px', fontWeight: 600, color: 'var(--color-copper)', background: 'rgba(198,168,124,0.12)', borderRadius: '4px', padding: '4px 10px' }}>
                 ✓ {t}
               </span>
             ))}
@@ -545,9 +545,9 @@ export default function BulkOrderModal() {
         </div>
 
         {/* ── FOOTER ── */}
-        <div className="bulk-modal-footer" style={{ padding: '16px 28px 20px', borderTop: '1px solid rgba(18,12,7,0.08)', background: '#FFFDF9', flexShrink: 0 }}>
+        <div className="bulk-modal-footer" style={{ padding: '16px 28px 20px', borderTop: '1px solid rgba(45,50,52,0.08)', background: '#FFFDF9', flexShrink: 0 }}>
           {grandTotal > 0 && (
-            <div className="bulk-footer-total" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', padding: '10px 14px', background: 'rgba(203,152,115,0.08)', borderRadius: '6px', border: '1px solid rgba(203,152,115,0.2)' }}>
+            <div className="bulk-footer-total" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', padding: '10px 14px', background: 'rgba(198,168,124,0.08)', borderRadius: '6px', border: '1px solid rgba(198,168,124,0.2)' }}>
               <span style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: 'var(--color-ink-muted)', fontWeight: 600, letterSpacing: '0.5px' }}>ESTIMATED TOTAL</span>
               <span style={{ fontFamily: 'var(--font-display)', fontSize: '20px', fontWeight: 700, color: 'var(--color-copper)', fontStyle: 'italic' }}>{fmt(grandTotal)}</span>
             </div>
@@ -730,7 +730,7 @@ export default function BulkOrderModal() {
 
 function SectionLabel({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px', paddingBottom: '10px', borderBottom: '1px solid rgba(18,12,7,0.08)' }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px', paddingBottom: '10px', borderBottom: '1px solid rgba(45,50,52,0.08)' }}>
       <span style={{ color: 'var(--color-copper)', display: 'flex' }}>{icon}</span>
       <span style={{ fontFamily: 'var(--font-body)', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--color-ink)' }}>
         {label}

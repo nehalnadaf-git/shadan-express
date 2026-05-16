@@ -43,9 +43,9 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <span className="tag-pill" style={{ color: 'rgba(18,12,7,0.6)', borderColor: 'rgba(18,12,7,0.2)', background: 'transparent', marginBottom: '20px', display: 'inline-flex' }}>
-            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#D4A853', flexShrink: 0 }} />
-            Authentic Mughal &amp; Tandoor — <strong style={{ color: 'var(--color-navy)' }}>Lazeez Pakwan</strong>
+          <span className="tag-pill" style={{ color: 'rgba(45,50,52,0.7)', borderColor: 'rgba(45,50,52,0.2)', background: 'transparent', marginBottom: '20px', display: 'inline-flex' }}>
+            <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--color-gold)', flexShrink: 0 }} />
+            Family Dining · Biryani · Mandi · Kabab &amp; More —{' '}<strong style={{ color: 'var(--color-navy-light)' }}>Hubballi</strong>
           </span>
         </motion.div>
 
@@ -54,7 +54,7 @@ export default function HeroSection() {
           className="heading-hero"
           style={{ color: 'var(--color-navy)', maxWidth: '860px', lineHeight: 1.02, marginBottom: '0' }}
         >
-          {['Where', 'Every', 'Bite', 'Tells', 'a', 'Story'].map((word, i) => (
+          {['Where', 'Taste', 'Meets', 'Tradition'].map((word, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0, y: 28 }}
@@ -100,8 +100,8 @@ export default function HeroSection() {
           {/* Desktop Banner */}
           <div className="hero-banner-desktop" style={{ position: 'relative', width: '100%', height: '100%' }}>
             <Image
-              src="/images/restaurant/inside-empty2.webp"
-              alt="Hayat Family Restaurant Lazeez Pakwan — Hubballi"
+              src="/images/restaurant/2new.webp"
+              alt="Empire Family Restaurant — Hubballi"
               fill
               priority
               sizes="100vw"
@@ -112,8 +112,8 @@ export default function HeroSection() {
           {/* Mobile Banner */}
           <div className="hero-banner-mobile" style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px', display: 'none' }}>
             <Image
-              src="/images/restaurant/inside-empty2.webp"
-              alt="Hayat Family Restaurant — Mobile View"
+              src="/images/restaurant/2new.webp"
+              alt="Empire Family Restaurant — Mobile View"
               fill
               priority
               sizes="100vw"
@@ -126,7 +126,7 @@ export default function HeroSection() {
             position: 'absolute',
             inset: 0,
             zIndex: 1,
-            background: 'linear-gradient(to bottom, rgba(250,246,240,0.15) 0%, transparent 30%, rgba(18,12,7,0.15) 100%)'
+            background: 'linear-gradient(to bottom, rgba(247,245,240,0.15) 0%, transparent 30%, rgba(26,31,33,0.15) 100%)'
           }} />
         </motion.div>
       </div>

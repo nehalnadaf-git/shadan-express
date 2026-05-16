@@ -4,18 +4,18 @@ import { reviews } from '@/data/reviews'
 import { restaurant } from '@/data/restaurant'
 
 export const metadata: Metadata = {
-  title: 'Customer Reviews | Hayat Family Restaurant Hubballi',
-  description: 'Read what our guests say about Hayat Family Restaurant Lazeez Pakwan — real reviews from happy families and food lovers in Hubballi.',
-  alternates: { canonical: 'https://hayatfamilyrestaurant.in/reviews' },
+  title: 'Customer Reviews | Empire Family Restaurant Hubballi',
+  description: 'Read what our guests say about Empire Family Restaurant — real reviews from happy families and food lovers in Hubballi.',
+  alternates: { canonical: 'https://empirefamilyrestaurant.in/reviews' },
 }
 
 const aggregateSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Hayat Family Restaurant Lazeez Pakwan',
+  name: 'Empire Family Restaurant',
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.5',
+    ratingValue: '3.8',
     reviewCount: String(reviews.length),
     bestRating: '5',
   },
@@ -57,9 +57,9 @@ export default function ReviewsPage() {
               return (
                 <div key={review.id} style={{
                   background: isDark ? 'var(--color-navy)' : 'white',
-                  border: isDark ? '1px solid var(--color-gold)' : '1px solid rgba(18,12,7,0.1)',
+                  border: isDark ? '1px solid var(--color-gold)' : '1px solid rgba(45,50,52,0.1)',
                   borderRadius: '4px', padding: '28px 24px',
-                  boxShadow: '0 4px 20px rgba(18,12,7,0.06)',
+                  boxShadow: '0 4px 20px rgba(45,50,52,0.06)',
                   display: 'flex', flexDirection: 'column',
                 }}>
                   <div style={{ display: 'flex', gap: '2px', marginBottom: '14px' }}>
@@ -70,7 +70,7 @@ export default function ReviewsPage() {
                   <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '17px', color: isDark ? 'var(--color-ivory)' : 'var(--color-navy)', lineHeight: 1.65, marginBottom: '20px', flex: 1 }}>
                     &ldquo;{review.text}&rdquo;
                   </p>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', borderTop: `1px solid ${isDark ? 'rgba(212,168,83,0.2)' : 'rgba(18,12,7,0.08)'}`, paddingTop: '14px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', borderTop: `1px solid ${isDark ? 'rgba(212,168,83,0.2)' : 'rgba(45,50,52,0.08)'}`, paddingTop: '14px' }}>
                     <div style={{ width: '34px', height: '34px', borderRadius: '50%', background: isDark ? 'var(--color-gold)' : 'var(--color-navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 600, fontSize: '13px', fontFamily: 'var(--font-body)', color: isDark ? 'var(--color-navy)' : 'white', flexShrink: 0 }}>
                       {review.name[0]}
                     </div>

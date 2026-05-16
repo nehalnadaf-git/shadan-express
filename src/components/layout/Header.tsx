@@ -84,16 +84,26 @@ export default function Header() {
           </nav>
 
           {/* ── Center Logo — absolute so it can never shift ── */}
-          <Link href="/" className="header-logo" aria-label="Hayat Family Restaurant — Home">
+          <Link
+            href="/"
+            className="header-logo"
+            aria-label="EMPIRE Family Restaurant — Home"
+            onClick={(e) => {
+              if (pathname === '/') {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }
+            }}
+          >
             {/* Top ornament line */}
             <span className="logo-ornament" />
 
-            <span className="logo-wordmark">HAYAT</span>
+            <span className="logo-wordmark">EMPIRE</span>
 
             <span className="logo-sub">Family Restaurant</span>
 
             {/* Italic Urdu-style tag */}
-            <span className="logo-tagline">Lazeez Pakwan</span>
+            <span className="logo-tagline">Where Taste Meets Tradition</span>
 
             {/* Bottom ornament line */}
             <span className="logo-ornament" />
@@ -125,7 +135,7 @@ export default function Header() {
                   href="/menu"
                   className="dropdown-item"
                   style={{
-                    borderBottom: '1px solid rgba(203,152,115,0.12)',
+                    borderBottom: '1px solid rgba(198,168,124,0.12)',
                     fontWeight: 700,
                     color: 'var(--color-gold-light)',
                     letterSpacing: '0.5px',
@@ -182,7 +192,7 @@ export default function Header() {
       {/* ════════════════════════════════════════
           MOBILE DRAWER
       ════════════════════════════════════════ */}
-      <div className={`mobile-drawer ${drawerOpen ? 'drawer-open' : ''}`} style={{ background: '#1E1208' }}>
+      <div className={`mobile-drawer ${drawerOpen ? 'drawer-open' : ''}`} style={{ background: 'var(--color-charcoal-mid)' }}>
 
         {/* ── Drawer header ── */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
@@ -191,11 +201,11 @@ export default function Header() {
               fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 700,
               color: 'var(--color-gold)', letterSpacing: '5px', lineHeight: 1,
             }}>
-              HAYAT
+              EMPIRE
             </div>
             <div style={{
               fontFamily: 'var(--font-body)', fontSize: '7.5px', fontWeight: 600,
-              color: 'rgba(250,246,240,0.38)', letterSpacing: '3px',
+              color: 'rgba(247,245,240,0.38)', letterSpacing: '3px',
               textTransform: 'uppercase', marginTop: '3px',
             }}>
               Family Restaurant
@@ -204,7 +214,7 @@ export default function Header() {
               fontFamily: 'var(--font-display)', fontStyle: 'italic',
               fontSize: '11.5px', color: 'var(--color-teak)', marginTop: '3px', letterSpacing: '0.4px',
             }}>
-              Lazeez Pakwan
+              Where Taste Meets Tradition
             </div>
           </div>
 
@@ -213,7 +223,7 @@ export default function Header() {
             aria-label="Close menu"
             style={{
               background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(203,152,115,0.2)',
+              border: '1px solid rgba(198,168,124,0.2)',
               borderRadius: '50%',
               width: '32px', height: '32px',
               cursor: 'pointer',
@@ -227,7 +237,7 @@ export default function Header() {
         </div>
 
         {/* Divider */}
-        <div style={{ height: '1px', background: 'linear-gradient(to right, rgba(203,152,115,0.35), transparent)', marginBottom: '16px' }} />
+        <div style={{ height: '1px', background: 'linear-gradient(to right, rgba(198,168,124,0.35), transparent)', marginBottom: '16px' }} />
 
         {/* ── Nav links ── */}
         <nav style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
@@ -247,7 +257,7 @@ export default function Header() {
                 fontFamily: 'var(--font-display)',
                 fontSize: '19px',
                 fontWeight: 600,
-                color: isActive(l.href) ? 'var(--color-gold-light)' : 'rgba(250,246,240,0.65)',
+                color: isActive(l.href) ? 'var(--color-gold-light)' : 'rgba(247,245,240,0.65)',
                 textDecoration: 'none',
                 padding: '8px 0',
                 borderBottom: '1px solid rgba(255,255,255,0.04)',
@@ -265,7 +275,7 @@ export default function Header() {
               }}
               onTouchEnd={e => {
                 if (!isActive(l.href)) {
-                  ;(e.currentTarget as HTMLElement).style.color = 'rgba(250,246,240,0.65)'
+                  ;(e.currentTarget as HTMLElement).style.color = 'rgba(247,245,240,0.65)'
                   ;(e.currentTarget as HTMLElement).style.paddingLeft = '0'
                 }
               }}
@@ -315,7 +325,7 @@ export default function Header() {
           <div style={{
             marginTop: '20px',
             paddingTop: '16px',
-            borderTop: '1px solid rgba(203,152,115,0.1)',
+            borderTop: '1px solid rgba(198,168,124,0.1)',
             display: 'flex',
             flexDirection: 'column',
             gap: '4px',
@@ -333,9 +343,9 @@ export default function Header() {
             </a>
             <span style={{
               fontFamily: 'var(--font-body)', fontSize: '10.5px',
-              color: 'rgba(250,246,240,0.28)', letterSpacing: '0.3px',
+              color: 'rgba(247,245,240,0.28)', letterSpacing: '0.3px',
             }}>
-              Shah Bazar Road, Hubballi
+              Opp. Railway Station, Hubballi
             </span>
           </div>
         </nav>
@@ -356,28 +366,28 @@ export default function Header() {
           position: fixed;
           top: 0; left: 0; right: 0;
           z-index: 100;
-          background: #1A1007;
-          border-bottom: 1px solid rgba(203,152,115,0.16);
+          background: var(--color-charcoal);
+          border-bottom: 1px solid rgba(198,168,124,0.16);
           transition: box-shadow 400ms ease, border-color 400ms ease;
         }
 
-        /* ── Scrolled state — deepens shadow & brightens gold line ── */
+        /* ── Scrolled state — deepens shadow & brightens brass line ── */
         .luxury-header.header-scrolled {
           box-shadow:
-            0 1px 0 rgba(203,152,115,0.24),
+            0 1px 0 rgba(198,168,124,0.24),
             0 4px 32px rgba(0,0,0,0.55);
-          border-bottom-color: rgba(203,152,115,0.28);
+          border-bottom-color: rgba(198,168,124,0.28);
         }
 
-        /* ── Gold top pixel stripe — always visible, amplifies on scroll ── */
+        /* ── Brass top pixel stripe — always visible, amplifies on scroll ── */
         .header-gold-stripe {
           height: 1px;
-          background: linear-gradient(to right, transparent, rgba(203,152,115,0.45), transparent);
+          background: linear-gradient(to right, transparent, rgba(198,168,124,0.45), transparent);
           opacity: 1;
           transition: opacity 400ms ease;
         }
         .header-scrolled .header-gold-stripe {
-          background: linear-gradient(to right, transparent, rgba(203,152,115,0.7), transparent);
+          background: linear-gradient(to right, transparent, rgba(198,168,124,0.7), transparent);
         }
 
         /* ── Inner layout ── */
@@ -407,7 +417,7 @@ export default function Header() {
           font-size: 12.5px;
           font-weight: 500;
           letter-spacing: 0.6px;
-          color: rgba(250,246,240,0.68);
+          color: rgba(247,245,240,0.68);
           text-decoration: none;
           padding: 8px 13px;
           border-radius: 3px;
@@ -424,7 +434,7 @@ export default function Header() {
         }
         .hdr-link:hover {
           color: var(--color-gold-light);
-          background: rgba(203,152,115,0.07);
+          background: rgba(0,0,0,0.12);
         }
         .hdr-link--active {
           color: var(--color-gold-light) !important;
@@ -436,7 +446,7 @@ export default function Header() {
           left: 13px;
           right: 13px;
           height: 1px;
-          background: linear-gradient(to right, transparent, rgba(203,152,115,0.7), transparent);
+          background: linear-gradient(to right, transparent, rgba(198,168,124,0.7), transparent);
         }
 
         /* ── CTA button ── */
@@ -451,8 +461,8 @@ export default function Header() {
           font-weight: 700;
           letter-spacing: 2px;
           text-transform: uppercase;
-          color: #1C1008;
-          background: linear-gradient(135deg, #CB9873 0%, #EBD0B9 55%, #CB9873 100%);
+          color: var(--color-charcoal);
+          background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-bright) 55%, var(--color-gold) 100%);
           background-size: 200% 200%;
           background-position: left center;
           border: none;
@@ -461,12 +471,12 @@ export default function Header() {
           text-decoration: none;
           white-space: nowrap;
           transition: background-position 400ms ease, box-shadow 300ms ease, transform 150ms ease;
-          box-shadow: 0 2px 14px rgba(203,152,115,0.25);
+          box-shadow: 0 2px 14px rgba(198,168,124,0.30);
           flex-shrink: 0;
         }
         .hdr-cta:hover {
           background-position: right center;
-          box-shadow: 0 6px 28px rgba(203,152,115,0.45);
+          box-shadow: 0 6px 28px rgba(0,0,0,0.35), 0 2px 12px rgba(198,168,124,0.30);
           transform: translateY(-1px);
         }
         .hdr-cta:active { transform: scale(0.97) translateY(0); }
@@ -491,7 +501,7 @@ export default function Header() {
           display: block;
           width: 44px;
           height: 1px;
-          background: linear-gradient(to right, transparent, rgba(203,152,115,0.55), transparent);
+          background: linear-gradient(to right, transparent, rgba(198,168,124,0.55), transparent);
           margin: 3px 0;
         }
 
@@ -502,14 +512,14 @@ export default function Header() {
           color: var(--color-gold);
           letter-spacing: 6px;
           line-height: 1;
-          text-shadow: 0 0 28px rgba(203,152,115,0.22);
+          text-shadow: 0 0 28px rgba(198,168,124,0.22);
         }
 
         .logo-sub {
           font-family: var(--font-body);
           font-size: 8px;
           font-weight: 600;
-          color: rgba(250,246,240,0.42);
+          color: rgba(247,245,240,0.42);
           letter-spacing: 4px;
           text-transform: uppercase;
           margin-top: 2px;
@@ -520,7 +530,7 @@ export default function Header() {
           font-family: var(--font-display);
           font-style: italic;
           font-size: 11px;
-          color: var(--color-teak);
+          color: var(--color-gold-light);
           letter-spacing: 0.5px;
           margin-top: 1px;
           line-height: 1;
@@ -533,7 +543,7 @@ export default function Header() {
           background: none;
           border: none;
           cursor: pointer;
-          color: rgba(250,246,240,0.82);
+          color: rgba(247,245,240,0.82);
           padding: 8px;
           border-radius: 4px;
           transition: color 200ms, background 200ms;
@@ -544,7 +554,7 @@ export default function Header() {
         }
         .hdr-hamburger:hover {
           color: var(--color-gold-light);
-          background: rgba(203,152,115,0.08);
+          background: rgba(0,0,0,0.12);
         }
 
         /* ── Responsive ── */

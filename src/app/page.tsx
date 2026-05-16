@@ -10,9 +10,9 @@ import ReviewsSection from '@/components/sections/ReviewsSection'
 import USPBar from '@/components/sections/USPBar'
 
 export const metadata: Metadata = {
-  title: 'Hayat Family Restaurant Hubballi | Best Biryani, Tandoori & Mughal Cuisine',
-  description: 'Hayat Family Restaurant Lazeez Pakwan in Hubballi — serving authentic Mughal & Tandoor cuisine. Beef Biryani, Tandoori Chicken, Kababs & more. Open daily 11 AM–11 PM, Shah Bazar Road.',
-  alternates: { canonical: 'https://hayatfamilyrestaurant.in' },
+  title: 'Empire Family Restaurant Hubballi | Best Biryani, Mandi & Family Dining',
+  description: 'Empire Family Restaurant in Hubballi — serving authentic Mughal & Tandoor cuisine. Beef Biryani, Tandoori Chicken, Kababs & more. Open daily 11 AM–11 PM, Shah Bazar Road.',
+  alternates: { canonical: 'https://empirefamilyrestaurant.in' },
 }
 
 export default function HomePage() {

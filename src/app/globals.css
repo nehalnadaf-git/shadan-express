@@ -1,55 +1,82 @@
 @import "tailwindcss";
 
 @theme {
-  /* === DARK SECTION PALETTE — Obsidian Walnut === */
-  --color-navy:           #1C120A;  /* obsidian walnut — signature dark */
-  --color-navy-mid:       #241508;  /* deeper obsidian */
-  --color-navy-light:     #2E1A0C;  /* lifted dark */
-  --color-charcoal:       #120C07;  /* pure near-black */
-  --color-charcoal-mid:   #1A110A;  /* charcoal mid */
+  /* ============================================================
+     EMPIRE FAMILY RESTAURANT — EMPIRE ELEGANCE PALETTE v3
+     Extracted from restaurant interior photography:
+       Muted Teal Seating · Warm Walnut Wood · Brass Sconces
+       Pearl-White Walls · Deep Espresso Charcoal
 
-  /* === LIGHT SECTION PALETTE — Warm Ivory (mirrors restaurant walls) === */
-  --color-parchment:      #FAF6F0;
-  --color-parchment-deep: #F0E6D8;
-  --color-linen:          #FDFAF7;
-  --color-linen-deep:     #F5EDE0;
-  --color-stone:          #EDE5D8;
-  --color-stone-deep:     #E4D8C8;
+     Design System:
+       BASE DARK  — Deep Espresso Charcoal (sections, header, footer)
+       PRIMARY    — Empire Teal (brand identity, nav, highlights)
+       ACCENT     — Warm Brass / Gold (CTAs, highlights, borders)
+       SECONDARY  — Walnut Brown (headings, warmth, depth)
+       LIGHT BG   — Pearl White / Warm Off-White (light sections)
+       TEXT DARK  — Deep Espresso Ink
+       TEXT LIGHT — Crisp Ivory
+      ============================================================ */
 
-  /* === SIGNATURE SAND — Logo Color #CB9873 === */
-  --color-gold:           #CB9873;  /* THE logo colour — signature sand */
-  --color-gold-light:     #EBD0B9;  /* pale copper highlight */
-  --color-gold-bright:    #F5E4D5;  /* soft blush highlight */
-  --color-gold-dim:       rgba(203,152,115,0.15);
-  --color-gold-dim-dark:  rgba(203,152,115,0.08);
+  /* ── DARK BASE — Deep Espresso Charcoal ── */
+  --color-charcoal:       #1A1F21;   /* deep espresso charcoal — deepest dark */
+  --color-charcoal-mid:   #232A2D;   /* lifted charcoal mid */
+  --color-charcoal-lift:  #2D3739;   /* card / surface lift */
 
-  /* === TEXT === */
-  --color-ivory:          #FAF6F0;
-  --color-ivory-2:        #F0E6D8;
-  --color-ivory-muted:    #C8B4A0;
-  --color-ink:            #2D1C10;  /* deep cocoa */
-  --color-ink-mid:        #3A2414;
-  --color-ink-muted:      #6B4E38;
-  --color-ink-soft:       #8C7060;
+  /* ── PRIMARY — Empire Teal (from seating) ── */
+  --color-navy:           #3A6068;   /* deep empire teal — dark section base */
+  --color-navy-mid:       #2D4F56;   /* deeper teal for gradients */
+  --color-navy-light:     #4B737A;   /* classic teal — brand signature */
 
-  /* === ACCENTS === */
-  --color-teak:           #CB9873;  /* same as logo */
-  --color-copper:         #B8845A;  /* slightly deeper sand accent */
+  /* ── SIGNATURE ACCENT — Warm Brass / Gold ── */
+  --color-gold:           #C6A87C;   /* warm brass — primary accent */
+  --color-gold-light:     #DCC09A;   /* pale brass highlight */
+  --color-gold-bright:    #EDD9BC;   /* blush brass / glow */
+  --color-gold-dim:       rgba(198,168,124,0.18);
+  --color-gold-dim-dark:  rgba(198,168,124,0.09);
+
+  /* ── SECONDARY WARMTH — Walnut Wood ── */
+  --color-teak:           #4A2E1B;   /* deep walnut — secondary CTA */
+  --color-copper:         #633A21;   /* rich dark copper/walnut — body emphasis (high contrast) */
+
+  --color-oak:            #A57248;   /* warm mid-walnut */
+  --color-oak-light:      #C4986A;   /* light walnut highlight */
+
+  /* ── LIGHT SECTION PALETTE — Pearl White ── */
+  --color-parchment:      #F7F5F0;   /* pearl white — light section bg */
+  --color-parchment-deep: #EEE9E0;   /* slightly deeper pearl */
+  --color-linen:          #FAFAF8;   /* near-white warm */
+  --color-linen-deep:     #E8E2D8;   /* light section card bg */
+  --color-stone:          #DDD7CC;   /* warm stone / divider */
+  --color-stone-deep:     #CEC6B8;   /* deeper stone */
+
+  /* ── TEXT — On dark backgrounds ── */
+  --color-ivory:          #F7F5F0;   /* pearl white — primary light text */
+  --color-ivory-2:        #E8E2D8;   /* slightly warmer ivory */
+  --color-ivory-muted:    #A8A098;   /* muted warm grey — secondary light text */
+
+  /* ── TEXT — On light backgrounds ── */
+  --color-ink:            #2D3234;   /* deep espresso ink — primary dark text */
+  --color-ink-mid:        #3F4A4D;   /* mid charcoal — body dark text */
+  --color-ink-muted:      #5E7074;   /* muted teal-grey — secondary dark text */
+  --color-ink-soft:       #8B9EA2;   /* soft teal-grey — caption text */
+
+  /* ── FUNCTIONAL ── */
   --color-red-dot:        #C0392B;
   --color-green-dot:      #27AE60;
 
-  /* === BORDERS === */
-  --color-border:         rgba(203,152,115,0.22);
-  --color-border-light:   rgba(45,28,16,0.12);
-  --color-border-gold:    rgba(203,152,115,0.35);
+  /* ── BORDERS ── */
+  --color-border:         rgba(198,168,124,0.28);   /* brass border — on dark */
+  --color-border-light:   rgba(45,50,52,0.12);      /* ink border — on light */
+  --color-border-gold:    rgba(198,168,124,0.45);   /* strong brass border */
 
-  /* === SURFACES === */
-  --color-surface-dark:   rgba(255,255,255,0.03);
-  --color-surface-light:  rgba(45,28,16,0.04);
+  /* ── SURFACES ── */
+  --color-surface-dark:   rgba(255,255,255,0.04);
+  --color-surface-light:  rgba(45,50,52,0.04);
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body:    "DM Sans", sans-serif;
 }
+
 
 /* ===== BASE ===== */
 *, *::before, *::after { box-sizing: border-box; }
@@ -131,7 +158,7 @@ body {
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.4px;
-  color: rgba(250,246,240,0.75);
+  color: rgba(247,245,240,0.75);
   position: relative;
   transition: color 200ms ease;
   padding-bottom: 4px;
@@ -159,7 +186,7 @@ body {
   right: 0;
   width: min(82vw, 340px);
   height: 100dvh;
-  background: var(--color-navy);
+  background: var(--color-charcoal-mid);
   border-left: 1px solid var(--color-border);
   z-index: 200;
   transform: translateX(100%);
@@ -177,7 +204,7 @@ body {
 .drawer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(50,32,16,0.88);
+  background: rgba(26,31,33,0.88);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   z-index: 150;
@@ -195,9 +222,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #CB9873 0%, #EBD0B9 50%, #CB9873 100%);
+  background: linear-gradient(135deg, #C6A87C 0%, #A57248 50%, #C6A87C 100%);
   background-size: 200% 200%;
-  color: #1C110A;
+  color: #F7F5F0;
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 700;
@@ -213,7 +240,7 @@ body {
 }
 .btn-primary:hover {
   background-position: right center;
-  box-shadow: 0 8px 32px rgba(203,152,115,0.5), 0 0 0 1px rgba(203,152,115,0.4);
+  box-shadow: 0 8px 32px rgba(198,168,124,0.5), 0 0 0 1px rgba(198,168,124,0.4);
   transform: translateY(-1px);
 }
 .btn-primary:active { transform: scale(0.97) translateY(0); }
@@ -234,7 +261,7 @@ body {
   border-radius: 2px;
   cursor: pointer;
   transition: all 250ms ease;
-  border: 1px solid rgba(203,152,115,0.6);
+  border: 1px solid rgba(198,168,124,0.55);
   text-decoration: none;
   touch-action: manipulation;
 }
@@ -242,7 +269,7 @@ body {
   background-color: var(--color-gold);
   color: var(--color-charcoal);
   border-color: var(--color-gold);
-  box-shadow: 0 4px 20px rgba(203,152,115,0.35);
+  box-shadow: 0 4px 20px rgba(198,168,124,0.4);
 }
 .btn-secondary:active { transform: scale(0.97); }
 
@@ -270,7 +297,7 @@ body {
   background-color: var(--color-ink);
   color: var(--color-gold-light);
   border-color: var(--color-ink);
-  box-shadow: 0 4px 20px rgba(45,28,16,0.2);
+  box-shadow: 0 4px 20px rgba(45,50,52,0.2);
 }
 .btn-secondary-dark:active { transform: scale(0.97); }
 
@@ -281,7 +308,7 @@ body {
 }
 .menu-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(30,18,10,0.45);
+  box-shadow: 0 20px 60px rgba(26,31,33,0.45);
 }
 
 .gallery-card {
@@ -290,11 +317,11 @@ body {
 .gallery-card:hover {
   transform: rotate(var(--card-rotation)) scale(1.05) !important;
   box-shadow:
-    0 40px 80px rgba(18,12,7,0.5),
-    0 16px 32px rgba(18,12,7,0.35),
-    0 4px 12px  rgba(18,12,7,0.25),
-    0 1px 3px   rgba(18,12,7,0.18),
-    0 0 0 1px   rgba(203,152,115,0.35) !important;
+    0 40px 80px rgba(26,31,33,0.6),
+    0 16px 32px rgba(26,31,33,0.45),
+    0 4px 12px  rgba(26,31,33,0.30),
+    0 1px 3px   rgba(26,31,33,0.20),
+    0 0 0 1px   rgba(198,168,124,0.35) !important;
 }
 
 /* ===== WHATSAPP FLOATING BUTTON ===== */
@@ -356,19 +383,19 @@ body {
   flex: 1;
   max-width: 72px;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(203,152,115,0.55));
+  background: linear-gradient(to right, transparent, rgba(198,168,124,0.50));
 }
 .ornament::after {
-  background: linear-gradient(to left, transparent, rgba(203,152,115,0.55));
+  background: linear-gradient(to left, transparent, rgba(198,168,124,0.50));
 }
 
 /* Ornament for LIGHT sections */
 .ornament-dark::before,
 .ornament-dark::after {
-  background: linear-gradient(to right, transparent, rgba(45,28,16,0.35));
+  background: linear-gradient(to right, transparent, rgba(45,50,52,0.28));
 }
 .ornament-dark::after {
-  background: linear-gradient(to left, transparent, rgba(45,28,16,0.35));
+  background: linear-gradient(to left, transparent, rgba(45,50,52,0.28));
 }
 
 /* ===== VEG / NON-VEG DOTS ===== */
@@ -421,14 +448,14 @@ body {
   text-decoration: none;
   line-height: 1.4;
   gap: 4px;
-  /* Ivory ring via box-shadow — no z-index issues */
-  box-shadow: 0 0 0 10px #FAF6F0;
+  /* Pearl white ring via box-shadow */
+  box-shadow: 0 0 0 10px var(--color-parchment), 0 4px 24px rgba(198,168,124,0.25);
 }
 .hero-cta-pill:hover {
   transform: scale(1.07);
-  background: var(--color-navy-light);
-  color: var(--color-ivory);
-  box-shadow: 0 0 0 10px #FAF6F0;
+  background: var(--color-gold);
+  color: var(--color-charcoal);
+  box-shadow: 0 0 0 10px var(--color-parchment), 0 8px 32px rgba(198,168,124,0.4);
 }
 .hero-cta-pill:active { transform: scale(0.97); }
 
@@ -453,12 +480,12 @@ body {
   top: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(18,12,7,0.98);
+  background: rgba(26,31,33,0.97);
   border: 1px solid var(--color-border);
   border-radius: 4px;
   padding: 8px 0;
   min-width: 230px;
-  box-shadow: 0 24px 64px rgba(8,5,2,0.85), 0 1px 0 rgba(203,152,115,0.15) inset;
+  box-shadow: 0 24px 64px rgba(26,31,33,0.9), 0 1px 0 rgba(198,168,124,0.12) inset;
   opacity: 0;
   pointer-events: none;
   transform: translateX(-50%) translateY(-10px);
@@ -475,7 +502,7 @@ body {
 .dropdown-item {
   display: block;
   padding: 10px 20px;
-  color: rgba(250,246,240,0.72);
+  color: rgba(247,245,240,0.72);
   font-family: var(--font-body);
   font-size: 13px;
   letter-spacing: 0.3px;
@@ -483,7 +510,7 @@ body {
   text-decoration: none;
 }
 .dropdown-item:hover {
-  background: rgba(203,152,115,0.12);
+  background: rgba(198,168,124,0.10);
   color: var(--color-gold-light);
 }
 
@@ -504,7 +531,7 @@ body {
 }
 
 /* ===== LIGHTBOX OVERRIDE ===== */
-.yarl__root { --yarl__color_backdrop: rgba(12,8,4,0.97); }
+.yarl__root { --yarl__color_backdrop: rgba(26,31,33,0.97); }
 
 /* Ensure slide wrapper doesn't clip the shadow */
 .yarl__slide {
@@ -523,7 +550,7 @@ body {
     0 32px 56px  rgba(0, 0, 0, 0.60),
     0 8px  20px  rgba(0, 0, 0, 0.50),
     0 2px  6px   rgba(0, 0, 0, 0.40),
-    0 0    0 1px rgba(203, 152, 115, 0.15) !important;
+    0 0    0 1px rgba(198,168,124,0.18) !important;
 }
 
 /* Remove any wrapper overflow clipping */
@@ -662,10 +689,10 @@ body {
   transform-origin: left center;
 }
 
-/* ── Gold pulse glow (for CTAs / badges) ── */
+/* ── Brass pulse glow (for CTAs / badges) ── */
 @keyframes gold-pulse {
-  0%, 100% { box-shadow: 0 0 0 0   rgba(203,152,115,0); }
-  50%       { box-shadow: 0 0 0 10px rgba(203,152,115,0); }
+  0%, 100% { box-shadow: 0 0 0 0   rgba(198,168,124,0); }
+  50%       { box-shadow: 0 0 0 10px rgba(198,168,124,0); }
 }
 
 /* ── Floating entrance for hero elements ── */
@@ -732,7 +759,7 @@ body {
 .snap-scroll::-webkit-scrollbar { display: none; }
 .snap-item { scroll-snap-align: center; flex-shrink: 0; }
 
-/* ===== HAYAT SPECIALS CARDS GRID ===== */
+/* ===== EMPIRE SPECIALS CARDS GRID ===== */
 .sig-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -755,7 +782,7 @@ body {
 
 /* ===== GOLD GRADIENT TEXT ===== */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #CB9873 0%, #EBD0B9 50%, #CB9873 100%);
+  background: linear-gradient(135deg, #C6A87C 0%, #DCC09A 50%, #A57248 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -771,16 +798,16 @@ body {
 
 /* ===== LIGHT SECTION CARD ===== */
 .light-card {
-  background: rgba(255,255,255,0.7);
-  border: 1px solid rgba(45,28,16,0.09);
+  background: rgba(250,249,248,0.75);
+  border: 1px solid rgba(45,50,52,0.09);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 16px rgba(45,28,16,0.06);
+  box-shadow: 0 2px 16px rgba(45,50,52,0.06);
 }
 .light-card:hover {
-  background: rgba(255,255,255,0.92);
-  border-color: rgba(203,152,115,0.3);
-  box-shadow: 0 8px 40px rgba(45,28,16,0.12);
+  background: rgba(250,249,248,0.97);
+  border-color: rgba(198,168,124,0.30);
+  box-shadow: 0 8px 40px rgba(45,50,52,0.10);
 }
 
 /* ===== CATEGORY CARD HOVER ===== */
@@ -793,18 +820,18 @@ body {
 .category-card .card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(18,12,7,0.88) 0%, rgba(18,12,7,0.38) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(26,31,33,0.88) 0%, rgba(26,31,33,0.38) 60%, transparent 100%);
   transition: background 300ms ease;
 }
 .category-card:hover .card-overlay {
-  background: linear-gradient(to top, rgba(18,12,7,0.94) 0%, rgba(18,12,7,0.56) 60%, rgba(203,152,115,0.08) 100%);
+  background: linear-gradient(to top, rgba(26,31,33,0.94) 0%, rgba(26,31,33,0.56) 60%, rgba(198,168,124,0.06) 100%);
 }
 
 /* ===== LUXURY SECTION DIVIDER ===== */
 .section-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(203,152,115,0.3), transparent);
+  background: linear-gradient(to right, transparent, rgba(198,168,124,0.30), transparent);
 }
 
 /* ===== TAG PILL — dark bg ===== */
@@ -812,15 +839,15 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 1px solid rgba(203,152,115,0.35);
+  border: 1px solid rgba(198,168,124,0.30);
   border-radius: 100px;
   padding: 6px 16px;
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: rgba(250,246,240,0.65);
-  background: rgba(203,152,115,0.06);
+  color: rgba(247,245,240,0.68);
+  background: rgba(198,168,124,0.07);
 }
 
 /* ===== TAG PILL — light bg ===== */
@@ -828,7 +855,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 1px solid rgba(45,28,16,0.18);
+  border: 1px solid rgba(45,50,52,0.18);
   border-radius: 100px;
   padding: 6px 16px;
   font-family: var(--font-body);
@@ -836,7 +863,7 @@ body {
   font-weight: 500;
   letter-spacing: 1px;
   color: var(--color-ink-muted);
-  background: rgba(45,28,16,0.05);
+  background: rgba(45,50,52,0.05);
 }
 
 /* ===== MOBILE RESPONSIVE ===== */
@@ -848,7 +875,7 @@ body {
     height: 96px;
     font-size: 8.5px;
     letter-spacing: 2px;
-    box-shadow: 0 0 0 8px #FAF6F0;
+    box-shadow: 0 0 0 8px var(--color-parchment), 0 4px 16px rgba(198,168,124,0.2);
   }
 
   /* Hero heading smaller on very small screens */
@@ -897,7 +924,7 @@ body {
   /* Reservations section photo grid: 2 cols still fine, reduce gap */
   .section-pad { padding: 64px 20px; }
 
-  /* Hayat Specials: horizontal snap-scroll on mobile */
+  /*/* Empire Specials: horizontal snap-scroll on mobile */
   .sig-cards-grid {
     display: flex !important;
     overflow-x: auto !important;
@@ -924,7 +951,7 @@ body {
     width: 84px;
     height: 84px;
     font-size: 8px;
-    box-shadow: 0 0 0 7px #FAF6F0;
+    box-shadow: 0 0 0 7px var(--color-parchment);
   }
   /* About section stats: single row of 3 with smaller numbers */
   .about-stats-row {

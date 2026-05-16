@@ -8,51 +8,51 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 const featured = [
   {
-    name: 'Beef Biryani & Starters',
-    tagline: 'Slow-cooked biryanis and bold beef preparations',
-    items: ['Beef Biryani (Basmati)', 'Beef Barbeque', 'Beef Chilli', 'Beef Kadai', 'Beef Lahori'],
-    slug: 'beef-starters',
-    image: '/images/food/beef_barbeque.webp',
+    name: 'Biryani & Mandi',
+    tagline: 'Dum biryanis, Mandi Specials & fragrant rice — the heart of Empire',
+    items: ['Chicken Dum Biryani', 'Mutton Dum Biryani', 'Chicken Mandi Special', 'Chicken Tangadi Biryani', 'Veg Biryani'],
+    slug: 'biryani-rice',
+    image: '/images/food/20_bulk_chicken_biryani.webp',
   },
   {
-    name: 'Tandoori Kababs',
-    tagline: 'Char-grilled masterpieces from our clay tandoor',
-    items: ['Tandoori Chicken Full', 'Lazeez Kabab', 'Gulzari Kabab', 'Sholay Kabab', 'Murg Hariyali'],
+    name: 'Tandoori & Kababs',
+    tagline: 'Char-grilled masterpieces from our clay tandoor oven',
+    items: ['Tandoori Chicken (Full)', 'Lazeez Kabab', 'Chicken Hariyali Kabab', 'Mutton Seek Kabab', 'Chicken Kasturi Kabab'],
     slug: 'tandoori-kababs',
     image: '/images/food/07_tandoori_chicken.webp',
   },
   {
     name: 'Chicken Starters',
-    tagline: 'Sizzling chicken in every style — 20+ varieties',
+    tagline: 'Sizzling chicken in every style — 17+ varieties',
     items: ['Chicken 65', 'Chicken Barbeque', 'Chicken Dragon', 'Chicken Satay', 'Chicken Lollipop'],
     slug: 'chicken-starters',
     image: '/images/food/chicken_65.webp',
   },
 ]
 
-const vegItems = new Set(['Veg Biryani', 'Paneer Biryani', 'Paneer Butter Masala'])
+const vegItems = new Set(['Veg Biryani', 'Paneer Biryani', 'Paneer Butter Masala', 'Dal Tadka', 'Mushroom Lababdar'])
 
 
 export default function MenuPreview() {
   const sectionRef = useScrollAnimation()
   const [sidebarIdx, setSidebarIdx] = useState(0)
   const sidebarItems = [
-    { title: 'Beef Specialties', items: ['Beef Biryani', 'Beef Kadai', 'Beef Roghan Josh'], desc: 'Slow-cooked beef in rich Mughal gravies — the heart of Hayat.' },
-    { title: 'Tandoor Favourites', items: ['Lazeez Kabab', 'Gulzari Kabab', 'Tandoori Chicken'], desc: 'Perfectly charred from our clay tandoor — smoky and unforgettable.' },
-    { title: 'Chicken Delights', items: ['Chicken 65', 'Chicken Dragon', 'Chicken Satay'], desc: 'Over 20 chicken starter varieties — crispy, spiced, and bold.' },
-    { title: 'Veg Favourites', items: ['Paneer Butter Masala', 'Shahi Paneer', 'Dal Tadka'], desc: 'Rich, aromatic vegetarian dishes crafted with equal care and passion.' },
+    { title: 'Biryani Specials', items: ['Chicken Dum Biryani', 'Mutton Dum Biryani', 'Chicken Mandi Special'], desc: 'Slow-cooked dum biryanis and Arabic-style mandi — the soul of Empire cuisine.' },
+    { title: 'Tandoor Favourites', items: ['Lazeez Kabab', 'Chicken Hariyali Kabab', 'Tandoori Chicken'], desc: 'Perfectly charred from our clay tandoor — smoky, juicy and unforgettable.' },
+    { title: 'Mughlai Mains', items: ['Mutton Nalli Nihari', 'Mutton Rogan Josh', 'Chicken Lazeez'], desc: 'Slow-cooked royal Mughlai gravies — rich, aromatic and deeply satisfying.' },
+    { title: 'Veg Favourites', items: ['Paneer Butter Masala', 'Mushroom Lababdar', 'Nawabi Thaali'], desc: 'Rich aromatic vegetarian dishes and paneer specialties crafted with equal care.' },
   ]
 
   return (
     <section ref={sectionRef} style={{
-      background: 'linear-gradient(160deg, #FDF8F2 0%, #F8F0E4 60%, #F4EAD5 100%)',
+      background: 'linear-gradient(160deg, var(--color-linen) 0%, var(--color-parchment) 60%, var(--color-parchment-deep) 100%)',
       padding: 'clamp(80px, 10vw, 140px) clamp(24px, 5vw, 80px)',
       position: 'relative', overflow: 'hidden',
     }}>
       {/* Subtle warm texture */}
-      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(ellipse at 80% 50%, rgba(203,152,115,0.07) 0%, transparent 55%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.2), transparent)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(18,12,7,0.08), transparent)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(ellipse at 80% 50%, rgba(198,168,124,0.06) 0%, transparent 55%)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.18), transparent)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(45,50,52,0.08), transparent)', pointerEvents: 'none' }} />
 
       <div style={{ maxWidth: '1300px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         {/* Header */}
@@ -76,37 +76,87 @@ export default function MenuPreview() {
           <div style={{
             background: 'rgba(255,255,255,0.75)',
             borderRadius: '6px', padding: '28px',
-            border: '1px solid rgba(18,12,7,0.1)',
+            border: '1px solid rgba(45,50,52,0.1)',
             backdropFilter: 'blur(12px)',
-            boxShadow: '0 4px 24px rgba(18,12,7,0.06)',
+            boxShadow: '0 4px 24px rgba(45,50,52,0.06)',
           }} className="menu-sidebar">
             <Utensils size={20} color="var(--color-copper)" strokeWidth={1.5} style={{ marginBottom: '14px' }} />
-            <h3 style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '20px', color: 'var(--color-ink)', marginBottom: '16px', fontWeight: 600 }}>
+            <h3 style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '22px', color: 'var(--color-ink)', marginBottom: '18px', fontWeight: 600, letterSpacing: '-0.2px' }}>
               {sidebarItems[sidebarIdx].title}
             </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {sidebarItems[sidebarIdx].items.map(item => (
-                <li key={item} style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-ink-mid)', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--color-copper)', flexShrink: 0 }} />
+                <li key={item} style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-ink)', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 500 }}>
+                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--color-copper)', flexShrink: 0, boxShadow: '0 0 0 2px rgba(139, 94, 60, 0.1)' }} />
                   {item}
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', color: 'var(--color-ink-soft)', lineHeight: 1.65, marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-ink-mid)', lineHeight: 1.7, marginBottom: '24px' }}>
               {sidebarItems[sidebarIdx].desc}
             </p>
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <button onClick={() => setSidebarIdx(i => (i - 1 + sidebarItems.length) % sidebarItems.length)}
-                style={{ width: '34px', height: '34px', border: '1px solid rgba(18,12,7,0.15)', borderRadius: '2px', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-copper)', transition: 'all 200ms' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(181,116,58,0.1)' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent' }}>
-                <ChevronLeft size={16} />
+            <div style={{ display: 'flex', gap: '10px', marginTop: '4px' }}>
+              <button 
+                onClick={() => setSidebarIdx(i => (i - 1 + sidebarItems.length) % sidebarItems.length)}
+                aria-label="Previous category"
+                style={{ 
+                  width: '44px', 
+                  height: '44px', 
+                  border: 'none', 
+                  borderRadius: '6px', 
+                  background: 'var(--color-ink)', 
+                  cursor: 'pointer', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  color: 'var(--color-ivory)', 
+                  transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.15)',
+                }}
+                onMouseEnter={e => { 
+                  const el = e.currentTarget as HTMLElement;
+                  el.style.background = 'var(--color-navy-light)';
+                  el.style.transform = 'translateY(-2px)';
+                  el.style.boxShadow = '0 6px 18px rgba(0,0,0,0.25)';
+                }}
+                onMouseLeave={e => { 
+                  const el = e.currentTarget as HTMLElement;
+                  el.style.background = 'var(--color-ink)';
+                  el.style.transform = 'translateY(0)';
+                  el.style.boxShadow = '0 4px 14px rgba(0,0,0,0.15)';
+                }}>
+                <ChevronLeft size={22} strokeWidth={2.5} />
               </button>
-              <button onClick={() => setSidebarIdx(i => (i + 1) % sidebarItems.length)}
-                style={{ width: '34px', height: '34px', border: '1px solid rgba(18,12,7,0.15)', borderRadius: '2px', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-copper)', transition: 'all 200ms' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(181,116,58,0.1)' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent' }}>
-                <ChevronRight size={16} />
+              <button 
+                onClick={() => setSidebarIdx(i => (i + 1) % sidebarItems.length)}
+                aria-label="Next category"
+                style={{ 
+                  width: '44px', 
+                  height: '44px', 
+                  border: 'none', 
+                  borderRadius: '6px', 
+                  background: 'var(--color-ink)', 
+                  cursor: 'pointer', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  color: 'var(--color-ivory)', 
+                  transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.15)',
+                }}
+                onMouseEnter={e => { 
+                  const el = e.currentTarget as HTMLElement;
+                  el.style.background = 'var(--color-navy-light)';
+                  el.style.transform = 'translateY(-2px)';
+                  el.style.boxShadow = '0 6px 18px rgba(0,0,0,0.25)';
+                }}
+                onMouseLeave={e => { 
+                  const el = e.currentTarget as HTMLElement;
+                  el.style.background = 'var(--color-ink)';
+                  el.style.transform = 'translateY(0)';
+                  el.style.boxShadow = '0 4px 14px rgba(0,0,0,0.15)';
+                }}>
+                <ChevronRight size={22} strokeWidth={2.5} />
               </button>
             </div>
           </div>
@@ -121,9 +171,9 @@ export default function MenuPreview() {
                 <div className="menu-card" style={{
                   borderRadius: '6px',
                   overflow: 'hidden',
-                  border: `1px solid ${i === 1 ? 'rgba(203,152,115,0.45)' : 'rgba(18,12,7,0.09)'}`,
+                  border: `1px solid ${i === 1 ? 'rgba(198,168,124,0.45)' : 'rgba(45,50,52,0.09)'}`,
                   background: 'white',
-                  boxShadow: i === 1 ? '0 8px 32px rgba(203,152,115,0.14)' : '0 2px 12px rgba(18,12,7,0.06)',
+                  boxShadow: i === 1 ? '0 8px 32px rgba(198,168,124,0.14)' : '0 2px 12px rgba(45,50,52,0.06)',
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
@@ -141,7 +191,7 @@ export default function MenuPreview() {
                     {/* Gradient overlay */}
                     <div style={{
                       position: 'absolute', inset: 0,
-                      background: 'linear-gradient(to top, rgba(30,17,9,0.65) 0%, rgba(30,17,9,0.15) 50%, transparent 100%)',
+                      background: 'linear-gradient(to top, rgba(45,50,52,0.65) 0%, rgba(45,50,52,0.15) 50%, transparent 100%)',
                     }} />
 
                   </div>
@@ -152,7 +202,7 @@ export default function MenuPreview() {
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: 'var(--color-ink-soft)', marginBottom: '16px', lineHeight: 1.55 }}>{cat.tagline}</p>
 
                     {/* Divider */}
-                    <div style={{ height: '1px', background: 'linear-gradient(to right, rgba(203,152,115,0.25), transparent)', marginBottom: '14px' }} />
+                    <div style={{ height: '1px', background: 'linear-gradient(to right, rgba(198,168,124,0.25), transparent)', marginBottom: '14px' }} />
 
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', flex: 1 }}>
                       {cat.items.map(item => (
@@ -165,12 +215,14 @@ export default function MenuPreview() {
 
                     {/* Explore link */}
                     <div style={{
-                      marginTop: '16px',
-                      fontFamily: 'var(--font-body)', fontSize: '11px', fontWeight: 700,
-                      color: 'var(--color-copper)', letterSpacing: '1.5px', textTransform: 'uppercase',
-                      display: 'flex', alignItems: 'center', gap: '4px',
+                      marginTop: '20px',
+                      paddingTop: '14px',
+                      borderTop: '1px solid rgba(45,50,52,0.06)',
+                      fontFamily: 'var(--font-body)', fontSize: '12px', fontWeight: 700,
+                      color: 'var(--color-ink)', letterSpacing: '1.5px', textTransform: 'uppercase',
+                      display: 'flex', alignItems: 'center', gap: '6px',
                     }}>
-                      Explore →
+                      Explore Menu <span style={{ color: 'var(--color-copper)', fontSize: '16px' }}>→</span>
                     </div>
                   </div>
                 </div>
@@ -179,9 +231,9 @@ export default function MenuPreview() {
           </div>
         </div>
 
-        <div className="fade-up" style={{ textAlign: 'right', marginTop: '32px' }}>
-          <Link href="/menu" style={{ fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: 600, color: 'var(--color-copper)', textDecoration: 'none', letterSpacing: '1.5px', textTransform: 'uppercase', borderBottom: '1px solid rgba(181,116,58,0.4)', paddingBottom: '2px' }}>
-            View Full Menu →
+        <div className="fade-up" style={{ textAlign: 'center', marginTop: '48px' }}>
+          <Link href="/menu" className="btn-primary" style={{ display: 'inline-flex' }}>
+            View Full Menu
           </Link>
         </div>
       </div>
@@ -212,7 +264,7 @@ export default function MenuPreview() {
         @media (max-width: 480px) {
           .menu-cards-grid > a { flex: 0 0 85vw !important; }
         }
-        .menu-card:hover { transform: translateY(-5px) !important; box-shadow: 0 20px 52px rgba(18,12,7,0.13) !important; border-color: rgba(203,152,115,0.4) !important; }
+        .menu-card:hover { transform: translateY(-5px) !important; box-shadow: 0 20px 52px rgba(45,50,52,0.12) !important; border-color: rgba(198,168,124,0.45) !important; }
         .menu-card:hover img { transform: scale(1.04) !important; }
       `}</style>
     </section>

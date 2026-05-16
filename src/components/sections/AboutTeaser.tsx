@@ -11,15 +11,51 @@ export default function AboutTeaser() {
       ref={sectionRef}
       id="about-teaser"
       style={{
-        background: 'linear-gradient(160deg, #1C120A 0%, #241508 55%, #1C120A 100%)',
+        background: 'linear-gradient(135deg, #0e1112 0%, #171b1d 50%, #0e1112 100%)',
         padding: 'clamp(80px, 10vw, 140px) clamp(24px, 5vw, 80px)',
         position: 'relative',
         overflow: 'hidden',
       }}>
-      {/* Ambient glows */}
-      <div style={{ position: 'absolute', top: '-15%', right: '-8%', width: '55%', height: '75%', background: 'radial-gradient(ellipse at center, rgba(203,152,115,0.06) 0%, transparent 65%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: '-10%', left: '-5%', width: '40%', height: '60%', background: 'radial-gradient(ellipse at center, rgba(203,152,115,0.03) 0%, transparent 65%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.25), transparent)', pointerEvents: 'none' }} />
+      
+      {/* Ultra-Premium Smooth Organic Curves (Liquid Gold / Silk Effect) */}
+      <svg viewBox="0 0 1440 800" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.35, pointerEvents: 'none' }} preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gold-silk" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="var(--color-gold)" stopOpacity="0.0" />
+            <stop offset="40%" stopColor="var(--color-gold-light)" stopOpacity="0.8" />
+            <stop offset="60%" stopColor="var(--color-gold)" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="var(--color-gold-muted)" stopOpacity="0.0" />
+          </linearGradient>
+          <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
+        </defs>
+
+        <g fill="none" stroke="url(#gold-silk)" filter="url(#soft-glow)">
+          {/* Top flowing silk ribbon */}
+          <path d="M-100,150 C400,0 700,500 1540,100" strokeWidth="0.5" />
+          <path d="M-100,180 C420,40 720,460 1540,140" strokeWidth="1" />
+          <path d="M-100,210 C440,80 740,420 1540,180" strokeWidth="2.5" />
+          <path d="M-100,240 C460,120 760,380 1540,220" strokeWidth="1" />
+          <path d="M-100,270 C480,160 780,340 1540,260" strokeWidth="0.5" />
+
+          {/* Bottom sweeping wave */}
+          <path d="M-100,600 C300,900 900,400 1540,750" strokeWidth="0.5" />
+          <path d="M-100,630 C320,860 920,440 1540,770" strokeWidth="1" />
+          <path d="M-100,660 C340,820 940,480 1540,790" strokeWidth="3" />
+          <path d="M-100,690 C360,780 960,520 1540,810" strokeWidth="1" />
+          <path d="M-100,720 C380,740 980,560 1540,830" strokeWidth="0.5" />
+          
+          {/* Elegant intersecting structural curves */}
+          <path d="M500,-100 C800,200 1000,500 1300,900" strokeWidth="1.5" opacity="0.6" />
+          <path d="M540,-100 C840,200 1040,500 1340,900" strokeWidth="0.5" opacity="0.4" />
+        </g>
+      </svg>
+
+      {/* Heavy Cinematic Ambient Light Overlays (Refined) */}
+      <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '60%', height: '80%', background: 'radial-gradient(ellipse, rgba(198,168,124,0.06) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
+      <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50%', height: '70%', background: 'radial-gradient(ellipse, rgba(58, 96, 104, 0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         {/* Eyebrow */}
@@ -33,20 +69,20 @@ export default function AboutTeaser() {
           {/* Left: Text */}
           <div data-animate="fade-right">
             <h2 className="heading-section" style={{ color: 'var(--color-ivory)', marginBottom: '28px', maxWidth: '500px' }}>
-              A Heritage of Mughal Flavour —{' '}
-              <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Crafted</em>{' '}
-              With Generations of Passion
+              A Modern Family Dining Destination —{' '}
+              <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Where Taste</em>{' '}
+              Meets Tradition
             </h2>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'rgba(200,184,154,0.8)', lineHeight: 1.85, marginBottom: '36px' }}>
-              Located in the vibrant heart of Shah Bazar Road, Hayat Family Restaurant Lazeez Pakwan is a culinary haven where Mughal heritage meets warm family hospitality. Known for bold flavours, authentic recipes, and exceptional service — every meal here feels like a royal occasion.
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'var(--color-ivory-muted)', lineHeight: 1.85, marginBottom: '36px' }}>
+              Located near Hubballi Railway Station, Empire Family Restaurant blends rich North Indian, Mughlai, Chinese & Biryani flavours with warm family hospitality. A comfortable, elegant space where every meal is an experience — cozy ambiance, hygienic kitchens, and attentive service that feels like home.
             </p>
 
             {/* Stats row */}
             <div className="about-stats-row" style={{ display: 'flex', gap: '40px', marginBottom: '40px', flexWrap: 'wrap' }}>
               {[
-                { num: '500+', label: 'Happy Families / Month' },
+                { num: '100%', label: 'Authentic Taste' },
                 { num: '4.5★', label: 'Google Rating' },
-                { num: '100%', label: 'Authentic Flavours' },
+                { num: '130+', label: 'Dishes on Menu' },
               ].map((s) => (
                 <div key={s.label}>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: '38px', fontWeight: 700, color: 'var(--color-gold)', lineHeight: 1 }}>{s.num}</div>
@@ -67,33 +103,33 @@ export default function AboutTeaser() {
               aspectRatio: '4/5',
               borderRadius: '4px',
               overflow: 'hidden',
-              boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(203,152,115,0.2)',
+              boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(198,168,124,0.18)',
             }}>
               <Image
-                src="/images/restaurant/entrance.webp"
-                alt="Hayat Family Restaurant Front — Hubballi"
+                src="/our-story.webp"
+                alt="Empire Family Restaurant — Our Story"
                 fill
                 sizes="(max-width: 768px) 90vw, 45vw"
                 style={{ objectFit: 'cover' }}
               />
-              {/* Warm tint overlay */}
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(203,152,115,0.06) 0%, transparent 40%, transparent 60%, rgba(203,152,115,0.04) 100%)', pointerEvents: 'none' }} />
+              {/* Warm gold tint overlay */}
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(198,168,124,0.05) 0%, transparent 40%, transparent 60%, rgba(198,168,124,0.03) 100%)', pointerEvents: 'none' }} />
               {/* Serving tag — glassmorphism */}
               <div style={{
                 position: 'absolute', bottom: '20px', left: '20px',
-                background: 'rgba(255,255,255,0.07)',
-                backdropFilter: 'blur(24px) saturate(160%)',
-                WebkitBackdropFilter: 'blur(24px) saturate(160%)',
-                border: '1px solid rgba(203,152,115,0.45)',
+                background: 'rgba(26, 31, 33, 0.90)', // Dark ink background for contrast
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                border: '1px solid rgba(198,168,124,0.35)', // Subtle brass border
                 borderRadius: '8px',
-                padding: '14px 22px',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.35), 0 1px 0 rgba(255,255,255,0.08) inset',
+                padding: '14px 24px',
+                boxShadow: '0 12px 40px rgba(0,0,0,0.5)',
                 overflow: 'hidden',
               }}>
                 {/* Inner top-edge shimmer line */}
-                <div style={{ position: 'absolute', top: 0, left: '10%', right: '10%', height: '1px', background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent)', pointerEvents: 'none' }} />
-                <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '15px', color: 'var(--color-gold-light)', textShadow: '0 0 18px rgba(232,188,106,0.35)' }}>Serving Hubballi</div>
-                <div style={{ fontFamily: 'var(--font-body)', fontSize: '10.5px', color: 'rgba(250,246,240,0.65)', letterSpacing: '2.5px', textTransform: 'uppercase', marginTop: '3px' }}>With Pride &amp; Passion</div>
+                <div style={{ position: 'absolute', top: 0, left: '10%', right: '10%', height: '1px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.6), transparent)', pointerEvents: 'none' }} />
+                <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '17px', color: 'var(--color-ivory)', fontWeight: 600 }}>Serving Hubballi</div>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: '11px', color: 'var(--color-gold)', letterSpacing: '2.5px', textTransform: 'uppercase', marginTop: '5px', fontWeight: 700 }}>With Pride &amp; Passion</div>
               </div>
             </div>
           </div>

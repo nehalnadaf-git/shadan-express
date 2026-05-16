@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import AboutPageClient from './AboutPageClient'
 
 export const metadata: Metadata = {
-  title: 'About Us | Hayat Family Restaurant Hubballi — Our Story',
-  description: 'Learn about Hayat Family Restaurant Lazeez Pakwan — a Hubballi landmark serving authentic Mughal & Tandoor cuisine with warmth, heritage, and family hospitality.',
-  alternates: { canonical: 'https://hayatfamilyrestaurant.in/about' },
+  title: 'About Us | Empire Family Restaurant Hubballi — Our Story & Brand',
+  description: 'Discover Empire Family Restaurant — a modern family dining destination in Hubballi near Railway Station, serving North Indian, Mughlai, Chinese, Biryani, Mandi, Tandoori & Kabab cuisine with warm hospitality.',
+  alternates: { canonical: 'https://empirefamilyrestaurant.in/about' },
 }
 
 export default function AboutPage() {

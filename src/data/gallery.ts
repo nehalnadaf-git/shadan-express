@@ -8,17 +8,11 @@ export type GalleryItem = {
 }
 
 export const galleryItems: GalleryItem[] = [
-  { id: 1,  src: '/images/restaurant/dining-hall.webp',    alt: 'Hayat Family Restaurant Dining Hall Interior',   caption: 'Dining Hall',      category: 'interior',  rotation: -2   },
-  { id: 2,  src: '/images/restaurant/ac-section.webp',     alt: 'Hayat Restaurant AC Dining Section',             caption: 'AC Section',       category: 'interior',  rotation: 1.5  },
-  { id: 3,  src: '/images/restaurant/entrance.webp',       alt: 'Hayat Family Restaurant Front Entrance',         caption: 'Entrance',         category: 'entrance',  rotation: -1   },
-  { id: 4,  src: '/images/restaurant/ambience (2).webp',   alt: 'Hayat Restaurant Ambience Details',              caption: 'Ambience Detail',  category: 'ambience',  rotation: 2    },
-  { id: 6,  src: '/images/restaurant/family-section.webp', alt: 'Family Dining at Hayat Restaurant',              caption: 'Family Dining',    category: 'ambience',  rotation: 1    },
-  { id: 7,  src: '/images/restaurant/ambience.webp',       alt: 'Hayat Restaurant Warm Ambience',                 caption: 'Ambience',         category: 'ambience',  rotation: -2.5 },
-  { id: 10, src: '/images/restaurant/waiting-area.webp',   alt: 'Hayat Restaurant Waiting Area',                  caption: 'Waiting Area',     category: 'interior',  rotation: 1.5  },
-  { id: 11, src: '/images/restaurant/inside-empty.webp',   alt: 'Hayat Restaurant Interior — Spacious Setup',     caption: 'Interior',         category: 'interior',  rotation: -1.5 },
-  { id: 13, src: '/images/restaurant/waiting-area2.webp',  alt: 'Waiting Area — Hayat Restaurant',                caption: 'Lounge Area',      category: 'interior',  rotation: 2    },
-  { id: 15, src: '/images/restaurant/inside-empty2.webp',  alt: 'Hayat Restaurant — Wide Dining Hall',            caption: 'Main Hall',        category: 'interior',  rotation: 0.5  },
-  { id: 16, src: '/images/restaurant/Wash-bason.webp',     alt: 'Hayat Restaurant Amenities',                     caption: 'Amenities',        category: 'interior',  rotation: -1.5 },
+  { id: 1,  src: '/images/restaurant/1.webp', alt: 'Empire Family Restaurant Interior',         caption: 'Empire Entrance', category: 'interior',  rotation: -2   },
+  { id: 2,  src: '/images/restaurant/2new.webp', alt: 'Empire Restaurant AC Dining Section',       caption: 'Empire AC Section', category: 'interior',  rotation: 1.5  },
+  { id: 3,  src: '/images/restaurant/3.webp', alt: 'Family Dining at Empire Restaurant',        caption: 'Empire Dining',    category: 'ambience',  rotation: -1   },
+  { id: 5,  src: '/images/restaurant/5.webp', alt: 'Empire Family Restaurant Front Entrance',   caption: 'Ambience',         category: 'entrance',  rotation: 2    },
+  { id: 6,  src: '/images/restaurant/6.webp', alt: 'Empire Restaurant Warm Ambience',           caption: 'Outside',          category: 'ambience',  rotation: 1    },
 ]
 
 

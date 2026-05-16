@@ -26,10 +26,10 @@ interface UseScrollAnimationOptions {
  */
 export function useScrollAnimation(options: UseScrollAnimationOptions = {}) {
   const {
-    selector    = '[data-animate], .fade-up',
-    threshold   = 0,
-    rootMargin  = '0px 0px -48px 0px',
-    once        = true,
+    selector = '[data-animate], .fade-up',
+    threshold = 0,
+    rootMargin = '0px 0px -48px 0px',
+    once = true,
   } = options
 
   const containerRef = useRef<HTMLElement | null>(null)

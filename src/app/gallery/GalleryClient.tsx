@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import { galleryItems, galleryCategories, type GalleryCategory } from '@/data/gallery'
 import type { SlideImage } from 'yet-another-react-lightbox'
 
+import 'yet-another-react-lightbox/styles.css'
 const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: false })
 
 export default function GalleryClient() {
@@ -32,7 +33,7 @@ export default function GalleryClient() {
               transition: 'all 200ms ease', border: '1px solid',
               background: activeCategory === cat ? 'var(--color-gold)' : 'transparent',
               color: activeCategory === cat ? 'var(--color-parchment)' : 'var(--color-navy)',
-              borderColor: activeCategory === cat ? 'var(--color-gold)' : 'rgba(18,12,7,0.2)',
+              borderColor: activeCategory === cat ? 'var(--color-gold)' : 'rgba(45,50,52,0.2)',
             }}
           >
             {cat}
@@ -52,14 +53,14 @@ export default function GalleryClient() {
               position: 'relative', 
               marginBottom: '24px',
               borderRadius: '8px',
-              border: '1px solid rgba(203,152,115,0.15)',
+              border: '1px solid rgba(198,168,124,0.15)',
               overflow: 'hidden',
               background: 'var(--color-linen)',
               transition: 'transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease',
             }}
             onMouseEnter={e => {
               e.currentTarget.style.transform = 'translateY(-8px)'
-              e.currentTarget.style.boxShadow = '0 20px 40px rgba(18,12,7,0.15)'
+              e.currentTarget.style.boxShadow = '0 20px 40px rgba(45,50,52,0.15)'
             }}
             onMouseLeave={e => {
               e.currentTarget.style.transform = 'translateY(0)'

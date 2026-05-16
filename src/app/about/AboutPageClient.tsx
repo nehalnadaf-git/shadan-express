@@ -8,32 +8,32 @@ import AboutBookingCTA from './AboutBookingCTA'
 
 const pillars = [
   {
-    icon: '🌿',
-    title: 'Authentic Ingredients',
-    desc: 'We source the finest spices, freshest meats, and premium Basmati rice to ensure every dish meets our exacting Mughal standards.',
+    icon: '🍽️',
+    title: 'Authentic Cuisine',
+    desc: 'From Chicken Dum Biryani and Mandi Specials to Mughlai gravies, Tandoori kababs and Indo-Chinese favourites — our menu spans 100+ dishes crafted with care and tradition.',
   },
   {
-    icon: '🔥',
-    title: 'Mughal Culinary Heritage',
-    desc: "Our recipes carry the legacy of North India's royal kitchens — slow-cooked, layered, and infused with generations of culinary wisdom.",
-  },
-  {
-    icon: '❤️',
-    title: 'Family Warmth',
-    desc: 'From the moment you walk in, you are treated as an honored Mehman. Our hospitality is as warm and rich as the food we serve.',
+    icon: '👨‍👩‍👧‍👦',
+    title: 'Family-First Hospitality',
+    desc: 'From the moment you walk in, you are welcomed as family. Our courteous staff, spacious seating, and group-friendly layout make every visit comfortable and memorable.',
   },
   {
     icon: '✨',
-    title: 'Premium Experience',
-    desc: 'From our elegant AC dining hall to our attentive service, every detail is crafted to make your visit an unforgettable occasion.',
+    title: 'Hygienic & Modern',
+    desc: 'We maintain strict hygiene standards in our kitchen and dining areas. Our modern interiors create an elegant, cozy atmosphere perfect for family lunches and celebratory dinners.',
+  },
+  {
+    icon: '⚡',
+    title: 'Fast & Attentive Service',
+    desc: 'Our trained team ensures prompt, attentive service — whether you are dining in with family, picking up a parcel, or hosting a large group event.',
   },
 ]
 
 const stats = [
   { num: '500+', label: 'Families Monthly' },
-  { num: '4.5★', label: 'Google Rating' },
-  { num: '48+', label: 'Reviews' },
-  { num: '100%', label: 'Authentic Recipes' },
+  { num: '3.8★', label: 'Google Rating' },
+  { num: '100+', label: 'Dishes on Menu' },
+  { num: '33+', label: 'Customer Reviews' },
 ]
 
 
@@ -62,11 +62,11 @@ export default function AboutPageClient() {
         width: '100%',
         height: 'clamp(250px, 35vw, 600px)',
         overflow: 'hidden',
-        borderBottom: '1px solid rgba(203,152,115,0.2)',
+        borderBottom: '1px solid rgba(198,168,124,0.2)',
       }}>
         <Image
-          src="/images/Full-banner.webp"
-          alt="Hayat Family Restaurant — Hubballi"
+          src="/images/empire-banner.webp"
+          alt="Empire Family Restaurant — Hubballi"
           fill priority sizes="100vw"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
@@ -83,12 +83,12 @@ export default function AboutPageClient() {
       }}>
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'radial-gradient(ellipse at 80% 20%, rgba(203,152,115,0.07) 0%, transparent 50%)',
+          background: 'radial-gradient(ellipse at 80% 20%, rgba(198,168,124,0.07) 0%, transparent 50%)',
           pointerEvents: 'none',
         }} />
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0, height: '1px',
-          background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.25), transparent)',
+          background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.25), transparent)',
         }} />
         <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <div style={{
@@ -112,7 +112,7 @@ export default function AboutPageClient() {
                 lineHeight: 1.85,
                 marginBottom: '20px',
               }}>
-                Hayat Family Restaurant Lazeez Pakwan was born from a simple yet powerful vision: to bring the grandeur of Mughal and North Indian cuisine to the heart of Hubballi. Nestled on Shah Bazar Road behind Jamiya Masjid, our restaurant has become a beloved landmark — a place where families gather, celebrations unfold, and memories are made over steaming plates of biryani and sizzling kababs.
+                Empire Family Restaurant was born from a vision to bring the best of North Indian, Mughlai, Chinese and Biryani cuisine together under one roof — right in the heart of Hubballi, near the Railway Station. Nestled in the ground floor of Shringar Palace on J C Nagar, our restaurant has become a beloved family dining destination — a place where families gather, celebrations unfold, and memories are made over steaming Dum Biryanis, sizzling Tandoori kababs, and rich Mughlai gravies.
               </p>
               <p style={{
                 fontFamily: 'var(--font-body)',
@@ -121,7 +121,7 @@ export default function AboutPageClient() {
                 lineHeight: 1.85,
                 marginBottom: '36px',
               }}>
-                The name <strong style={{ color: 'var(--color-ink)', fontWeight: 600 }}>"Hayat"</strong> — meaning <em>Life</em> — reflects our belief that great food is the celebration of life itself.
+                The name <strong style={{ color: 'var(--color-ink)', fontWeight: 600 }}>"Empire"</strong> reflects our ambition — to be the premier family dining destination in Hubballi. A place where taste meets tradition, and every guest is treated like royalty.
               </p>
               <Link href="/menu" className="btn-secondary-dark">Explore Our Menu →</Link>
             </div>
@@ -132,30 +132,30 @@ export default function AboutPageClient() {
                 aspectRatio: '4/5',
                 borderRadius: '4px',
                 overflow: 'hidden',
-                boxShadow: '0 40px 80px rgba(18,12,7,0.18), 0 12px 32px rgba(18,12,7,0.10)',
-                border: '1px solid rgba(203,152,115,0.2)',
+                boxShadow: '0 40px 80px rgba(45,50,52,0.18), 0 12px 32px rgba(45,50,52,0.10)',
+                border: '1px solid rgba(198,168,124,0.2)',
               }}>
                 <Image
-                  src="/images/restaurant/dining-hall.webp"
-                  alt="Hayat Family Restaurant Dining Hall"
+                  src="/images/restaurant/2new.webp"
+                  alt="Empire Family Restaurant Dining Hall"
                   fill sizes="(max-width:768px) 90vw, 45vw"
                   style={{ objectFit: 'cover' }}
                 />
                 <div style={{
                   position: 'absolute', inset: 0,
-                  background: 'linear-gradient(to top, rgba(18,12,7,0.4) 0%, transparent 50%)',
+                  background: 'linear-gradient(to top, rgba(45,50,52,0.4) 0%, transparent 50%)',
                 }} />
                 <div style={{
                   position: 'absolute', bottom: '20px', left: '20px',
                   background: 'rgba(255,255,255,0.08)',
                   backdropFilter: 'blur(20px) saturate(150%)',
                   WebkitBackdropFilter: 'blur(20px) saturate(150%)',
-                  border: '1px solid rgba(203,152,115,0.4)',
+                  border: '1px solid rgba(198,168,124,0.4)',
                   borderRadius: '6px',
                   padding: '10px 18px',
                 }}>
                   <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '14px', color: 'var(--color-gold-light)' }}>Our Grand Dining Hall</div>
-                  <div style={{ fontFamily: 'var(--font-body)', fontSize: '10px', color: 'rgba(250,246,240,0.6)', letterSpacing: '2px', textTransform: 'uppercase', marginTop: '3px' }}>Hubballi, Karnataka</div>
+                  <div style={{ fontFamily: 'var(--font-body)', fontSize: '10px', color: 'rgba(247,245,240,0.6)', letterSpacing: '2px', textTransform: 'uppercase', marginTop: '3px' }}>Hubballi, Karnataka</div>
                 </div>
               </div>
             </div>
@@ -172,19 +172,19 @@ export default function AboutPageClient() {
         position: 'relative',
         overflow: 'hidden',
       }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 100%, rgba(203,152,115,0.08) 0%, transparent 55%)', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.3), transparent)' }} />
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.2), transparent)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 100%, rgba(75,115,122,0.08) 0%, transparent 55%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.3), transparent)' }} />
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.2), transparent)' }} />
 
         <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <div className="fade-up" style={{ textAlign: 'center', marginBottom: 'clamp(48px,6vw,80px)' }}>
             <div className="ornament" style={{ marginBottom: '20px' }}>
-              <span className="eyebrow">The Hayat Standard</span>
+              <span className="eyebrow">The Empire Standard</span>
             </div>
             <h2 className="heading-section" style={{ color: 'var(--color-ivory)', maxWidth: '520px', margin: '0 auto' }}>
-              What Makes Us{' '}
-              <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Hayat</em>
-            </h2>
+            What Makes{' '}
+            <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Empire Special</em>
+          </h2>
           </div>
 
           <div style={{
@@ -197,7 +197,7 @@ export default function AboutPageClient() {
                 <div
                   style={{
                     background: 'rgba(255,255,255,0.03)',
-                    border: '1px solid rgba(203,152,115,0.2)',
+                    border: '1px solid rgba(198,168,124,0.2)',
                     borderRadius: '4px',
                     overflow: 'hidden',
                     height: '100%',
@@ -205,19 +205,19 @@ export default function AboutPageClient() {
                   }}
                   onMouseEnter={e => {
                     const el = e.currentTarget as HTMLElement
-                    el.style.borderColor = 'rgba(203,152,115,0.5)'
+                    el.style.borderColor = 'rgba(198,168,124,0.5)'
                     el.style.transform = 'translateY(-6px)'
-                    el.style.boxShadow = '0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(203,152,115,0.25)'
+                    el.style.boxShadow = '0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(198,168,124,0.25)'
                   }}
                   onMouseLeave={e => {
                     const el = e.currentTarget as HTMLElement
-                    el.style.borderColor = 'rgba(203,152,115,0.2)'
+                    el.style.borderColor = 'rgba(198,168,124,0.2)'
                     el.style.transform = 'translateY(0)'
                     el.style.boxShadow = 'none'
                   }}
                 >
                   {/* Gold top accent line */}
-                  <div style={{ height: '2px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.55), transparent)' }} />
+                  <div style={{ height: '2px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.55), transparent)' }} />
                   {/* Content */}
                   <div style={{ padding: 'clamp(28px,3vw,40px) clamp(24px,2.5vw,32px) clamp(32px,3.5vw,44px)' }}>
                     {/* Number badge */}
@@ -226,7 +226,7 @@ export default function AboutPageClient() {
                       fontSize: '11px',
                       fontWeight: 700,
                       letterSpacing: '3px',
-                      color: 'rgba(203,152,115,0.5)',
+                      color: 'rgba(198,168,124,0.5)',
                       textTransform: 'uppercase',
                       marginBottom: '20px',
                     }}>0{i + 1}</div>
@@ -242,7 +242,7 @@ export default function AboutPageClient() {
                     <p style={{
                       fontFamily: 'var(--font-body)',
                       fontSize: '14px',
-                      color: 'rgba(200,184,154,0.75)',
+                      color: 'rgba(168,160,152,0.82)',
                       lineHeight: 1.75,
                     }}>{p.desc}</p>
                     {/* Gold underline accent */}
@@ -265,7 +265,7 @@ export default function AboutPageClient() {
         position: 'relative',
         overflow: 'hidden',
       }}>
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.25), transparent)' }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.25), transparent)' }} />
 
         <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <div style={{
@@ -292,8 +292,8 @@ export default function AboutPageClient() {
                   <div key={info.label} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                     <div style={{
                       width: '40px', height: '40px', borderRadius: '50%', flexShrink: 0,
-                      background: 'rgba(203,152,115,0.1)',
-                      border: '1px solid rgba(203,152,115,0.25)',
+                      background: 'rgba(198,168,124,0.1)',
+                      border: '1px solid rgba(198,168,124,0.25)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       color: 'var(--color-copper)',
                     }}>{info.icon}</div>
@@ -304,7 +304,7 @@ export default function AboutPageClient() {
                         <a href={info.link} target="_blank" rel="noopener noreferrer" style={{
                           fontFamily: 'var(--font-body)', fontSize: '12px', color: 'var(--color-copper)',
                           letterSpacing: '1px', fontWeight: 600, textDecoration: 'none',
-                          borderBottom: '1px solid rgba(181,116,58,0.35)', paddingBottom: '1px',
+                          borderBottom: '1px solid rgba(198,168,124,0.35)', paddingBottom: '1px',
                           marginTop: '6px', display: 'inline-block',
                         }}>{info.linkText}</a>
                       )}
@@ -317,13 +317,13 @@ export default function AboutPageClient() {
             <div className="fade-up" style={{ transitionDelay: '150ms' }}>
               <div style={{
                 borderRadius: '8px', overflow: 'hidden',
-                border: '1px solid rgba(203,152,115,0.25)',
-                boxShadow: '0 20px 60px rgba(18,12,7,0.12)',
+                border: '1px solid rgba(198,168,124,0.25)',
+                boxShadow: '0 20px 60px rgba(45,50,52,0.12)',
                 position: 'relative', aspectRatio: '4/3',
               }}>
                 <Image
-                  src="/images/og/og-homepage.png"
-                  alt="Hayat Family Restaurant — Hubballi"
+                  src="/images/restaurant/6.webp"
+                  alt="Empire Family Restaurant — Hubballi"
                   fill
                   sizes="(max-width:768px) 90vw, 45vw"
                   style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -353,8 +353,8 @@ export default function AboutPageClient() {
         position: 'relative',
         overflow: 'hidden',
       }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 50%, rgba(203,152,115,0.10) 0%, transparent 60%)', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(203,152,115,0.35), transparent)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 50%, rgba(198,168,124,0.10) 0%, transparent 60%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.35), transparent)' }} />
 
         <div style={{ maxWidth: '680px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <div className="fade-up">
@@ -363,7 +363,7 @@ export default function AboutPageClient() {
             </div>
             <h2 className="heading-section" style={{ color: 'var(--color-ivory)', marginBottom: '20px' }}>
               Your Table Awaits at{' '}
-              <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Hayat</em>
+              <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Empire</em>
             </h2>
             <p style={{
               fontFamily: 'var(--font-body)',
@@ -372,7 +372,7 @@ export default function AboutPageClient() {
               maxWidth: '480px', margin: '0 auto 40px',
               lineHeight: 1.8,
             }}>
-              Experience the magic of Hayat — where every meal is a celebration and every guest is our honored Mehman.
+              Experience the magic of Empire — where every meal is a celebration, every family is welcome, and every visit leaves you craving for more.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <AboutBookingCTA />
@@ -397,8 +397,8 @@ export default function AboutPageClient() {
           .about-stats-grid {
             grid-template-columns: repeat(2,1fr) !important;
           }
-          .about-stats-grid > div { border-right: none !important; border-bottom: 1px solid rgba(203,152,115,0.15); }
-          .about-stats-grid > div:nth-child(odd) { border-right: 1px solid rgba(203,152,115,0.15) !important; }
+          .about-stats-grid > div { border-right: none !important; border-bottom: 1px solid rgba(198,168,124,0.15); }
+          .about-stats-grid > div:nth-child(odd) { border-right: 1px solid rgba(198,168,124,0.15) !important; }
           .about-stats-grid > div:nth-last-child(-n+2) { border-bottom: none; }
         }
 

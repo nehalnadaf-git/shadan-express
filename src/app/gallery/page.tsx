@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import GalleryClient from './GalleryClient'
 
 export const metadata: Metadata = {
-  title: 'Gallery | Hayat Family Restaurant Hubballi — Interiors & Food',
-  description: 'Photos of Hayat Family Restaurant — our warm dining hall, AC section, food, ambience and special occasions.',
-  alternates: { canonical: 'https://hayatfamilyrestaurant.in/gallery' },
+  title: 'Gallery | Empire Family Restaurant Hubballi — Interiors & Food',
+  description: 'Photos of Empire Family Restaurant — our warm dining hall, AC section, food, ambience and special occasions.',
+  alternates: { canonical: 'https://empirefamilyrestaurant.in/gallery' },
 }
 
 export default function GalleryPage() {
@@ -15,7 +15,7 @@ export default function GalleryPage() {
         <p className="eyebrow" style={{ marginBottom: '16px' }}>A Feast for the Eyes</p>
         <h1 className="heading-hero" style={{ fontSize: 'clamp(40px,7vw,72px)', color: 'var(--color-ivory)' }}>Our Gallery</h1>
         <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'var(--color-ivory-muted)', marginTop: '16px', maxWidth: '480px', margin: '16px auto 0', lineHeight: 1.7 }}>
-          Step inside Hayat — from our warm dining hall to signature Mughal dishes
+          Step inside Empire — from our warm dining hall to signature Mughal dishes
         </p>
       </section>
 

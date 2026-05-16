@@ -94,7 +94,7 @@ export default function OfflinePage() {
           Call us directly
         </p>
         <a
-          href="tel:+919740271679"
+          href="tel:+919986600860"
           style={{
             fontSize: '1.25rem',
             fontWeight: 700,
@@ -103,7 +103,7 @@ export default function OfflinePage() {
             letterSpacing: '0.05em',
           }}
         >
-          +91 97402 71679
+          +91 99866 00860
         </a>
         <p style={{
           margin: '0.4rem 0 0',
