@@ -21,8 +21,6 @@ const menuCategories = [
   { label: 'Soups',                href: '/menu/soups'            },
   { label: 'Veg Starters',         href: '/menu/veg-starters'     },
   { label: 'Veg Main Course',      href: '/menu/veg-mains'        },
-  { label: 'Veg Biryani & Rice',   href: '/menu/veg-biryani-rice' },
-  { label: 'Beef Starters',        href: '/menu/beef-starters'    },
   { label: 'Chicken Starters',     href: '/menu/chicken-starters' },
   { label: 'Chicken Main Course',  href: '/menu/chicken-mains'    },
   { label: 'Mutton Starters',      href: '/menu/mutton-starters'  },
