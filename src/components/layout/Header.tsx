@@ -18,16 +18,21 @@ const navLinksRight = [
   { label: 'Contact', href: '/contact' },
 ]
 const menuCategories = [
-  { label: 'Soups',               href: '/menu/soups'            },
-  { label: 'Veg Starters',        href: '/menu/veg-starters'     },
-  { label: 'Veg Main Course',     href: '/menu/veg-mains'        },
-  { label: 'Veg Biryani & Rice',  href: '/menu/veg-biryani-rice' },
-  { label: 'Beef Starters',       href: '/menu/beef-starters'    },
-  { label: 'Chicken Starters',    href: '/menu/chicken-starters' },
-  { label: 'Mutton Starters',     href: '/menu/mutton-starters'  },
-  { label: 'Tandoori Kababs',     href: '/menu/tandoori-kababs'  },
-  { label: 'Beef Main Course',    href: '/menu/beef-mains'       },
-  { label: 'Bulk Orders',         href: '/menu/bulk-orders'      },
+  { label: 'Soups',                href: '/menu/soups'            },
+  { label: 'Veg Starters',         href: '/menu/veg-starters'     },
+  { label: 'Veg Main Course',      href: '/menu/veg-mains'        },
+  { label: 'Veg Biryani & Rice',   href: '/menu/veg-biryani-rice' },
+  { label: 'Beef Starters',        href: '/menu/beef-starters'    },
+  { label: 'Chicken Starters',     href: '/menu/chicken-starters' },
+  { label: 'Chicken Main Course',  href: '/menu/chicken-mains'    },
+  { label: 'Mutton Starters',      href: '/menu/mutton-starters'  },
+  { label: 'Mutton Main Course',   href: '/menu/mutton-mains'     },
+  { label: 'Tandoori & Kababs',    href: '/menu/tandoori-kababs'  },
+  { label: 'Biryani & Rice',       href: '/menu/biryani-rice'     },
+  { label: 'Mandi Specials',       href: '/menu/mandi'            },
+  { label: 'Tandoori Breads',      href: '/menu/breads'           },
+  { label: 'Desserts',             href: '/menu/desserts'         },
+  { label: 'Beverages',            href: '/menu/beverages'        },
 ]
 
 export default function Header() {
