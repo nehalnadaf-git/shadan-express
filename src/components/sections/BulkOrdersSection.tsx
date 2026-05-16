@@ -111,7 +111,7 @@ export default function BulkOrdersSection() {
             {/* Photo banner */}
             <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden', marginBottom: '24px', aspectRatio: '21/8' }}>
               <Image
-                src="/images/food/20_bulk_chicken_biryani.webp"
+                src="/images/food/118-biryani-feast.webp"
                 alt="Empire Bulk Biryani Catering — Hubballi"
                 fill
                 sizes="(max-width:900px) 100vw, 750px"
