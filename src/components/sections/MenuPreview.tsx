@@ -12,21 +12,21 @@ const featured = [
     tagline: 'Dum biryanis, Mandi Specials & fragrant rice — the heart of Empire',
     items: ['Chicken Dum Biryani', 'Mutton Dum Biryani', 'Chicken Mandi Special', 'Chicken Tangadi Biryani', 'Veg Biryani'],
     slug: 'biryani-rice',
-    image: '/images/food/20_bulk_chicken_biryani.webp',
+    image: '/images/food/118-biryani-feast.webp',
   },
   {
     name: 'Tandoori & Kababs',
     tagline: 'Char-grilled masterpieces from our clay tandoor oven',
     items: ['Tandoori Chicken (Full)', 'Lazeez Kabab', 'Chicken Hariyali Kabab', 'Mutton Seek Kabab', 'Chicken Kasturi Kabab'],
     slug: 'tandoori-kababs',
-    image: '/images/food/07_tandoori_chicken.webp',
+    image: '/images/food/052-tandoori-chicken.webp',
   },
   {
     name: 'Chicken Starters',
     tagline: 'Sizzling chicken in every style — 17+ varieties',
     items: ['Chicken 65', 'Chicken Barbeque', 'Chicken Dragon', 'Chicken Satay', 'Chicken Lollipop'],
     slug: 'chicken-starters',
-    image: '/images/food/chicken_65.webp',
+    image: '/images/food/028-chicken-65.webp',
   },
 ]
 
