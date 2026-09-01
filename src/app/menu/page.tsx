@@ -4,9 +4,9 @@ import Image from 'next/image'
 import { menuCategories } from '@/data/menu'
 
 export const metadata: Metadata = {
-  title: 'Our Full Menu | Empire Family Restaurant Hubballi',
-  description: "Explore Empire Family Restaurant's full menu — Beef Biryani, Tandoori Kababs, Chicken Starters, Mutton, Veg Mains, Soups & more. Authentic Mughal cuisine in Hubballi.",
-  alternates: { canonical: 'https://empirefamilyrestaurant.in/menu' },
+  title: "Our Full Menu | Shadan's Biryani Express Hubli",
+  description: "Explore Shadan's Biryani Express full menu — Chicken Biryani, Kababs, Chicken 65, Rolls, Veg Starters, Mains & more. Authentic flavours in Hubli.",
+  alternates: { canonical: 'https://biryaniexpresshubli.in/menu' },
 }
 
 export default function MenuPage() {
@@ -17,7 +17,7 @@ export default function MenuPage() {
         <p className="eyebrow" style={{ marginBottom: '16px' }}>Explore Our</p>
         <h1 className="heading-hero" style={{ fontSize: 'clamp(40px,7vw,72px)', color: 'var(--color-ivory)' }}>Full Menu</h1>
         <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'var(--color-ivory-muted)', marginTop: '16px', maxWidth: '520px', margin: '16px auto 0', lineHeight: 1.7 }}>
-          From slow-cooked Beef Biryani to sizzling Tandoori Kababs — discover the full breadth of our Mughal royal kitchen.
+          From Hyderabadi Chicken Biryani to crispy Chicken 65 and loaded Rolls — explore the full Biryani Express menu.
         </p>
       </section>
 

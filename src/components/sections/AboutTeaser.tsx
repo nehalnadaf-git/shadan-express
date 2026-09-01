@@ -11,7 +11,7 @@ export default function AboutTeaser() {
       ref={sectionRef}
       id="about-teaser"
       style={{
-        background: 'linear-gradient(135deg, #0e1112 0%, #171b1d 50%, #0e1112 100%)',
+        background: 'linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 50%, var(--color-navy-mid) 100%)',
         padding: 'clamp(80px, 10vw, 140px) clamp(24px, 5vw, 80px)',
         position: 'relative',
         overflow: 'hidden',
@@ -55,7 +55,7 @@ export default function AboutTeaser() {
 
       {/* Heavy Cinematic Ambient Light Overlays (Refined) */}
       <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '60%', height: '80%', background: 'radial-gradient(ellipse, rgba(198,168,124,0.06) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
-      <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50%', height: '70%', background: 'radial-gradient(ellipse, rgba(58, 96, 104, 0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
+      <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50%', height: '70%', background: 'radial-gradient(ellipse, rgba(217,99,31,0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         {/* Eyebrow */}
@@ -69,20 +69,20 @@ export default function AboutTeaser() {
           {/* Left: Text */}
           <div data-animate="fade-right">
             <h2 className="heading-section" style={{ color: 'var(--color-ivory)', marginBottom: '28px', maxWidth: '500px' }}>
-              A Modern Family Dining Destination —{' '}
-              <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Where Taste</em>{' '}
-              Meets Tradition
+              A Local Hubli Favourite —{' '}
+              <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Real Biryani</em>{' '}
+              Every Day
             </h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'var(--color-ivory-muted)', lineHeight: 1.85, marginBottom: '36px' }}>
-              Located near Hubballi Railway Station, Empire Family Restaurant blends rich North Indian, Mughlai, Chinese & Biryani flavours with warm family hospitality. A comfortable, elegant space where every meal is an experience — cozy ambiance, hygienic kitchens, and attentive service that feels like home.
+              Located in Vidya Nagar, Hubli, Shadan's Biryani Express blends authentic Hyderabadi biryani with freshly made Indian-Chinese starters and rolls. A casual, clean, and family-friendly spot where fresh food, honest prices, and quick service come together every single day.
             </p>
 
             {/* Stats row */}
             <div className="about-stats-row" style={{ display: 'flex', gap: '40px', marginBottom: '40px', flexWrap: 'wrap' }}>
               {[
-                { num: '100%', label: 'Authentic Taste' },
+                { num: '4.1★', label: 'Zomato Rating' },
                 { num: '4.5★', label: 'Google Rating' },
-                { num: '130+', label: 'Dishes on Menu' },
+                { num: 'Fresh', label: 'Made Daily' },
               ].map((s) => (
                 <div key={s.label}>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: '38px', fontWeight: 700, color: 'var(--color-gold)', lineHeight: 1 }}>{s.num}</div>
@@ -106,8 +106,8 @@ export default function AboutTeaser() {
               boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(198,168,124,0.18)',
             }}>
               <Image
-                src="/our-story.webp"
-                alt="Empire Family Restaurant — Our Story"
+                src="/images/restaurant/our-story.png"
+                alt="Shadan's Biryani Express — Our Story"
                 fill
                 sizes="(max-width: 768px) 90vw, 45vw"
                 style={{ objectFit: 'cover' }}
@@ -128,7 +128,7 @@ export default function AboutTeaser() {
               }}>
                 {/* Inner top-edge shimmer line */}
                 <div style={{ position: 'absolute', top: 0, left: '10%', right: '10%', height: '1px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.6), transparent)', pointerEvents: 'none' }} />
-                <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '17px', color: 'var(--color-ivory)', fontWeight: 600 }}>Serving Hubballi</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '17px', color: 'var(--color-ivory)', fontWeight: 600 }}>Serving Hubli</div>
                 <div style={{ fontFamily: 'var(--font-body)', fontSize: '11px', color: 'var(--color-gold)', letterSpacing: '2.5px', textTransform: 'uppercase', marginTop: '5px', fontWeight: 700 }}>With Pride &amp; Passion</div>
               </div>
             </div>

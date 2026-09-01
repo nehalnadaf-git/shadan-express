@@ -25,7 +25,7 @@ const serwist = new Serwist({
         request.destination === 'image' &&
         (url.pathname.startsWith('/images/') || url.pathname.startsWith('/favicon/')),
       handler: new CacheFirst({
-        cacheName: 'Empire-images',
+        cacheName: 'biryani-express-images',
         plugins: [
           new ExpirationPlugin({
             maxEntries: 80,
@@ -40,7 +40,7 @@ const serwist = new Serwist({
     {
       matcher: ({ request }) => request.destination === 'image',
       handler: new CacheFirst({
-        cacheName: 'Empire-next-images',
+        cacheName: 'biryani-express-next-images',
         plugins: [
           new ExpirationPlugin({
             maxEntries: 60,
@@ -57,7 +57,7 @@ const serwist = new Serwist({
         url.origin === 'https://fonts.googleapis.com' ||
         url.origin === 'https://fonts.gstatic.com',
       handler: new CacheFirst({
-        cacheName: 'Empire-fonts',
+        cacheName: 'biryani-express-fonts',
         plugins: [
           new ExpirationPlugin({
             maxEntries: 10,
@@ -72,7 +72,7 @@ const serwist = new Serwist({
     {
       matcher: ({ request }) => request.mode === 'navigate',
       handler: new NetworkFirst({
-        cacheName: 'Empire-pages',
+        cacheName: 'biryani-express-pages',
         networkTimeoutSeconds: 3,
         plugins: [
           new ExpirationPlugin({

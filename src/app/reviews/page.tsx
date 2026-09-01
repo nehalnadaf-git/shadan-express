@@ -4,18 +4,18 @@ import { reviews } from '@/data/reviews'
 import { restaurant } from '@/data/restaurant'
 
 export const metadata: Metadata = {
-  title: 'Customer Reviews | Empire Family Restaurant Hubballi',
-  description: 'Read what our guests say about Empire Family Restaurant — real reviews from happy families and food lovers in Hubballi.',
-  alternates: { canonical: 'https://empirefamilyrestaurant.in/reviews' },
+  title: "Customer Reviews | Shadan's Biryani Express Hubli",
+  description: "Read what our guests say about Shadan's Biryani Express — real reviews from happy diners and food lovers in Hubli.",
+  alternates: { canonical: 'https://biryaniexpresshubli.in/reviews' },
 }
 
 const aggregateSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Empire Family Restaurant',
+  name: "Shadan's Biryani Express",
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '3.8',
+    ratingValue: '4.1',
     reviewCount: String(reviews.length),
     bestRating: '5',
   },

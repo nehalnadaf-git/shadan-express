@@ -1,14 +1,6 @@
 {
-  "name": "Empire Family Restaurant",
-  "short_name": "Empire",
-  "description": "Family dining in Hubballi — Biryani, Mandi, Mughlai & Kabab. Open daily 11 AM–11 PM near Railway Station.",
-  "start_url": "/",
-  "scope": "/",
-  "display": "standalone",
-  "orientation": "portrait",
-  "theme_color": "#1A1F21",
-  "background_color": "#1A1F21",
-  "lang": "en",
+  "name": "Shadan's Biryani Express",
+  "short_name": "Biryani Express",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -21,14 +13,9 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
-    },
-    {
-      "src": "/favicon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "any"
     }
   ],
-  "categories": ["food", "restaurants"],
-  "screenshots": []
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }

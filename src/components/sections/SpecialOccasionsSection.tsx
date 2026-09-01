@@ -7,17 +7,17 @@ const occasions = [
   {
     Icon: Cake,
     title: 'Parties & Milestones',
-    desc: 'Make your special day unforgettable with our curated setups, personalised decorations, and a custom menu crafted just for you.',
+    desc: 'Mark your special day with fresh biryani and starters from Shadan’s. We cater for birthday parties, anniversaries, and milestone celebrations.',
   },
   {
     Icon: Users,
     title: 'Family Celebrations',
-    desc: 'Grand family gatherings deserve a grand setting. Our spacious AC hall and warm Mughal hospitality ensure every family moment is cherished.',
+    desc: 'Family gatherings are best served with great food. Our bulk catering ensures authentic Hyderabadi flavours reach your celebration, freshly made.',
   },
   {
     Icon: Briefcase,
-    title: 'Corporate Lunches',
-    desc: 'Impress your colleagues and clients with our professional service, premium Mughal cuisine, and comfortable AC dining.',
+    title: 'Office & Corporate Lunches',
+    desc: 'Treat your team to a satisfying, affordable spread. Biryani Express offers reliable bulk orders for corporate lunches and office events in Hubli.',
   },
 ]
 
@@ -35,7 +35,7 @@ export default function SpecialOccasionsSection() {
 
   return (
     <section ref={sectionRef} style={{
-      background: 'linear-gradient(135deg, #0e1112 0%, #171b1d 50%, #0e1112 100%)',
+      background: 'linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 50%, var(--color-navy-mid) 100%)',
       padding: 'clamp(80px, 10vw, 140px) clamp(24px, 5vw, 80px)',
       position: 'relative',
       overflow: 'hidden',
@@ -75,7 +75,7 @@ export default function SpecialOccasionsSection() {
 
       {/* Heavy Cinematic Ambient Light Overlays */}
       <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '60%', height: '80%', background: 'radial-gradient(ellipse, rgba(198,168,124,0.06) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
-      <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50%', height: '70%', background: 'radial-gradient(ellipse, rgba(58, 96, 104, 0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
+      <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50%', height: '70%', background: 'radial-gradient(ellipse, rgba(217,99,31,0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
 
       <div style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
         {/* Header */}
@@ -89,7 +89,7 @@ export default function SpecialOccasionsSection() {
             With Us
           </h2>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'var(--color-ivory-muted)', maxWidth: '540px', margin: '20px auto 0', lineHeight: 1.85 }}>
-            From private parties to family gatherings and corporate lunches — Empire Family Restaurant is your perfect venue for every occasion.
+            From private parties to family gatherings and office lunches — Shadan’s Biryani Express is your go-to catering partner for every occasion in Hubli.
           </p>
         </div>
 

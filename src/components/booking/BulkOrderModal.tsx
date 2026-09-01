@@ -283,7 +283,7 @@ export default function BulkOrderModal() {
     const d = new Date(form.date + 'T12:00:00')
     const dateStr = `${d.getDate()}/${d.getMonth() + 1}/${String(d.getFullYear()).slice(2)}`
     const lines: string[] = [
-      'Empire Family Restaurant',
+      "Shadan's Biryani Express",
       'Bulk Catering Order',
       '--------------------------------',
       '',
@@ -326,7 +326,7 @@ export default function BulkOrderModal() {
     lines.push('', 'Kindly confirm this order and share the final quotation at your earliest convenience.', '', 'Thank you.')
 
     const msg = lines.join('\n')
-    window.open(`https://wa.me/919986600860?text=${encodeURIComponent(msg)}`, '_blank')
+    window.open(`https://wa.me/919035167777?text=${encodeURIComponent(msg)}`, '_blank')
     closeModal()
     setForm({ name: '', phone: '', date: '', guests: '', delivery: 'venue', address: '', notes: '' })
     setErrors({})
@@ -389,7 +389,7 @@ export default function BulkOrderModal() {
               <Package size={22} color="var(--color-gold-light)" strokeWidth={1.4} />
             </div>
             <div>
-              <p className="bulk-modal-header-eyebrow" style={{ fontFamily: 'var(--font-body)', fontSize: '10px', fontWeight: 700, letterSpacing: '3.5px', textTransform: 'uppercase', color: 'rgba(198,168,124,0.8)', margin: '0 0 5px' }}>Empire Family Restaurant</p>
+              <p className="bulk-modal-header-eyebrow" style={{ fontFamily: 'var(--font-body)', fontSize: '10px', fontWeight: 700, letterSpacing: '3.5px', textTransform: 'uppercase', color: 'rgba(198,168,124,0.8)', margin: '0 0 5px' }}>Shadan's Biryani Express</p>
               <h2 className="bulk-modal-header-title" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(19px,3.5vw,25px)', fontWeight: 600, color: '#FAF6F0', margin: 0, lineHeight: 1.2 }}>
                 Bulk Order &amp; Catering
               </h2>

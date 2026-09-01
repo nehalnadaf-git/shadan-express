@@ -4,37 +4,36 @@ import { restaurant } from '@/data/restaurant'
 import ContactCTAs from './ContactCTAs'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Empire Family Restaurant Hubballi — Location, Hours & Directions',
-  description: 'Visit Empire Family Restaurant near Hubballi Railway Station — Ground Floor, Shringar Palace, J C Nagar, New Hubli. Open daily 11 AM–11 PM. Call +91 99866 00860 or book via WhatsApp.',
-  alternates: { canonical: 'https://empirefamilyrestaurant.in/contact' },
+  title: "Contact Us | Shadan's Biryani Express Hubli — Location, Hours & Directions",
+  description: "Visit Shadan's Biryani Express in Vidya Nagar, Hubli — Suhail Complex, Opp. Samarth PU College, Shirur Park. Open daily 12–4:30 PM & 6:30–11 PM. Call +91 90351 67777 or order on Swiggy/Zomato.",
+  alternates: { canonical: 'https://biryaniexpresshubli.in/contact' },
 }
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'Restaurant',
-  name: 'Empire Family Restaurant',
-  telephone: '+919986600860',
-  url: 'https://empirefamilyrestaurant.in',
+  name: "Shadan's Biryani Express",
+  telephone: '+919035167777',
+  url: 'https://biryaniexpresshubli.in',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Bhandiwad Base, Shah Bazar Road, Behind Jamiya Masjid, Durgad Bail, New Hubli',
-    addressLocality: 'Hubballi',
+    streetAddress: 'Suhail Complex, Opposite Samarth PU College, Shirur Park, Vidya Nagar',
+    addressLocality: 'Hubli',
     addressRegion: 'Karnataka',
-    postalCode: '580028',
+    postalCode: '580021',
     addressCountry: 'IN',
   },
-  geo: { '@type': 'GeoCoordinates', latitude: 15.3647, longitude: 75.1240 },
-  openingHoursSpecification: [{
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-    opens: '11:00', closes: '23:00',
-  }],
+  geo: { '@type': 'GeoCoordinates', latitude: 15.3730, longitude: 75.1350 },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '12:00', closes: '16:30' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '18:30', closes: '23:00' },
+  ],
 }
 
 const hours = [
-  { day: 'Monday – Friday', time: '11:00 AM – 11:00 PM' },
-  { day: 'Saturday', time: '11:00 AM – 11:00 PM' },
-  { day: 'Sunday', time: '11:00 AM – 11:00 PM' },
+  { day: 'Monday – Friday', time: '12:00 PM – 4:30 PM & 6:30 PM – 11:00 PM' },
+  { day: 'Saturday', time: '12:00 PM – 4:30 PM & 6:30 PM – 11:00 PM' },
+  { day: 'Sunday', time: '12:00 PM – 4:30 PM & 6:30 PM – 11:00 PM' },
 ]
 
 export default function ContactPage() {
@@ -47,7 +46,7 @@ export default function ContactPage() {
         <p className="eyebrow" style={{ marginBottom: '16px' }}>Come Visit Us</p>
         <h1 className="heading-hero" style={{ fontSize: 'clamp(40px,7vw,72px)', color: 'var(--color-ivory)' }}>Find Us</h1>
         <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'var(--color-ivory-muted)', marginTop: '16px', maxWidth: '480px', margin: '16px auto 0', lineHeight: 1.7 }}>
-          We’re located near Hubballi Railway Station — Ground Floor, Shringar Palace, Opposite Railway Station Road, J C Nagar, New Hubli, Hubballi, Karnataka
+          We’re located in Vidya Nagar, Hubli — Suhail Complex, Opposite Samarth PU College, Shirur Park, Hubli, Karnataka 580021
         </p>
       </section>
 
@@ -116,14 +115,14 @@ export default function ContactPage() {
             </h2>
             <div style={{ borderRadius: '4px', overflow: 'hidden', border: '2px solid rgba(212,168,83,0.3)', boxShadow: '0 8px 40px rgba(45,50,52,0.1)' }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.462!2d75.1183!3d15.3647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d4b03fa04adf%3A0x6c6f57d5f7d57b2e!2sShah%20Bazar%20Road%20Hubballi!5e0!3m2!1sen!2sin!4v1712345678901"
+                src={restaurant.googleMapsEmbed}
                 width="100%"
                 height="400"
                 style={{ border: 0, display: 'block' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Empire Family Restaurant on Google Maps"
+                title="Shadan's Biryani Express on Google Maps"
               />
             </div>
             <a

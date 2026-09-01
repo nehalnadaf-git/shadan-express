@@ -2,76 +2,76 @@
 
 @theme {
   /* ============================================================
-     EMPIRE FAMILY RESTAURANT — EMPIRE ELEGANCE PALETTE v3
-     Extracted from restaurant interior photography:
-       Muted Teal Seating · Warm Walnut Wood · Brass Sconces
-       Pearl-White Walls · Deep Espresso Charcoal
+     EMPIRE FAMILY RESTAURANT — BIRYANI EXPRESS PALETTE v4
+     Indian restaurant warm palette:
+       Tandoor Maroon · Ember Orange · Saffron Gold
+       Cream Ivory · Marble Charcoal · Papad Beige
 
      Design System:
-       BASE DARK  — Deep Espresso Charcoal (sections, header, footer)
-       PRIMARY    — Empire Teal (brand identity, nav, highlights)
-       ACCENT     — Warm Brass / Gold (CTAs, highlights, borders)
-       SECONDARY  — Walnut Brown (headings, warmth, depth)
-       LIGHT BG   — Pearl White / Warm Off-White (light sections)
-       TEXT DARK  — Deep Espresso Ink
-       TEXT LIGHT — Crisp Ivory
+       BASE DARK  — Marble Charcoal (sections, header, footer)
+       PRIMARY    — Tandoor Maroon (brand identity, nav, highlights)
+       ACCENT     — Saffron Gold (CTAs, highlights, borders)
+       SECONDARY  — Ember Orange (headings, warmth, depth)
+       LIGHT BG   — Cream Ivory / Papad Beige (light sections)
+       TEXT DARK  — Marble Charcoal Ink
+       TEXT LIGHT — Cream Ivory
       ============================================================ */
 
-  /* ── DARK BASE — Deep Espresso Charcoal ── */
-  --color-charcoal:       #1A1F21;   /* deep espresso charcoal — deepest dark */
-  --color-charcoal-mid:   #232A2D;   /* lifted charcoal mid */
-  --color-charcoal-lift:  #2D3739;   /* card / surface lift */
+  /* ── DARK BASE — Marble Charcoal ── */
+  --color-charcoal:       #1C1B1A;   /* marble charcoal — deepest dark */
+  --color-charcoal-mid:   #252320;   /* lifted charcoal mid */
+  --color-charcoal-lift:  #302D29;   /* card / surface lift */
 
-  /* ── PRIMARY — Empire Teal (from seating) ── */
-  --color-navy:           #3A6068;   /* deep empire teal — dark section base */
-  --color-navy-mid:       #2D4F56;   /* deeper teal for gradients */
-  --color-navy-light:     #4B737A;   /* classic teal — brand signature */
+  /* ── PRIMARY — Tandoor Maroon ── */
+  --color-navy:           #7A2E1E;   /* tandoor maroon — dark section base */
+  --color-navy-mid:       #611F10;   /* deeper maroon for gradients */
+  --color-navy-light:     #9A3E2C;   /* lighter maroon — brand signature */
 
-  /* ── SIGNATURE ACCENT — Warm Brass / Gold ── */
-  --color-gold:           #C6A87C;   /* warm brass — primary accent */
-  --color-gold-light:     #DCC09A;   /* pale brass highlight */
-  --color-gold-bright:    #EDD9BC;   /* blush brass / glow */
-  --color-gold-dim:       rgba(198,168,124,0.18);
-  --color-gold-dim-dark:  rgba(198,168,124,0.09);
+  /* ── SIGNATURE ACCENT — Saffron Gold ── */
+  --color-gold:           #F0B429;   /* saffron gold — primary accent */
+  --color-gold-light:     #F5CB6A;   /* pale saffron highlight */
+  --color-gold-bright:    #FAE0A0;   /* blush saffron / glow */
+  --color-gold-dim:       rgba(240,180,41,0.18);
+  --color-gold-dim-dark:  rgba(240,180,41,0.09);
 
-  /* ── SECONDARY WARMTH — Walnut Wood ── */
-  --color-teak:           #4A2E1B;   /* deep walnut — secondary CTA */
-  --color-copper:         #633A21;   /* rich dark copper/walnut — body emphasis (high contrast) */
+  /* ── SECONDARY WARMTH — Ember Orange ── */
+  --color-teak:           #7A2E1E;   /* deep tandoor maroon — secondary CTA */
+  --color-copper:         #D9631F;   /* ember orange — body emphasis (high contrast) */
 
-  --color-oak:            #A57248;   /* warm mid-walnut */
-  --color-oak-light:      #C4986A;   /* light walnut highlight */
+  --color-oak:            #D9631F;   /* ember orange */
+  --color-oak-light:      #E8844A;   /* light ember highlight */
 
-  /* ── LIGHT SECTION PALETTE — Pearl White ── */
-  --color-parchment:      #F7F5F0;   /* pearl white — light section bg */
-  --color-parchment-deep: #EEE9E0;   /* slightly deeper pearl */
-  --color-linen:          #FAFAF8;   /* near-white warm */
-  --color-linen-deep:     #E8E2D8;   /* light section card bg */
-  --color-stone:          #DDD7CC;   /* warm stone / divider */
-  --color-stone-deep:     #CEC6B8;   /* deeper stone */
+  /* ── LIGHT SECTION PALETTE — Cream Ivory ── */
+  --color-parchment:      #FBF4E9;   /* cream ivory — light section bg */
+  --color-parchment-deep: #E9DCC3;   /* papad beige */
+  --color-linen:          #FDF8F0;   /* near-white warm cream */
+  --color-linen-deep:     #E9DCC3;   /* light section card bg — papad beige */
+  --color-stone:          #D8C9A8;   /* light warm beige / divider */
+  --color-stone-deep:     #C8B490;   /* deeper warm beige */
 
   /* ── TEXT — On dark backgrounds ── */
-  --color-ivory:          #F7F5F0;   /* pearl white — primary light text */
-  --color-ivory-2:        #E8E2D8;   /* slightly warmer ivory */
-  --color-ivory-muted:    #A8A098;   /* muted warm grey — secondary light text */
+  --color-ivory:          #FBF4E9;   /* cream ivory — primary light text */
+  --color-ivory-2:        #E9DCC3;   /* papad beige */
+  --color-ivory-muted:    #B8A890;   /* muted warm beige — secondary light text */
 
   /* ── TEXT — On light backgrounds ── */
-  --color-ink:            #2D3234;   /* deep espresso ink — primary dark text */
-  --color-ink-mid:        #3F4A4D;   /* mid charcoal — body dark text */
-  --color-ink-muted:      #5E7074;   /* muted teal-grey — secondary dark text */
-  --color-ink-soft:       #8B9EA2;   /* soft teal-grey — caption text */
+  --color-ink:            #1C1B1A;   /* marble charcoal — primary dark text */
+  --color-ink-mid:        #3A3632;   /* mid charcoal — body dark text */
+  --color-ink-muted:      #7A2E1E;   /* tandoor maroon — secondary dark text */
+  --color-ink-soft:       #A8906E;   /* soft warm tan — caption text */
 
   /* ── FUNCTIONAL ── */
-  --color-red-dot:        #C0392B;
-  --color-green-dot:      #27AE60;
+  --color-red-dot:        #A8341E;   /* chilli red */
+  --color-green-dot:      #2E7D5B;   /* coriander green */
 
   /* ── BORDERS ── */
-  --color-border:         rgba(198,168,124,0.28);   /* brass border — on dark */
-  --color-border-light:   rgba(45,50,52,0.12);      /* ink border — on light */
-  --color-border-gold:    rgba(198,168,124,0.45);   /* strong brass border */
+  --color-border:         rgba(240,180,41,0.28);    /* saffron border — on dark */
+  --color-border-light:   rgba(216,201,168,0.45);   /* warm beige border — on light */
+  --color-border-gold:    rgba(240,180,41,0.45);    /* strong saffron border */
 
   /* ── SURFACES ── */
   --color-surface-dark:   rgba(255,255,255,0.04);
-  --color-surface-light:  rgba(45,50,52,0.04);
+  --color-surface-light:  rgba(28,27,26,0.04);
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body:    "DM Sans", sans-serif;

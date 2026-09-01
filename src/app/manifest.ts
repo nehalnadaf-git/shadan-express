@@ -2,9 +2,9 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Empire Family Restaurant',
-    short_name: 'Empire',
-    description: 'Empire Family Restaurant — Where Taste Meets Tradition. Family dining in Hubballi with Biryanis, Mandi, Kababs & more.',
+    name: "Shadan's Biryani Express",
+    short_name: 'Biryani Express',
+    description: "Shadan's Biryani Express — Real Biryani. Real Taste. Authentic Hyderabadi chicken biryani, starters & rolls in Hubli.",
     start_url: '/',
     scope: '/',
     display: 'standalone',

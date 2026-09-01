@@ -8,39 +8,39 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 const featured = [
   {
-    name: 'Biryani & Mandi',
-    tagline: 'Dum biryanis, Mandi Specials & fragrant rice — the heart of Empire',
-    items: ['Chicken Dum Biryani', 'Mutton Dum Biryani', 'Chicken Mandi Special', 'Chicken Tangadi Biryani', 'Veg Biryani'],
-    slug: 'biryani-rice',
-    image: '/images/food/118-biryani-feast.webp',
-  },
-  {
-    name: 'Tandoori & Kababs',
-    tagline: 'Char-grilled masterpieces from our clay tandoor oven',
-    items: ['Tandoori Chicken (Full)', 'Lazeez Kabab', 'Chicken Hariyali Kabab', 'Mutton Seek Kabab', 'Chicken Kasturi Kabab'],
-    slug: 'tandoori-kababs',
-    image: '/images/food/052-tandoori-chicken.webp',
+    name: 'Rice & Biryani',
+    tagline: 'Hyderabadi chicken biryani, egg biryani & veg biryani — the heart of Biryani Express',
+    items: ['Chicken Biryani', 'Veg Biryani', 'Egg Biryani', 'Kushka Rice'],
+    slug: 'rice-biryani',
+    image: '/images/food/102-chicken-dum-biryani.webp',
   },
   {
     name: 'Chicken Starters',
-    tagline: 'Sizzling chicken in every style — 17+ varieties',
-    items: ['Chicken 65', 'Chicken Barbeque', 'Chicken Dragon', 'Chicken Satay', 'Chicken Lollipop'],
-    slug: 'chicken-starters',
+    tagline: 'Sizzling chicken in every style',
+    items: ['Chicken Kabab', 'Chicken 65', 'Chicken Manchurian', 'Lemon Chicken', 'Pepper Chicken'],
+    slug: 'non-veg-starters',
     image: '/images/food/028-chicken-65.webp',
+  },
+  {
+    name: 'Rolls & Breads',
+    tagline: 'Quick bites and fresh tandoori breads',
+    items: ['Chicken Roll', 'Paneer Roll', 'Egg Roll', 'Paratha', 'Tandoori Bread'],
+    slug: 'rolls',
+    image: '/images/food/034-chicken-crispy.webp',
   },
 ]
 
-const vegItems = new Set(['Veg Biryani', 'Paneer Biryani', 'Paneer Butter Masala', 'Dal Tadka', 'Mushroom Lababdar'])
+const vegItems = new Set(['Veg Biryani', 'Kushka Rice', 'Paneer Butter Masala', 'Gobi Manchurian', 'Paneer Roll', 'Egg Biryani'])
 
 
 export default function MenuPreview() {
   const sectionRef = useScrollAnimation()
   const [sidebarIdx, setSidebarIdx] = useState(0)
   const sidebarItems = [
-    { title: 'Biryani Specials', items: ['Chicken Dum Biryani', 'Mutton Dum Biryani', 'Chicken Mandi Special'], desc: 'Slow-cooked dum biryanis and Arabic-style mandi — the soul of Empire cuisine.' },
-    { title: 'Tandoor Favourites', items: ['Lazeez Kabab', 'Chicken Hariyali Kabab', 'Tandoori Chicken'], desc: 'Perfectly charred from our clay tandoor — smoky, juicy and unforgettable.' },
-    { title: 'Mughlai Mains', items: ['Mutton Nalli Nihari', 'Mutton Rogan Josh', 'Chicken Lazeez'], desc: 'Slow-cooked royal Mughlai gravies — rich, aromatic and deeply satisfying.' },
-    { title: 'Veg Favourites', items: ['Paneer Butter Masala', 'Mushroom Lababdar', 'Nawabi Thaali'], desc: 'Rich aromatic vegetarian dishes and paneer specialties crafted with equal care.' },
+    { title: 'Biryani Specials', items: ["Chicken Biryani", "Veg Biryani", "Egg Biryani", "Kushka Rice"], desc: "Authentic Hyderabadi-style biryani — the signature and soul of Shadan's Biryani Express." },
+    { title: 'Chicken Starters', items: ['Chicken Kabab', 'Chicken 65', 'Chicken Manchurian', 'Garlic Chicken'], desc: 'Spicy, golden-fried and wok-tossed chicken — the perfect way to start your meal.' },
+    { title: 'Main Course', items: ['Butter Chicken', 'Chicken Hyderabadi', 'Paneer Butter Masala'], desc: 'Rich, aromatic gravies and curries made with fresh ingredients and our secret spice blends.' },
+    { title: 'Veg Favourites', items: ['Gobi Manchurian', 'Paneer Chilli', 'Baby Corn 65'], desc: 'Crispy and flavourful vegetarian Indian-Chinese starters crafted with equal care.' },
   ]
 
   return (

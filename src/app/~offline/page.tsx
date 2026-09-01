@@ -94,7 +94,7 @@ export default function OfflinePage() {
           Call us directly
         </p>
         <a
-          href="tel:+919986600860"
+          href="tel:+919035167777"
           style={{
             fontSize: '1.25rem',
             fontWeight: 700,
@@ -103,14 +103,14 @@ export default function OfflinePage() {
             letterSpacing: '0.05em',
           }}
         >
-          +91 99866 00860
+          +91 90351 67777
         </a>
         <p style={{
           margin: '0.4rem 0 0',
           fontSize: '0.75rem',
           color: 'rgba(255,255,255,0.35)',
         }}>
-          Open daily 11 AM – 11 PM
+          Open daily 12–4:30 PM & 6:30–11 PM
         </p>
       </div>
 

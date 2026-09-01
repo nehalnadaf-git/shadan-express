@@ -33,30 +33,30 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://empirefamilyrestaurant.in'),
-  applicationName: 'Empire Family Restaurant',
-  title: { default: 'Empire Family Restaurant Hubballi | Biryani, Mandi, Kabab & Family Dining', template: '%s | Empire Family Restaurant Hubballi' },
-  description: 'Empire Family Restaurant in Hubballi — a modern family dining destination near Railway Station offering North Indian, Mughlai, Chinese, Dum Biryanis, Mandi Specials, Tandoori & Kabab platters. Open daily 11 AM–11 PM.',
+  metadataBase: new URL('https://biryaniexpresshubli.in'),
+  applicationName: "Shadan's Biryani Express",
+  title: { default: "Shadan's Biryani Express Hubli | Authentic Hyderabadi Chicken Biryani", template: "%s | Shadan's Biryani Express Hubli" },
+  description: "Shadan's Biryani Express in Hubli — authentic Hyderabadi-style chicken biryani, Indian-Chinese starters, rolls, and mains. Dine-in, takeaway & delivery via Swiggy & Zomato. Open daily 12–4:30 PM & 6:30–11 PM.",
   keywords: [
-    'Empire Family Restaurant', 'Hubballi restaurant', 'family restaurant Hubli',
-    'best biryani Hubballi', 'Chicken Dum Biryani Hubballi', 'Mutton Biryani Hubballi',
-    'Mandi Hubballi', 'Chicken Mandi Hubballi', 'Tandoori Chicken Hubballi',
-    'Mughlai restaurant Hubballi', 'North Indian restaurant Hubballi',
-    'Chinese food Hubballi', 'Kabab restaurant Hubballi', 'Nihari Hubballi',
-    'Railway Station Road restaurant Hubli', 'J C Nagar restaurant Hubballi',
-    'family dining Hubballi', 'dine-in restaurant Hubli', 'Paneer Tikka Hubballi',
+    "Shadan's Biryani Express", 'Biryani Express Hubli', 'best biryani Hubli',
+    'chicken biryani Hubli', 'Hyderabadi biryani Hubli', 'biryani near me Hubli',
+    'Vidya Nagar restaurant Hubli', 'Shadan biryani', 'chicken kabab Hubli',
+    'chicken 65 Hubli', 'rolls Hubli', 'Indian Chinese Hubli',
+    'biryani delivery Hubli', 'Zomato Hubli biryani', 'Swiggy biryani Hubli',
+    'Samarth PU College restaurant', 'Chalukya Nagar food Hubli',
+    'family restaurant Hubli', 'casual dining Hubli', 'affordable biryani Hubli',
   ],
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'Empire',
+    title: 'Biryani Express',
   },
   formatDetection: { telephone: false },
   openGraph: {
-    siteName: 'Empire Family Restaurant',
+    siteName: "Shadan's Biryani Express",
     locale: 'en_IN',
     type: 'website',
-    images: [{ url: '/images/restaurant/2new.webp', width: 1200, height: 630, alt: 'Empire Family Restaurant Hubballi — Family Dining, Biryani & Mandi' }],
+    images: [{ url: '/images/restaurant/2.webp', width: 1200, height: 630, alt: "Shadan's Biryani Express Hubli — Authentic Hyderabadi Chicken Biryani" }],
   },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
@@ -65,36 +65,44 @@ export const metadata: Metadata = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'Restaurant',
-  name: 'Empire Family Restaurant',
-  description: 'Modern family dining restaurant in Hubballi offering North Indian, Mughlai, Chinese, Biryani, Mandi, Tandoori and Kabab cuisine. Family-friendly ambiance with hygienic food preparation.',
-  telephone: '+919986600860',
-  url: 'https://empirefamilyrestaurant.in',
+  name: "Shadan's Biryani Express",
+  description: 'Popular local biryani chain in Hubli serving authentic Hyderabadi-style chicken biryani, Indian-Chinese starters, rolls and mains. Fresh, hygienic food at honest prices.',
+  telephone: '+919035167777',
+  url: 'https://biryaniexpresshubli.in',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Ground Floor, Shringar Palace, Opposite Railway Station Road, J C Nagar, New Hubli',
-    addressLocality: 'Hubballi',
+    streetAddress: 'Suhail Complex, Opposite Samarth PU College, Shirur Park, Vidya Nagar',
+    addressLocality: 'Hubli',
     addressRegion: 'Karnataka',
-    postalCode: '580020',
+    postalCode: '580021',
     addressCountry: 'IN',
   },
-  geo: { '@type': 'GeoCoordinates', latitude: 15.3647, longitude: 75.1240 },
-  openingHoursSpecification: [{
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-    opens: '11:00',
-    closes: '23:00',
-  }],
-  servesCuisine: ['North Indian', 'Mughlai', 'Chinese', 'Biryani', 'Mandi', 'Tandoori', 'Kabab', 'Indo-Chinese', 'Family Dining'],
-  priceRange: '₹₹',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '3.8', reviewCount: '33' },
+  geo: { '@type': 'GeoCoordinates', latitude: 15.3730, longitude: 75.1350 },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+      opens: '12:00',
+      closes: '16:30',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+      opens: '18:30',
+      closes: '23:00',
+    },
+  ],
+  servesCuisine: ['Hyderabadi Biryani', 'Indian-Chinese', 'Chicken Starters', 'Rolls', 'Mains'],
+  priceRange: '₹',
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.1', reviewCount: '16' },
   amenityFeature: [
-    { '@type': 'LocationFeatureSpecification', name: 'Family Dining', value: true },
     { '@type': 'LocationFeatureSpecification', name: 'Dine-In', value: true },
     { '@type': 'LocationFeatureSpecification', name: 'Takeaway', value: true },
-    { '@type': 'LocationFeatureSpecification', name: 'Group Dining', value: true },
+    { '@type': 'LocationFeatureSpecification', name: 'Delivery', value: true },
+    { '@type': 'LocationFeatureSpecification', name: 'Family Dining', value: true },
   ],
-  hasMenu: 'https://empirefamilyrestaurant.in/menu',
-  image: 'https://empirefamilyrestaurant.in/images/restaurant/2new.webp',
+  hasMenu: 'https://biryaniexpresshubli.in/menu',
+  image: 'https://biryaniexpresshubli.in/images/restaurant/2.webp',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -107,7 +115,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="Empire" />
+        <meta name="apple-mobile-web-app-title" content="Biryani Express" />
         <link rel="manifest" href="/site.webmanifest" />
         <script
           type="application/ld+json"

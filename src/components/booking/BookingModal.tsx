@@ -23,7 +23,7 @@ const PARTY_SIZES = ['1', '2', '3', '4', '5', '6', '7', '8+']
 const today = new Date().toISOString().split('T')[0]
 const maxDate = new Date(Date.now() + 60 * 86_400_000).toISOString().split('T')[0]
 
-const PHONE = '919986600860'
+const PHONE = '919035167777'
 
 /* ── Field wrapper ───────────────────────────────────────── */
 function Field({ label, icon, error, children }: { label: string; icon: React.ReactNode; error?: string; children: React.ReactNode }) {
@@ -108,7 +108,7 @@ export default function BookingModal() {
     const dateStr = `${d.getDate()}/${d.getMonth() + 1}/${String(d.getFullYear()).slice(2)}`
     const timeLabel = TIME_SLOTS.find(t => t.value === form.time)?.label ?? form.time
     const msg = [
-      'Empire Family Restaurant',
+      "Shadan's Biryani Express",
       'Table Reservation Request',
       '--------------------------------',
       '',
@@ -210,7 +210,7 @@ export default function BookingModal() {
             letterSpacing: '4px', textTransform: 'uppercase',
             color: 'rgba(198,168,124,0.85)', margin: '0 0 10px',
           }}>
-            Empire Family Restaurant
+            Shadan's Biryani Express
           </p>
 
           {/* Heading */}
@@ -351,7 +351,7 @@ export default function BookingModal() {
             background: 'rgba(198,168,124,0.07)',
             border: '1px solid rgba(198,168,124,0.18)',
           }}>
-            {['No booking fee', 'Open daily 11AM–11PM', 'Instant WhatsApp confirm'].map(t => (
+            {['No booking fee', '12–4:30 PM & 6:30–11 PM', 'Instant WhatsApp confirm'].map(t => (
               <span key={t} style={{
                 fontFamily: 'var(--font-body)', fontSize: '11px', fontWeight: 600,
                 color: 'var(--color-copper)', letterSpacing: '0.5px',

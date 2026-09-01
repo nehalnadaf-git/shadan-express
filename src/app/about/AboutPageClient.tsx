@@ -8,32 +8,32 @@ import AboutBookingCTA from './AboutBookingCTA'
 
 const pillars = [
   {
-    icon: '🍽️',
-    title: 'Authentic Cuisine',
-    desc: 'From Chicken Dum Biryani and Mandi Specials to Mughlai gravies, Tandoori kababs and Indo-Chinese favourites — our menu spans 100+ dishes crafted with care and tradition.',
+    icon: '🍛',
+    title: 'Authentic Hyderabadi Biryani',
+    desc: "From Chicken Biryani and Shadan's Special to Veg Biryani and Egg Biryani — every grain is cooked with care, fragrant spice, and old-school Hyderabadi technique.",
   },
   {
     icon: '👨‍👩‍👧‍👦',
-    title: 'Family-First Hospitality',
-    desc: 'From the moment you walk in, you are welcomed as family. Our courteous staff, spacious seating, and group-friendly layout make every visit comfortable and memorable.',
+    title: 'Family-Friendly Casual Dining',
+    desc: 'A clean, comfortable dine-in spot where everyone is welcome. Ideal for family lunches, casual outings, and quick dinners with friends — no fuss, great food.',
   },
   {
     icon: '✨',
-    title: 'Hygienic & Modern',
-    desc: 'We maintain strict hygiene standards in our kitchen and dining areas. Our modern interiors create an elegant, cozy atmosphere perfect for family lunches and celebratory dinners.',
+    title: 'Fresh & Hygienic Every Day',
+    desc: 'We prepare our food fresh daily with quality ingredients. Customers consistently praise the cleanliness and freshness of the food — a standard we take great pride in.',
   },
   {
     icon: '⚡',
-    title: 'Fast & Attentive Service',
-    desc: 'Our trained team ensures prompt, attentive service — whether you are dining in with family, picking up a parcel, or hosting a large group event.',
+    title: 'Quick & Efficient Service',
+    desc: 'Fast turnaround whether you are dining in, picking up a parcel, or ordering via Swiggy and Zomato. We value your time as much as your taste.',
   },
 ]
 
 const stats = [
-  { num: '500+', label: 'Families Monthly' },
-  { num: '3.8★', label: 'Google Rating' },
-  { num: '100+', label: 'Dishes on Menu' },
-  { num: '33+', label: 'Customer Reviews' },
+  { num: '4.1★', label: 'Zomato Rating' },
+  { num: '4.5★', label: 'Google Rating' },
+  { num: '50+', label: 'Menu Items' },
+  { num: '2', label: 'Outlets in Hubli' },
 ]
 
 
@@ -65,8 +65,8 @@ export default function AboutPageClient() {
         borderBottom: '1px solid rgba(198,168,124,0.2)',
       }}>
         <Image
-          src="/images/empire-banner.webp"
-          alt="Empire Family Restaurant — Hubballi"
+          src="/images/restaurant/2.png"
+          alt="Shadan's Biryani Express — Hubli"
           fill priority sizes="100vw"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
@@ -102,8 +102,8 @@ export default function AboutPageClient() {
                 <span className="eyebrow-dark">Origin & Heritage</span>
               </div>
               <h2 className="heading-section" style={{ color: 'var(--color-ink)', marginBottom: '28px', maxWidth: '460px' }}>
-                A Culinary Legacy{' '}
-                <em style={{ fontStyle: 'italic', color: 'var(--color-copper)' }}>Rooted in Mughal Tradition</em>
+              A Homegrown{' '}
+                <em style={{ fontStyle: 'italic', color: 'var(--color-copper)' }}>Biryani Story</em>
               </h2>
               <p style={{
                 fontFamily: 'var(--font-body)',
@@ -112,7 +112,7 @@ export default function AboutPageClient() {
                 lineHeight: 1.85,
                 marginBottom: '20px',
               }}>
-                Empire Family Restaurant was born from a vision to bring the best of North Indian, Mughlai, Chinese and Biryani cuisine together under one roof — right in the heart of Hubballi, near the Railway Station. Nestled in the ground floor of Shringar Palace on J C Nagar, our restaurant has become a beloved family dining destination — a place where families gather, celebrations unfold, and memories are made over steaming Dum Biryanis, sizzling Tandoori kababs, and rich Mughlai gravies.
+                Shadan's Biryani Express started with a simple but powerful idea: bring authentic Hyderabadi-style biryani to Hubli at prices everyone can afford. Born in Vidya Nagar and now operating multiple outlets, we have become a go-to dining destination for families, students, and biryani lovers across the city. Fresh food, quick service, and honest pricing — that is the Biryani Express promise.
               </p>
               <p style={{
                 fontFamily: 'var(--font-body)',
@@ -121,7 +121,7 @@ export default function AboutPageClient() {
                 lineHeight: 1.85,
                 marginBottom: '36px',
               }}>
-                The name <strong style={{ color: 'var(--color-ink)', fontWeight: 600 }}>"Empire"</strong> reflects our ambition — to be the premier family dining destination in Hubballi. A place where taste meets tradition, and every guest is treated like royalty.
+                The name <strong style={{ color: 'var(--color-ink)', fontWeight: 600 }}>"Shadan's"</strong> reflects family pride and a deep commitment to quality. Every plate we serve carries that commitment — whether it is our signature Chicken Biryani or a freshly rolled Chicken Roll.
               </p>
               <Link href="/menu" className="btn-secondary-dark">Explore Our Menu →</Link>
             </div>
@@ -136,8 +136,8 @@ export default function AboutPageClient() {
                 border: '1px solid rgba(198,168,124,0.2)',
               }}>
                 <Image
-                  src="/images/restaurant/2new.webp"
-                  alt="Empire Family Restaurant Dining Hall"
+                  src="/images/restaurant/2.png"
+                  alt="Shadan's Biryani Express Dining Area"
                   fill sizes="(max-width:768px) 90vw, 45vw"
                   style={{ objectFit: 'cover' }}
                 />
@@ -154,8 +154,8 @@ export default function AboutPageClient() {
                   borderRadius: '6px',
                   padding: '10px 18px',
                 }}>
-                  <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '14px', color: 'var(--color-gold-light)' }}>Our Grand Dining Hall</div>
-                  <div style={{ fontFamily: 'var(--font-body)', fontSize: '10px', color: 'rgba(247,245,240,0.6)', letterSpacing: '2px', textTransform: 'uppercase', marginTop: '3px' }}>Hubballi, Karnataka</div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '14px', color: 'var(--color-gold-light)' }}>Our Dining Area</div>
+                  <div style={{ fontFamily: 'var(--font-body)', fontSize: '10px', color: 'rgba(247,245,240,0.6)', letterSpacing: '2px', textTransform: 'uppercase', marginTop: '3px' }}>Vidya Nagar, Hubli</div>
                 </div>
               </div>
             </div>
@@ -179,11 +179,11 @@ export default function AboutPageClient() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <div className="fade-up" style={{ textAlign: 'center', marginBottom: 'clamp(48px,6vw,80px)' }}>
             <div className="ornament" style={{ marginBottom: '20px' }}>
-              <span className="eyebrow">The Empire Standard</span>
+              <span className="eyebrow">The Biryani Express Standard</span>
             </div>
             <h2 className="heading-section" style={{ color: 'var(--color-ivory)', maxWidth: '520px', margin: '0 auto' }}>
             What Makes{' '}
-            <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Empire Special</em>
+            <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Shadan's Special</em>
           </h2>
           </div>
 
@@ -196,28 +196,29 @@ export default function AboutPageClient() {
               <div key={p.title} className="fade-up" style={{ transitionDelay: `${i * 80}ms` }}>
                 <div
                   style={{
-                    background: 'rgba(255,255,255,0.03)',
-                    border: '1px solid rgba(198,168,124,0.2)',
-                    borderRadius: '4px',
+                    background: 'linear-gradient(155deg, var(--color-linen) 0%, var(--color-parchment) 100%)',
+                    border: '1px solid rgba(198,168,124,0.35)',
+                    borderRadius: '6px',
                     overflow: 'hidden',
                     height: '100%',
+                    boxShadow: '0 8px 30px rgba(0,0,0,0.18)',
                     transition: 'border-color 300ms, box-shadow 300ms, transform 300ms',
                   }}
                   onMouseEnter={e => {
                     const el = e.currentTarget as HTMLElement
-                    el.style.borderColor = 'rgba(198,168,124,0.5)'
+                    el.style.borderColor = 'rgba(198,168,124,0.8)'
                     el.style.transform = 'translateY(-6px)'
-                    el.style.boxShadow = '0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(198,168,124,0.25)'
+                    el.style.boxShadow = '0 24px 60px rgba(0,0,0,0.35), 0 0 0 1.5px rgba(198,168,124,0.45)'
                   }}
                   onMouseLeave={e => {
                     const el = e.currentTarget as HTMLElement
-                    el.style.borderColor = 'rgba(198,168,124,0.2)'
+                    el.style.borderColor = 'rgba(198,168,124,0.35)'
                     el.style.transform = 'translateY(0)'
-                    el.style.boxShadow = 'none'
+                    el.style.boxShadow = '0 8px 30px rgba(0,0,0,0.18)'
                   }}
                 >
-                  {/* Gold top accent line */}
-                  <div style={{ height: '2px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.55), transparent)' }} />
+                  {/* Gold/Copper top accent line */}
+                  <div style={{ height: '3px', background: 'linear-gradient(to right, var(--color-gold), var(--color-copper), var(--color-gold))' }} />
                   {/* Content */}
                   <div style={{ padding: 'clamp(28px,3vw,40px) clamp(24px,2.5vw,32px) clamp(32px,3.5vw,44px)' }}>
                     {/* Number badge */}
@@ -226,7 +227,7 @@ export default function AboutPageClient() {
                       fontSize: '11px',
                       fontWeight: 700,
                       letterSpacing: '3px',
-                      color: 'rgba(198,168,124,0.5)',
+                      color: 'var(--color-copper)',
                       textTransform: 'uppercase',
                       marginBottom: '20px',
                     }}>0{i + 1}</div>
@@ -235,18 +236,18 @@ export default function AboutPageClient() {
                       fontStyle: 'italic',
                       fontSize: 'clamp(20px,2vw,24px)',
                       fontWeight: 600,
-                      color: 'var(--color-ivory)',
+                      color: 'var(--color-ink)',
                       marginBottom: '14px',
                       lineHeight: 1.2,
                     }}>{p.title}</h3>
                     <p style={{
                       fontFamily: 'var(--font-body)',
                       fontSize: '14px',
-                      color: 'rgba(168,160,152,0.82)',
+                      color: 'var(--color-ink-mid)',
                       lineHeight: 1.75,
                     }}>{p.desc}</p>
-                    {/* Gold underline accent */}
-                    <div style={{ width: '32px', height: '1px', background: 'linear-gradient(to right, var(--color-gold), transparent)', marginTop: '20px' }} />
+                    {/* Copper underline accent */}
+                    <div style={{ width: '32px', height: '2px', background: 'linear-gradient(to right, var(--color-copper), transparent)', marginTop: '20px' }} />
                   </div>
                 </div>
               </div>
@@ -322,8 +323,8 @@ export default function AboutPageClient() {
                 position: 'relative', aspectRatio: '4/3',
               }}>
                 <Image
-                  src="/images/restaurant/6.webp"
-                  alt="Empire Family Restaurant — Hubballi"
+                  src="/images/restaurant/4.png"
+                  alt="Shadan's Biryani Express — Hubli"
                   fill
                   sizes="(max-width:768px) 90vw, 45vw"
                   style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -362,8 +363,8 @@ export default function AboutPageClient() {
               <span className="eyebrow">Join Us</span>
             </div>
             <h2 className="heading-section" style={{ color: 'var(--color-ivory)', marginBottom: '20px' }}>
-              Your Table Awaits at{' '}
-              <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Empire</em>
+              Your Table at{' '}
+              <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Biryani Express</em>
             </h2>
             <p style={{
               fontFamily: 'var(--font-body)',
@@ -372,7 +373,7 @@ export default function AboutPageClient() {
               maxWidth: '480px', margin: '0 auto 40px',
               lineHeight: 1.8,
             }}>
-              Experience the magic of Empire — where every meal is a celebration, every family is welcome, and every visit leaves you craving for more.
+              Experience the flavours of Shadan's Biryani Express — where every biryani is freshly made, every starter is sizzling hot, and every visit leaves you craving more.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <AboutBookingCTA />

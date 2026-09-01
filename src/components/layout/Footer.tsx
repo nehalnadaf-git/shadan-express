@@ -15,7 +15,7 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: 'var(--color-charcoal)', color: 'var(--color-ivory)', position: 'relative', overflow: 'hidden' }}>
+    <footer style={{ background: 'var(--color-linen)', color: 'var(--color-navy)', position: 'relative', overflow: 'hidden' }}>
 
       {/* Top brass border */}
       <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(198,168,124,0.6), transparent)' }} />
@@ -36,37 +36,31 @@ export default function Footer() {
 
           {/* ── Col 1: Brand ── */}
           <div>
-            {/* Logo wordmark */}
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: '56px', fontWeight: 700, color: 'var(--color-gold)', lineHeight: 1, letterSpacing: '4px', marginBottom: '4px' }}>
-              EMPIRE
-            </div>
-            <div style={{ fontFamily: 'var(--font-body)', fontSize: '10px', color: 'rgba(247,245,240,0.35)', letterSpacing: '5px', textTransform: 'uppercase', marginBottom: '6px' }}>
-              Family Restaurant
-            </div>
-            <div style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '15px', color: 'var(--color-gold)', opacity: 0.65, marginBottom: '28px', letterSpacing: '0.5px' }}>
-              Where Taste Meets Tradition
+            {/* Logo image */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0', marginBottom: '24px' }}>
+              <img src="/logo.png" alt="Biryani Express Logo" className="footer-logo" style={{ width: 'auto', objectFit: 'contain' }} />
             </div>
 
             {/* Gold rule */}
             <div style={{ width: '52px', height: '1px', background: 'var(--color-gold)', opacity: 0.45, marginBottom: '26px' }} />
 
             {/* Tagline */}
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-ivory-muted)', lineHeight: 1.9, marginBottom: '36px', maxWidth: '460px' }}>
-              A modern family dining destination in Hubballi — serving North Indian, Mughlai, Chinese, Dum Biryani, Mandi Specials, and Tandoori cuisine with warm hospitality. Open daily 11 AM – 11 PM near Hubballi Railway Station.
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-ink-muted)', lineHeight: 1.9, marginBottom: '36px', maxWidth: '460px' }}>
+              Shadan's Biryani Express — serving authentic Hyderabadi-style chicken biryani, Indian-Chinese starters, and quick rolls at honest prices. Open daily 12–4:30 PM & 6:30–11 PM in Vidya Nagar, Hubli.
             </p>
 
             {/* Contact details */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', marginBottom: '36px' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
-                <MapPin size={15} style={{ color: 'var(--color-gold)', flexShrink: 0, marginTop: '3px', opacity: 0.85 }} />
-                <span style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-ivory-muted)', lineHeight: 1.7 }}>
+                <MapPin size={15} style={{ color: 'var(--color-copper)', flexShrink: 0, marginTop: '3px', opacity: 0.85 }} />
+                <span style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-ink-muted)', lineHeight: 1.7 }}>
                   {restaurant.addressFull}
                 </span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <Phone size={15} style={{ color: 'var(--color-gold)', flexShrink: 0, opacity: 0.85 }} />
+                <Phone size={15} style={{ color: 'var(--color-copper)', flexShrink: 0, opacity: 0.85 }} />
                 <a href={restaurant.phoneHref}
-                  style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-gold)', textDecoration: 'none', fontWeight: 600, letterSpacing: '0.5px', transition: 'opacity 200ms' }}
+                  style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-copper)', textDecoration: 'none', fontWeight: 600, letterSpacing: '0.5px', transition: 'opacity 200ms' }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = '0.7' }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = '1' }}
                 >
@@ -74,8 +68,8 @@ export default function Footer() {
                 </a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <Clock size={15} style={{ color: 'var(--color-gold)', flexShrink: 0, opacity: 0.85 }} />
-                <span style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-ivory-muted)' }}>
+                <Clock size={15} style={{ color: 'var(--color-copper)', flexShrink: 0, opacity: 0.85 }} />
+                <span style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-ink-muted)' }}>
                   {restaurant.hours}
                 </span>
               </div>
@@ -84,20 +78,20 @@ export default function Footer() {
             {/* Footer CTAs */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '36px' }}>
               <a 
-                href="https://wa.me/919986600860?text=Hii%20EMPIRE%20family%20restaurant"
+                href={restaurant.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', background: 'var(--color-navy)', border: '1px solid var(--color-gold)', borderRadius: '2px', fontFamily: 'var(--font-body)', fontSize: '12px', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-gold)', textDecoration: 'none', transition: 'all 250ms ease' }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'rgba(0,0,0,0.25)' }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'var(--color-navy)' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', background: 'var(--color-copper)', border: '1px solid var(--color-copper)', borderRadius: '2px', fontFamily: 'var(--font-body)', fontSize: '12px', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-ivory)', textDecoration: 'none', transition: 'all 250ms ease' }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'rgba(0,0,0,0.05)'; el.style.color = 'var(--color-copper)' }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'var(--color-copper)'; el.style.color = 'var(--color-ivory)' }}
               >
                 <MessageCircle size={14} /> whatsapp
               </a>
 
               <a href={restaurant.googleMapsUrl} target="_blank" rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', border: '1px solid rgba(198,168,124,0.38)', borderRadius: '2px', fontFamily: 'var(--font-body)', fontSize: '12px', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-gold)', textDecoration: 'none', transition: 'all 250ms ease' }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'rgba(0,0,0,0.15)'; el.style.borderColor = 'rgba(198,168,124,0.7)' }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'transparent'; el.style.borderColor = 'rgba(198,168,124,0.38)' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', border: '1px solid rgba(0,0,0,0.15)', borderRadius: '2px', fontFamily: 'var(--font-body)', fontSize: '12px', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-navy)', textDecoration: 'none', transition: 'all 250ms ease' }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'rgba(0,0,0,0.05)'; el.style.borderColor = 'rgba(0,0,0,0.3)' }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'transparent'; el.style.borderColor = 'rgba(0,0,0,0.15)' }}
               >
                 <Navigation size={13} /> Get Directions
               </a>
@@ -106,27 +100,27 @@ export default function Footer() {
 
           {/* ── Col 2: Quick Links ── */}
           <div>
-            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 600, color: 'var(--color-ivory)', marginBottom: '10px', letterSpacing: '0.5px' }}>
+            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 600, color: 'var(--color-navy)', marginBottom: '10px', letterSpacing: '0.5px' }}>
               Quick Links
             </h3>
-            <div style={{ width: '36px', height: '1px', background: 'var(--color-gold)', opacity: 0.5, marginBottom: '28px' }} />
+            <div style={{ width: '36px', height: '1px', background: 'var(--color-copper)', opacity: 0.5, marginBottom: '28px' }} />
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {quickLinks.map(l => (
                 <Link key={l.href} href={l.href}
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontSize: '15px',
-                    color: 'var(--color-ivory-muted)',
+                    color: 'var(--color-ink-muted)',
                     textDecoration: 'none',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '12px',
                     transition: 'color 200ms, gap 200ms',
                   }}
-                  onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--color-gold)'; el.style.gap = '16px' }}
-                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--color-ivory-muted)'; el.style.gap = '12px' }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--color-copper)'; el.style.gap = '16px' }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--color-ink-muted)'; el.style.gap = '12px' }}
                 >
-                  <span style={{ width: '5px', height: '1px', background: 'rgba(198,168,124,0.55)', display: 'block', flexShrink: 0, transition: 'width 200ms' }} />
+                  <span style={{ width: '5px', height: '1px', background: 'rgba(0,0,0,0.2)', display: 'block', flexShrink: 0, transition: 'width 200ms' }} />
                   {l.label}
                 </Link>
               ))}
@@ -136,20 +130,22 @@ export default function Footer() {
         </div>
 
         {/* ── Bottom bar ── */}
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '28px', display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'space-between', alignItems: 'center' }}>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: 'rgba(198,168,124,0.35)', letterSpacing: '0.3px' }}>
-            © 2026 EMPIRE Family Restaurant Where Taste Meets Tradition, Hubballi. All rights reserved.
+        <div style={{ borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '28px', display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'space-between', alignItems: 'center' }}>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: 'rgba(0,0,0,0.4)', letterSpacing: '0.3px' }}>
+            © 2026 Shadan's Biryani Express — Real Biryani. Real Taste., Hubli. All rights reserved.
           </p>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: 'rgba(247,245,240,0.18)', letterSpacing: '0.3px' }}>
-            Shah Bazar Road, Behind Jamiya Masjid, Hubballi — 580028
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: 'rgba(0,0,0,0.4)', letterSpacing: '0.3px' }}>
+            Kusugal Road, Chalukya Nagar, Hubli — 580023
           </p>
         </div>
       </div>
 
       {/* Responsive */}
       <style>{`
+        .footer-logo { height: 192px; }
         @media (max-width: 768px) {
           .footer-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+          .footer-logo { height: 96px; }
         }
       `}</style>
     </footer>

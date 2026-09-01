@@ -18,16 +18,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = menuCategories.find(c => c.slug === category)
   if (!cat) return {}
   return {
-    title: `${cat.name} | Empire Family Restaurant Hubballi`,
-    description: `Explore our ${cat.name} menu — ${cat.tagline}. Authentic Mughal cuisine at Empire Family Restaurant, Hubballi.`,
-    alternates: { canonical: `https://empirefamilyrestaurant.in/menu/${category}` },
+    title: `${cat.name} | Shadan's Biryani Express Hubli`,
+    description: `Explore our ${cat.name} menu — ${cat.tagline}. Authentic biryani and Indian-Chinese cuisine at Shadan's Biryani Express, Hubli.`,
+    alternates: { canonical: `https://biryaniexpresshubli.in/menu/${category}` },
   }
 }
 
 const categorySchema = (cat: typeof menuCategories[0]) => ({
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: `${cat.name} — Empire Family Restaurant`,
+  name: `${cat.name} — Shadan's Biryani Express`,
   itemListElement: cat.items.map((item, i) => ({
     '@type': 'ListItem',
     position: i + 1,
@@ -43,9 +43,9 @@ const breadcrumbSchema = (cat: typeof menuCategories[0]) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://empirefamilyrestaurant.in' },
-    { '@type': 'ListItem', position: 2, name: 'Menu', item: 'https://empirefamilyrestaurant.in/menu' },
-    { '@type': 'ListItem', position: 3, name: cat.name, item: `https://empirefamilyrestaurant.in/menu/${cat.slug}` },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://biryaniexpresshubli.in' },
+    { '@type': 'ListItem', position: 2, name: 'Menu', item: 'https://biryaniexpresshubli.in/menu' },
+    { '@type': 'ListItem', position: 3, name: cat.name, item: `https://biryaniexpresshubli.in/menu/${cat.slug}` },
   ],
 })
 

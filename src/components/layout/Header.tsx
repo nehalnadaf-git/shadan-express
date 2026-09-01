@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { restaurant } from '@/data/restaurant'
-import { useBookingModal } from '@/contexts/BookingModalContext'
 import { useBulkOrderModal } from '@/contexts/BulkOrderModalContext'
 
 const navLinksLeft = [
@@ -18,19 +17,14 @@ const navLinksRight = [
   { label: 'Contact', href: '/contact' },
 ]
 const menuCategories = [
-  { label: 'Soups',                href: '/menu/soups'            },
-  { label: 'Veg Starters',         href: '/menu/veg-starters'     },
-  { label: 'Veg Main Course',      href: '/menu/veg-mains'        },
-  { label: 'Chicken Starters',     href: '/menu/chicken-starters' },
-  { label: 'Chicken Main Course',  href: '/menu/chicken-mains'    },
-  { label: 'Mutton Starters',      href: '/menu/mutton-starters'  },
-  { label: 'Mutton Main Course',   href: '/menu/mutton-mains'     },
-  { label: 'Tandoori & Kababs',    href: '/menu/tandoori-kababs'  },
-  { label: 'Biryani & Rice',       href: '/menu/biryani-rice'     },
-  { label: 'Mandi Specials',       href: '/menu/mandi'            },
-  { label: 'Tandoori Breads',      href: '/menu/breads'           },
-  { label: 'Desserts',             href: '/menu/desserts'         },
-  { label: 'Beverages',            href: '/menu/beverages'        },
+  { label: 'Rice & Biryani',       href: '/menu/rice-biryani'       },
+  { label: 'Veg Starters',         href: '/menu/veg-starters'       },
+  { label: 'Non-Veg Starters',     href: '/menu/non-veg-starters'   },
+  { label: 'Rolls',                href: '/menu/rolls'              },
+  { label: 'Main Course (Curries)',href: '/menu/main-course'        },
+  { label: 'Breads',               href: '/menu/breads'             },
+  { label: 'Fried Rice & Noodles', href: '/menu/fried-rice-noodles' },
+  { label: 'Accompaniments',       href: '/menu/accompaniments'     },
 ]
 
 export default function Header() {
@@ -39,7 +33,6 @@ export default function Header() {
   const [menuOpen,    setMenuOpen]    = useState(false)
   const pathname = usePathname()
   const menuRef  = useRef<HTMLDivElement>(null)
-  const { openModal: openBookingModal } = useBookingModal()
   const { openModal: openBulkOrderModal } = useBulkOrderModal()
 
   useEffect(() => {
@@ -90,7 +83,7 @@ export default function Header() {
           <Link
             href="/"
             className="header-logo"
-            aria-label="EMPIRE Family Restaurant — Home"
+            aria-label="Biryani Express — Home"
             onClick={(e) => {
               if (pathname === '/') {
                 e.preventDefault()
@@ -98,18 +91,10 @@ export default function Header() {
               }
             }}
           >
-            {/* Top ornament line */}
-            <span className="logo-ornament" />
-
-            <span className="logo-wordmark">EMPIRE</span>
-
-            <span className="logo-sub">Family Restaurant</span>
-
-            {/* Italic Urdu-style tag */}
-            <span className="logo-tagline">Where Taste Meets Tradition</span>
-
-            {/* Bottom ornament line */}
-            <span className="logo-ornament" />
+            {/* Logo image only */}
+            <span className="logo-name-row">
+              <img src="/logo.png" alt="Biryani Express Logo" className="header-logo-img" style={{ width: 'auto', objectFit: 'contain' }} />
+            </span>
           </Link>
 
           {/* ── Right nav (flex: 1, justify flex-end) ── */}
@@ -126,7 +111,7 @@ export default function Header() {
                   style={{
                     transition: 'transform 280ms ease',
                     transform: menuOpen ? 'rotate(180deg)' : 'none',
-                    color: 'var(--color-gold)',
+                    color: 'var(--color-copper)',
                     marginLeft: '3px',
                   }}
                 />
@@ -162,23 +147,19 @@ export default function Header() {
               </Link>
             ))}
 
-            {/* CTA */}
-            <button
-              onClick={() => openBookingModal()}
-              className="hdr-cta"
-            >
-              Book a Table
-            </button>
+
           </nav>
 
-          {/* ── Mobile hamburger ── */}
-          <button
-            onClick={() => setDrawerOpen(true)}
-            className="show-mobile hdr-hamburger"
-            aria-label="Open navigation menu"
-          >
-            <Menu size={22} strokeWidth={1.6} />
-          </button>
+          {/* ── Mobile hamburger — in right grid column ── */}
+          <div className="show-mobile" style={{ justifyContent: 'flex-end', alignItems: 'center' }}>
+            <button
+              onClick={() => setDrawerOpen(true)}
+              className="hdr-hamburger"
+              aria-label="Open navigation menu"
+            >
+              <Menu size={22} strokeWidth={1.6} />
+            </button>
+          </div>
 
         </div>{/* /header-inner */}
 
@@ -200,24 +181,8 @@ export default function Header() {
         {/* ── Drawer header ── */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
           <div>
-            <div style={{
-              fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 700,
-              color: 'var(--color-gold)', letterSpacing: '5px', lineHeight: 1,
-            }}>
-              EMPIRE
-            </div>
-            <div style={{
-              fontFamily: 'var(--font-body)', fontSize: '7.5px', fontWeight: 600,
-              color: 'rgba(247,245,240,0.38)', letterSpacing: '3px',
-              textTransform: 'uppercase', marginTop: '3px',
-            }}>
-              Family Restaurant
-            </div>
-            <div style={{
-              fontFamily: 'var(--font-display)', fontStyle: 'italic',
-              fontSize: '11.5px', color: 'var(--color-teak)', marginTop: '3px', letterSpacing: '0.4px',
-            }}>
-              Where Taste Meets Tradition
+            <div style={{ display: 'flex', alignItems: 'center', gap: 0 }}>
+              <img src="/logo.png" alt="Biryani Express Logo" style={{ height: '56px', width: 'auto', objectFit: 'contain' }} />
             </div>
           </div>
 
@@ -290,24 +255,8 @@ export default function Header() {
             </Link>
           ))}
 
-          {/* ── CTAs: side by side to save space ── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '20px' }}>
-            <button
-              onClick={() => { openBookingModal(); setDrawerOpen(false) }}
-              className="btn-primary"
-              style={{
-                justifyContent: 'center',
-                width: '100%',
-                cursor: 'pointer',
-                border: 'none',
-                fontSize: '10px',
-                padding: '12px 8px',
-                letterSpacing: '1.5px',
-              }}
-            >
-              Book a Table
-            </button>
-
+          {/* ── CTA ── */}
+          <div style={{ marginTop: '20px' }}>
             <button
               onClick={() => { openBulkOrderModal(); setDrawerOpen(false) }}
               className="btn-secondary"
@@ -348,7 +297,7 @@ export default function Header() {
               fontFamily: 'var(--font-body)', fontSize: '10.5px',
               color: 'rgba(247,245,240,0.28)', letterSpacing: '0.3px',
             }}>
-              Opp. Railway Station, Hubballi
+              Opp. Samarth PU College, Vidya Nagar, Hubli
             </span>
           </div>
         </nav>
@@ -359,7 +308,6 @@ export default function Header() {
           SCOPED STYLES
       ════════════════════════════════════════ */}
       <style>{`
-
         /* ═══════════════════════════════════════════════════
            BASE HEADER — always solid, always premium
            No transparency. The ivory hero section sits
@@ -369,60 +317,59 @@ export default function Header() {
           position: fixed;
           top: 0; left: 0; right: 0;
           z-index: 100;
-          background: var(--color-charcoal);
-          border-bottom: 1px solid rgba(198,168,124,0.16);
+          background: var(--color-ivory);
+          border-bottom: 1px solid rgba(0,0,0,0.06);
           transition: box-shadow 400ms ease, border-color 400ms ease;
         }
 
         /* ── Scrolled state — deepens shadow & brightens brass line ── */
         .luxury-header.header-scrolled {
-          box-shadow:
-            0 1px 0 rgba(198,168,124,0.24),
-            0 4px 32px rgba(0,0,0,0.55);
-          border-bottom-color: rgba(198,168,124,0.28);
+          box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+          border-bottom-color: rgba(0,0,0,0.1);
         }
 
         /* ── Brass top pixel stripe — always visible, amplifies on scroll ── */
         .header-gold-stripe {
           height: 1px;
-          background: linear-gradient(to right, transparent, rgba(198,168,124,0.45), transparent);
-          opacity: 1;
-          transition: opacity 400ms ease;
+          background: linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);
         }
         .header-scrolled .header-gold-stripe {
-          background: linear-gradient(to right, transparent, rgba(198,168,124,0.7), transparent);
+          background: linear-gradient(to right, transparent, rgba(0,0,0,0.15), transparent);
         }
 
-        /* ── Inner layout ── */
+        /* ── Inner layout — 3-col grid: left | logo | right ── */
         .header-inner {
           max-width: 1440px;
           margin: 0 auto;
-          padding: 0 40px;
-          height: 76px;
-          display: flex;
+          padding: 0 48px;
+          height: 104px;
+          display: grid;
+          grid-template-columns: 1fr auto 1fr;
           align-items: center;
-          justify-content: space-between;
-          position: relative;
+          gap: 24px;
+          transition: height 250ms ease;
+        }
+        .header-scrolled .header-inner {
+          height: 86px;
         }
 
         /* ── Nav groups ── */
         .header-nav {
           display: flex;
           align-items: center;
-          gap: 2px;
-          flex: 1;
+          gap: 4px;
         }
         .header-nav--right { justify-content: flex-end; }
 
         /* ── Nav links ── */
         .hdr-link {
           font-family: var(--font-body);
-          font-size: 12.5px;
+          font-size: 14px;
           font-weight: 500;
-          letter-spacing: 0.6px;
-          color: rgba(247,245,240,0.68);
+          letter-spacing: 0.4px;
+          color: var(--color-navy);
           text-decoration: none;
-          padding: 8px 13px;
+          padding: 9px 15px;
           border-radius: 3px;
           position: relative;
           transition: color 200ms ease, background 200ms ease;
@@ -436,20 +383,20 @@ export default function Header() {
           align-items: center;
         }
         .hdr-link:hover {
-          color: var(--color-gold-light);
-          background: rgba(0,0,0,0.12);
+          color: var(--color-copper);
+          background: rgba(0,0,0,0.04);
         }
         .hdr-link--active {
-          color: var(--color-gold-light) !important;
+          color: var(--color-copper) !important;
         }
         .hdr-link--active::after {
           content: '';
           position: absolute;
           bottom: 4px;
-          left: 13px;
-          right: 13px;
-          height: 1px;
-          background: linear-gradient(to right, transparent, rgba(198,168,124,0.7), transparent);
+          left: 15px;
+          right: 15px;
+          height: 2px;
+          background: var(--color-copper);
         }
 
         /* ── CTA button ── */
@@ -457,12 +404,12 @@ export default function Header() {
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          margin-left: 10px;
-          padding: 9px 22px;
+          margin-left: 12px;
+          padding: 10px 24px;
           font-family: var(--font-body);
-          font-size: 11px;
+          font-size: 12.5px;
           font-weight: 700;
-          letter-spacing: 2px;
+          letter-spacing: 1.8px;
           text-transform: uppercase;
           color: var(--color-charcoal);
           background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-bright) 55%, var(--color-gold) 100%);
@@ -484,11 +431,8 @@ export default function Header() {
         }
         .hdr-cta:active { transform: scale(0.97) translateY(0); }
 
-        /* ── Center logo (absolutely centered) ── */
+        /* ── Center logo — sits in the middle grid column ── */
         .header-logo {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -497,8 +441,17 @@ export default function Header() {
           padding: 4px 0;
           transition: opacity 200ms ease;
           user-select: none;
+          white-space: nowrap;
         }
         .header-logo:hover { opacity: 0.88; }
+
+        .header-logo-img {
+          height: 100px;
+          transition: height 250ms ease;
+        }
+        .header-scrolled .header-logo-img {
+          height: 80px;
+        }
 
         .logo-ornament {
           display: block;
@@ -508,25 +461,40 @@ export default function Header() {
           margin: 3px 0;
         }
 
-        .logo-wordmark {
-          font-family: var(--font-display);
-          font-size: 24px;
-          font-weight: 700;
-          color: var(--color-gold);
-          letter-spacing: 6px;
+        .logo-shadans {
+          font-family: var(--font-body);
+          font-size: 9px;
+          font-weight: 600;
+          color: rgba(247,245,240,0.45);
+          letter-spacing: 3.5px;
+          text-transform: uppercase;
           line-height: 1;
-          text-shadow: 0 0 28px rgba(198,168,124,0.22);
+          margin-bottom: 3px;
         }
 
-        .logo-sub {
-          font-family: var(--font-body);
-          font-size: 8px;
-          font-weight: 600;
-          color: rgba(247,245,240,0.42);
-          letter-spacing: 4px;
-          text-transform: uppercase;
-          margin-top: 2px;
+        .logo-name-row {
+          display: flex;
+          align-items: center;
+          gap: 0;
+        }
+
+        .logo-sep {
+          display: inline-block;
+          width: 1px;
+          height: 18px;
+          background: rgba(240,180,41,0.35);
+          margin: 0 10px;
+          flex-shrink: 0;
+        }
+
+        .logo-wordmark {
+          font-family: var(--font-display);
+          font-size: 26px;
+          font-weight: 700;
+          color: var(--color-gold);
+          letter-spacing: 5px;
           line-height: 1;
+          text-shadow: 0 0 28px rgba(198,168,124,0.22);
         }
 
         .logo-tagline {
@@ -546,14 +514,13 @@ export default function Header() {
           background: none;
           border: none;
           cursor: pointer;
-          color: rgba(247,245,240,0.82);
+          color: var(--color-navy);
           padding: 8px;
           border-radius: 4px;
           transition: color 200ms, background 200ms;
           touch-action: manipulation;
           display: flex;
           align-items: center;
-          margin-left: auto;
         }
         .hdr-hamburger:hover {
           color: var(--color-gold-light);
@@ -566,7 +533,12 @@ export default function Header() {
         @media (max-width: 960px) {
           .hidden-mobile { display: none !important; }
           .show-mobile   { display: flex !important; }
-          .header-inner  { padding: 0 20px; }
+          .header-logo-img { height: 50px !important; }
+          .header-inner  {
+            padding: 0 20px;
+            height: 68px !important;
+            grid-template-columns: auto 1fr auto;
+          }
         }
       `}</style>
     </>

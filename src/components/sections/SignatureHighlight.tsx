@@ -8,7 +8,7 @@ export default function SignatureHighlight() {
 
   return (
     <section ref={sectionRef} style={{
-      background: 'linear-gradient(135deg, #0e1112 0%, #171b1d 50%, #0e1112 100%)',
+      background: 'linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 50%, var(--color-navy-mid) 100%)',
       padding: 'clamp(80px, 10vw, 140px) clamp(24px, 5vw, 80px)',
       position: 'relative',
       overflow: 'hidden',
@@ -48,12 +48,12 @@ export default function SignatureHighlight() {
 
       {/* Heavy Cinematic Ambient Light Overlays */}
       <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '60%', height: '80%', background: 'radial-gradient(ellipse, rgba(198,168,124,0.06) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
-      <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50%', height: '70%', background: 'radial-gradient(ellipse, rgba(58, 96, 104, 0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
+      <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50%', height: '70%', background: 'radial-gradient(ellipse, rgba(217,99,31,0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
 
       <div style={{ maxWidth: '1400px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         <div className="fade-up" style={{ textAlign: 'center', marginBottom: '72px' }}>
           <div className="ornament" style={{ marginBottom: '20px' }}>
-            <span className="eyebrow">Empire Specials</span>
+            <span className="eyebrow">Biryani Express Specials</span>
           </div>
           <h2 className="heading-section" style={{ color: 'var(--color-ivory)', maxWidth: '540px', margin: '0 auto' }}>
             Dishes That{' '}

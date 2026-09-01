@@ -8,28 +8,29 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 /* ── Bulk menu items ─────────────────────────────────────── */
 const bulkMenu = [
   {
-    category: 'Biryani — Basmati Rice',
+    category: 'Biryani & Rice',
     items: [
-      { name: 'Chicken Dum Biryani', price: '₹900/kg' },
-      { name: 'Mutton Dum Biryani', price: '₹1,600/kg' },
-      { name: 'Veg Biryani', price: '₹650/kg' },
-      { name: 'Khushka (Plain Basmati)', price: '₹500/kg' },
+      { name: 'Chicken Biryani', price: '₹125 / plate' },
+      { name: "Shadan's Special Biryani", price: '₹150 / plate' },
+      { name: 'Veg Biryani', price: '₹90 / plate' },
+      { name: 'Egg Biryani', price: '₹100 / plate' },
     ],
   },
   {
-    category: 'Biryani — Jeera Rice',
+    category: 'Chicken Starters',
     items: [
-      { name: 'Chicken Biryani', price: '₹850/kg' },
-      { name: 'Mutton Biryani', price: '₹1,550/kg' },
-      { name: 'Khushka (Plain Rice)', price: '₹470/kg' },
+      { name: 'Chicken Kabab (9 pcs)', price: '₹145 / serving' },
+      { name: 'Chicken 65 (12 pcs)', price: '₹165 / serving' },
+      { name: 'Chicken Manchurian', price: '₹160 / serving' },
+      { name: 'Garlic Chicken', price: '₹160 / serving' },
     ],
   },
   {
-    category: 'Gravies & Kababs',
+    category: 'Veg Starters & Rolls',
     items: [
-      { name: 'Chicken Gravy', price: '₹950/kg' },
-      { name: 'Mutton Gravy', price: '₹1,200/kg' },
-      { name: 'Chicken Fried Kabab', price: '₹600/kg' },
+      { name: 'Gobi Manchurian', price: '₹130 / serving' },
+      { name: 'Paneer Chilli', price: '₹150 / serving' },
+      { name: 'Chicken Roll', price: '₹120 / piece' },
     ],
   },
 ]
@@ -42,7 +43,7 @@ export default function BulkOrdersSection() {
     <section
       ref={sectionRef}
       style={{
-        background: 'linear-gradient(135deg, #0e1112 0%, #171b1d 50%, #0e1112 100%)',
+        background: 'linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 50%, var(--color-navy-mid) 100%)',
         padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,80px)',
         position: 'relative',
         overflow: 'hidden',
@@ -83,7 +84,7 @@ export default function BulkOrdersSection() {
 
       {/* Heavy Cinematic Ambient Light Overlays */}
       <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '60%', height: '80%', background: 'radial-gradient(ellipse, rgba(198,168,124,0.06) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
-      <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50%', height: '70%', background: 'radial-gradient(ellipse, rgba(58, 96, 104, 0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
+      <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50%', height: '70%', background: 'radial-gradient(ellipse, rgba(217,99,31,0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', mixBlendMode: 'screen' }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
 
@@ -93,11 +94,11 @@ export default function BulkOrdersSection() {
             <span className="eyebrow">Catering & Bulk Orders</span>
           </div>
           <h2 className="heading-section" style={{ color: 'var(--color-ivory)', maxWidth: '760px', margin: '0 auto 18px' }}>
-            Hosting a Grand Gathering?{' '}
-            <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Leave the Feast to Empire.</em>
+            Need Food for a Big Event?{' '}
+            <em style={{ fontStyle: 'italic', color: 'var(--color-gold-light)' }}>Leave the Biryani to Us.</em>
           </h2>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'var(--color-ivory-muted)', maxWidth: '560px', margin: '0 auto', lineHeight: 1.85 }}>
-            From family dawats to corporate lunches and large group events — Empire delivers fresh, authentic Mughlai & Biryani cuisine right to your venue in Hubballi.
+            From family dawats to office lunches and large group events — Shadan's Biryani Express delivers fresh, authentic biryani and starters right to your venue in Hubli.
           </p>
         </div>
 
@@ -112,7 +113,7 @@ export default function BulkOrdersSection() {
             <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden', marginBottom: '24px', aspectRatio: '21/8' }}>
               <Image
                 src="/images/food/118-biryani-feast.webp"
-                alt="Empire Bulk Biryani Catering — Hubballi"
+                alt="Shadan's Biryani Express Bulk Catering — Hubli"
                 fill
                 sizes="(max-width:900px) 100vw, 750px"
                 style={{ objectFit: 'cover', objectPosition: 'center 40%' }}

@@ -45,7 +45,7 @@ export default function HeroSection() {
         >
           <span className="tag-pill" style={{ color: 'rgba(45,50,52,0.7)', borderColor: 'rgba(45,50,52,0.2)', background: 'transparent', marginBottom: '20px', display: 'inline-flex' }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--color-gold)', flexShrink: 0 }} />
-            Family Dining · Biryani · Mandi · Kabab &amp; More —{' '}<strong style={{ color: 'var(--color-navy-light)' }}>Hubballi</strong>
+            Family Dining · Biryani · Rolls · Kabab &amp; More —{' '}<strong style={{ color: 'var(--color-navy-light)' }}>Hubballi</strong>
           </span>
         </motion.div>
 
@@ -100,8 +100,8 @@ export default function HeroSection() {
           {/* Desktop Banner */}
           <div className="hero-banner-desktop" style={{ position: 'relative', width: '100%', height: '100%' }}>
             <Image
-              src="/images/restaurant/2new.webp"
-              alt="Empire Family Restaurant — Hubballi"
+              src="/images/restaurant/1.png"
+              alt="Shadan's Biryani Express — Hubli"
               fill
               priority
               sizes="100vw"
@@ -112,8 +112,8 @@ export default function HeroSection() {
           {/* Mobile Banner */}
           <div className="hero-banner-mobile" style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px', display: 'none' }}>
             <Image
-              src="/images/restaurant/2new.webp"
-              alt="Empire Family Restaurant — Mobile View"
+              src="/images/restaurant/1.png"
+              alt="Shadan's Biryani Express — Mobile View"
               fill
               priority
               sizes="100vw"

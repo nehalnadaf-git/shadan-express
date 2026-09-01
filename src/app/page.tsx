@@ -4,15 +4,14 @@ import AboutTeaser from '@/components/sections/AboutTeaser'
 import MenuPreview from '@/components/sections/MenuPreview'
 import SignatureHighlight from '@/components/sections/SignatureHighlight'
 import ReservationsTeaser from '@/components/sections/ReservationsTeaser'
-import GalleryStrip from '@/components/sections/GalleryStrip'
 import BulkOrdersSection from '@/components/sections/BulkOrdersSection'
 import ReviewsSection from '@/components/sections/ReviewsSection'
 import USPBar from '@/components/sections/USPBar'
 
 export const metadata: Metadata = {
-  title: 'Empire Family Restaurant Hubballi | Best Biryani, Mandi & Family Dining',
-  description: 'Empire Family Restaurant in Hubballi — serving authentic Mughal & Tandoor cuisine. Beef Biryani, Tandoori Chicken, Kababs & more. Open daily 11 AM–11 PM, Shah Bazar Road.',
-  alternates: { canonical: 'https://empirefamilyrestaurant.in' },
+  title: "Shadan's Biryani Express Hubli | Authentic Hyderabadi Chicken Biryani",
+  description: "Shadan's Biryani Express in Hubli — authentic Hyderabadi chicken biryani, Indian-Chinese starters, rolls and mains. Dine-in, takeaway & delivery on Swiggy & Zomato. Open daily 12–4:30 PM & 6:30–11 PM, Vidya Nagar, Hubli.",
+  alternates: { canonical: 'https://biryaniexpresshubli.in' },
 }
 
 export default function HomePage() {
@@ -23,7 +22,6 @@ export default function HomePage() {
       <MenuPreview />
       <SignatureHighlight />
       <ReservationsTeaser />
-      <GalleryStrip />
       <BulkOrdersSection />
       <ReviewsSection />
       <USPBar />

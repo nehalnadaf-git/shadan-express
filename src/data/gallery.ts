@@ -8,11 +8,10 @@ export type GalleryItem = {
 }
 
 export const galleryItems: GalleryItem[] = [
-  { id: 1,  src: '/images/restaurant/1.webp', alt: 'Empire Family Restaurant Interior',         caption: 'Empire Entrance', category: 'interior',  rotation: -2   },
-  { id: 2,  src: '/images/restaurant/2new.webp', alt: 'Empire Restaurant AC Dining Section',       caption: 'Empire AC Section', category: 'interior',  rotation: 1.5  },
-  { id: 3,  src: '/images/restaurant/3.webp', alt: 'Family Dining at Empire Restaurant',        caption: 'Empire Dining',    category: 'ambience',  rotation: -1   },
-  { id: 5,  src: '/images/restaurant/5.webp', alt: 'Empire Family Restaurant Front Entrance',   caption: 'Ambience',         category: 'entrance',  rotation: 2    },
-  { id: 6,  src: '/images/restaurant/6.webp', alt: 'Empire Restaurant Warm Ambience',           caption: 'Outside',          category: 'ambience',  rotation: 1    },
+  { id: 1, src: '/images/restaurant/1.png', alt: "Shadan's Biryani Express Interior",        caption: 'Biryani Express Entrance', category: 'interior', rotation: -2   },
+  { id: 2, src: '/images/restaurant/2.png', alt: "Biryani Express Restaurant Dining Section", caption: 'Dining Area',              category: 'interior', rotation: 1.5  },
+  { id: 3, src: '/images/restaurant/3.png', alt: "Family Dining at Shadan's Biryani Express", caption: 'Family Dining',            category: 'ambience', rotation: -1   },
+  { id: 4, src: '/images/restaurant/4.png', alt: "Shadan's Biryani Express Ambience",         caption: 'Ambience',                 category: 'entrance', rotation: 2    },
 ]
 
 

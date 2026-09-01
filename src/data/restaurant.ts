@@ -1,96 +1,90 @@
 export const restaurant = {
-  name: 'Empire Family Restaurant',
-  tagline: 'Where Taste Meets Tradition',
-  shortDesc: 'A modern family dining destination in Hubballi, blending rich Indian flavors with warm hospitality and a welcoming atmosphere.',
-  diningStyle: 'Family Dining | Indian & Chinese Cuisine',
+  name: "Shadan's Biryani Express",
+  tagline: 'Real Biryani. Real Taste.',
+  shortDesc: 'A popular local biryani chain in Hubli, serving authentic Hyderabadi-style chicken biryani, Indian-Chinese starters, and quick rolls at honest prices.',
+  diningStyle: 'Casual Dine-In | Biryani & Indian-Chinese',
 
-  phone: '+91 99866 00860',
-  phoneHref: 'tel:+919986600860',
-  whatsapp: 'https://wa.me/919986600860?text=Hello%20Empire%20Family%20Restaurant%2C%20I%20would%20like%20to%20book%20a%20table.',
-  whatsappEvent: 'https://wa.me/919986600860?text=Hello%2C%20I%20would%20like%20to%20arrange%20a%20special%20occasion%20at%20Empire%20Family%20Restaurant.',
-  whatsappBulk: 'https://wa.me/919986600860?text=Hello%20Empire%20Family%20Restaurant%2C%20I%20would%20like%20to%20place%20a%20bulk%20order%20for%20an%20event.%20Please%20share%20the%20details.',
+  phone: '+91 90351 67777',
+  phoneHref: 'tel:+919035167777',
+  whatsapp: "https://wa.me/919035167777?text=Hello%20Shadan's%20Biryani%20Express%2C%20I%20would%20like%20to%20book%20a%20table.",
+  whatsappEvent: "https://wa.me/919035167777?text=Hello%2C%20I%20would%20like%20to%20arrange%20a%20special%20occasion%20at%20Shadan's%20Biryani%20Express.",
+  whatsappBulk: "https://wa.me/919035167777?text=Hello%20Shadan's%20Biryani%20Express%2C%20I%20would%20like%20to%20place%20a%20bulk%20order%20for%20an%20event.%20Please%20share%20the%20details.",
 
   address: {
-    street: 'Ground Floor, Shringar Palace, Opposite Railway Station Road, J C Nagar, New Hubli',
-    city: 'Hubballi',
+    street: 'Suhail Complex, Opposite Samarth PU College, Shirur Park, Vidya Nagar',
+    city: 'Hubli',
     state: 'Karnataka',
-    zip: '580020',
+    zip: '580021',
     country: 'IN',
   },
-  addressFull: 'Ground Floor, Shringar Palace, Opposite Railway Station Road, J C Nagar, New Hubli, Hubballi, Karnataka 580020',
-  landmark: 'Opposite Railway Station Road, Near Hubballi Railway Station',
+  addressFull: 'Suhail Complex, Opp. Samarth PU College, Shirur Park, Vidya Nagar, Hubli, Karnataka 580021',
+  landmark: 'Opposite Samarth PU College, Vidya Nagar, Hubli',
 
-  hours: 'Monday – Sunday: 11:00 AM – 11:00 PM',
-  hoursShort: 'Open Daily · 11 AM – 11 PM',
+  hours: 'Mon – Sun: 12:00 PM – 4:30 PM & 6:30 PM – 11:00 PM',
+  hoursShort: 'Open Daily · 12–4:30 PM & 6:30–11 PM',
 
-  coordinates: { lat: 15.3647, lng: 75.1240 },
-  rating: 3.8,
-  reviewCount: 33,
-  googleMapsUrl: 'https://maps.app.goo.gl/hiUgSoT8rGALv9YK8',
-  googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.9219!2d75.124!3d15.3647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d4d2a7b3b4b7%3A0x0!2sEmpire+Family+Restaurant!5e0!3m2!1sen!2sin!4v1234567890',
-  domain: 'https://empirefamilyrestaurant.in',
+  coordinates: { lat: 15.3730, lng: 75.1350 },
+  rating: 4.1,
+  reviewCount: 16,
+  googleMapsUrl: 'https://maps.app.goo.gl/dL1yDyLGfCsFRBd47',
+  googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.9!2d75.135!3d15.373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sShadans+Biryani+Express!5e0!3m2!1sen!2sin!4v1234567890',
+  domain: 'https://biryaniexpresshubli.in',
 
   /* ── Services ── */
-  services: ['Dine-In', 'Family Dining', 'Parcel & Takeaway', 'Group Dining', 'Vegetarian & Non-Vegetarian Options'],
+  services: ['Dine-In', 'Takeaway', 'Delivery via Swiggy & Zomato', 'Family Dining', 'Bulk Orders'],
 
   /* ── Cuisine Categories ── */
-  cuisines: ['North Indian', 'Mughlai', 'Chinese', 'Dum Biryani', 'Mandi', 'Tandoori & Kabab', 'Indo-Chinese'],
+  cuisines: ['Hyderabadi Biryani', 'Indian-Chinese', 'Chicken Starters', 'Veg Starters', 'Rolls', 'Mains'],
 
   /* ── Brand Pillars ── */
   pillars: [
-    'Flavorful North Indian, Mughlai, Chinese & Biryani cuisine',
-    'Family-friendly hospitality',
-    'Comfortable ambiance with modern interiors',
-    'Hygienic food preparation',
-    'Fast and attentive service',
+    'Authentic Hyderabadi-style biryani and Indian-Chinese cuisine',
+    'Family-friendly casual dine-in experience',
+    'Fresh, hygienic food prepared daily',
+    'Quick, efficient service at every outlet',
+    'Honest prices for every budget',
   ],
 
   /* ── Positioning ── */
   positioning: [
-    'A family-oriented dining restaurant in Hubballi',
-    'A destination for Mughlai and Biryani lovers',
-    'A place offering both traditional and Indo-Chinese flavors',
-    'A casual yet elegant dine-in experience for families and groups',
+    "Hubli's go-to spot for authentic chicken biryani",
+    'A local multi-outlet chain known for freshness and flavour',
+    'Casual and family-friendly with quick turnaround service',
+    'Available on Swiggy and Zomato for home delivery',
   ],
 
   /* ── Signature Dishes ── */
   signatureDishes: {
     biryani: [
-      'Chicken Dum Biryani', 'Mutton Dum Biryani', 'Chicken Tangadi Biryani',
-      'Prawns Biryani (Seasonal)', 'Veg Biryani', 'Paneer Biryani',
-      'Chicken Mandi Special', 'Biryani Feast',
+      "Chicken Biryani (Full)", "Chicken Biryani (Half)", "Egg Biryani",
+      "Veg Biryani", "Veg Kushka Rice", "Shadan's Special Biryani",
     ],
     nonVeg: [
-      'Mutton Nalli Nihari', 'Chicken Tandoori', 'Chicken Kabab',
-      'Chicken Tangadi Kabab', 'Chicken Hariyali Kabab', 'Chicken Kali Mirch Tikka',
-      'Mutton Seek Kabab', 'Mutton Chops Sukka', 'Chicken Lazeez',
-      'Chicken Kasturi', 'Mutton Rogan Josh', 'Mutton Mughlai',
+      'Chicken Kabab', 'Chicken 65', 'Chicken Manchurian', 'Chicken Chilli',
+      'Garlic Chicken', 'Lemon Chicken', 'Pepper Chicken', 'Kabab Chilli',
     ],
     veg: [
-      'Paneer Tikka Masala', 'Paneer Butter Masala', 'Mushroom Masala',
-      'Kaju Makhani', 'Veg Kolhapuri', 'Paneer Lazeez',
-      'Mushroom Lababdar', 'Nawabi Thaali',
+      'Gobi Manchurian', 'Gobi 65', 'Baby Corn Manchurian', 'Baby Corn Chilli',
+      'Paneer Chilli', 'Paneer Manchurian', 'Paneer 65', 'Baby Corn 65',
     ],
     chinese: [
-      'Chicken Schezwan Fried Rice', 'Veg Schezwan Fried Rice',
-      'Chicken Noodles', 'Paneer Schezwan Crispy',
-      'Gobi Manchurian', 'Chicken Chilly', 'Egg Manchurian',
+      'Chicken Roll', 'Egg Roll', 'Paneer Roll',
+      'Butter Chicken', 'Chicken Hyderabadi',
     ],
     desserts: [
-      'Rasmalai', 'Gulab Jamun', 'Kulfi',
-      'Mohabbat Sharbat', 'Blue Angel Mojito', 'Fresh Lime Soda',
+      'Raita', 'Salan (Gravy)', 'Soft Drinks', 'Lassi', 'Mineral Water',
     ],
   },
 
   /* ── Customer Strengths ── */
   reviewHighlights: {
     strengths: [
-      'Chicken Dum Biryani', 'Mandi Specials', 'Kababs & Nihari',
-      'Ambience & interiors', 'Friendly staff', 'Fast service', 'Family dining comfort',
+      'Chicken Biryani', 'Fresh food', 'Quick service',
+      'Good hygiene', 'Affordable prices', 'Friendly staff', 'Nice atmosphere',
     ],
     improvements: [
-      'Delays during peak hours', 'Inconsistent service timing',
-      'Pricing concerns for select dishes',
+      'Moderate portion sizes', 'Special requests need to be stated clearly',
+      'Can get busy during peak dinner hours',
     ],
   },
 }

@@ -1,10 +1,10 @@
 import { Utensils, Star, Users, Clock } from 'lucide-react'
 
 const usps = [
-  { Icon: Utensils, number: '100+', label: 'Dishes on Menu' },
-  { Icon: Star,     number: '4.5★', label: 'Google Rating' },
-  { Icon: Users,    number: 'Family', label: 'AC Dining Sections' },
-  { Icon: Clock,    number: 'Daily', label: '11 AM – 11 PM' },
+  { Icon: Utensils, number: '50+', label: 'Items on Menu' },
+  { Icon: Star,     number: '4.1★', label: 'Zomato Rating' },
+  { Icon: Users,    number: 'Family', label: 'Dine-In & Delivery' },
+  { Icon: Clock,    number: 'Daily', label: '12PM–4:30 & 6:30–11PM' },
 ]
 
 export default function USPBar() {

@@ -1,15 +1,16 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import { MessageCircle } from 'lucide-react'
 import { restaurant } from '@/data/restaurant'
 import { useBookingModal } from '@/contexts/BookingModalContext'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 const photos = [
-  { src: '/images/restaurant/2new.webp', alt: 'Empire Dining Hall' },
-  { src: '/images/restaurant/3.webp', alt: 'Empire AC Section' },
-  { src: '/images/restaurant/5.webp', alt: 'Empire Entrance' },
-  { src: '/images/restaurant/6.webp', alt: 'Empire Warm Ambience' },
+  { src: '/images/restaurant/1.png', alt: 'Biryani Express Dining Area' },
+  { src: '/images/restaurant/2.png', alt: 'Biryani Express Family Dining' },
+  { src: '/images/restaurant/3.png', alt: 'Biryani Express Entrance' },
+  { src: '/images/restaurant/4.png', alt: 'Biryani Express Warm Ambience' },
 ]
 
 export default function ReservationsTeaser() {
@@ -48,7 +49,7 @@ export default function ReservationsTeaser() {
 
             {/* Info chips */}
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '36px' }}>
-              {['Open Daily 11AM–11PM', 'Dine-In & Parcel', 'Group Dining Available'].map(tag => (
+              {['12–4:30 PM & 6:30–11 PM', 'Dine-In & Parcel', 'Group Dining Available'].map(tag => (
                 <span key={tag} style={{
                   fontFamily: 'var(--font-body)', fontSize: '12px', color: 'var(--color-ink-muted)',
                   border: '1px solid rgba(45,50,52,0.15)', borderRadius: '100px',
@@ -60,10 +61,15 @@ export default function ReservationsTeaser() {
               ))}
             </div>
 
-            <button onClick={openModal} className="btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
-              <MessageCircle size={17} />
-              Book a Table
-            </button>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+              <button onClick={openModal} className="btn-primary" style={{ border: 'none', cursor: 'pointer' }}>
+                <MessageCircle size={17} />
+                Book a Table
+              </button>
+              <Link href="/gallery" className="btn-secondary-dark" style={{ display: 'inline-block' }}>
+                View Full Gallery
+              </Link>
+            </div>
           </div>
 
           {/* Right: 2×2 photo grid */}
