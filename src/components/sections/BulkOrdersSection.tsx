@@ -8,29 +8,30 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 /* ── Bulk menu items ─────────────────────────────────────── */
 const bulkMenu = [
   {
-    category: 'Biryani & Rice',
+    category: 'Biryani — Basmati Rice',
     items: [
-      { name: 'Chicken Biryani', price: '₹125 / plate' },
-      { name: "Shadan's Special Biryani", price: '₹150 / plate' },
-      { name: 'Veg Biryani', price: '₹90 / plate' },
-      { name: 'Egg Biryani', price: '₹100 / plate' },
+      { name: 'Beef Biryani',         price: '₹800 / kg' },
+      { name: 'Chicken Biryani',      price: '₹900 / kg' },
+      { name: 'Mutton Biryani',       price: '₹1,600 / kg' },
+      { name: 'Veg Biryani',          price: '₹650 / kg' },
+      { name: 'Khushka (Plain Rice)', price: '₹500 / kg' },
     ],
   },
   {
-    category: 'Chicken Starters',
+    category: 'Biryani — Jeera Rice',
     items: [
-      { name: 'Chicken Kabab (9 pcs)', price: '₹145 / serving' },
-      { name: 'Chicken 65 (12 pcs)', price: '₹165 / serving' },
-      { name: 'Chicken Manchurian', price: '₹160 / serving' },
-      { name: 'Garlic Chicken', price: '₹160 / serving' },
+      { name: 'Beef Biryani',         price: '₹750 / kg' },
+      { name: 'Chicken Biryani',      price: '₹850 / kg' },
+      { name: 'Mutton Biryani',       price: '₹1,550 / kg' },
+      { name: 'Khushka (Plain Rice)', price: '₹470 / kg' },
     ],
   },
   {
-    category: 'Veg Starters & Rolls',
+    category: 'Gravies & Kababs',
     items: [
-      { name: 'Gobi Manchurian', price: '₹130 / serving' },
-      { name: 'Paneer Chilli', price: '₹150 / serving' },
-      { name: 'Chicken Roll', price: '₹120 / piece' },
+      { name: 'Beef Gravy',           price: '₹800 / kg' },
+      { name: 'Chicken Gravy',        price: '₹950 / kg' },
+      { name: 'Chicken Fried Kabab',  price: '₹600 / kg' },
     ],
   },
 ]
@@ -125,7 +126,7 @@ export default function BulkOrdersSection() {
                   <span className="eyebrow" style={{ color: 'var(--color-gold)' }}>Bulk Pricing</span>
                 </div>
                 <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(18px,2.2vw,26px)', color: 'var(--color-ivory)', fontWeight: 600, lineHeight: 1.25 }}>
-                  Priced per kilogram.<br />Minimum order: 5 kg.
+                  Priced per kilogram.<br />Minimum order: 5 kg · No advance required.
                 </p>
               </div>
             </div>
@@ -173,7 +174,7 @@ export default function BulkOrdersSection() {
               ))}
               {/* Footnote */}
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '11px', color: 'var(--color-ivory-muted)', opacity: 0.55, lineHeight: 1.6, paddingLeft: '4px' }}>
-                Prices inclusive of taxes · Advance booking recommended · Subject to change
+                Prices per kg · Min. 5 kg per item · Subject to change · Inclusive of taxes
               </p>
             </div>
           </div>
