@@ -100,7 +100,7 @@ export default function HeroSection() {
           {/* Desktop Banner */}
           <div className="hero-banner-desktop" style={{ position: 'relative', width: '100%', height: '100%' }}>
             <Image
-              src="/images/restaurant/1.png"
+              src="/images/restaurant/1.webp"
               alt="Shadan's Biryani Express — Hubli"
               fill
               priority
@@ -112,7 +112,7 @@ export default function HeroSection() {
           {/* Mobile Banner */}
           <div className="hero-banner-mobile" style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px', display: 'none' }}>
             <Image
-              src="/images/restaurant/1.png"
+              src="/images/restaurant/1.webp"
               alt="Shadan's Biryani Express — Mobile View"
               fill
               priority

@@ -65,7 +65,7 @@ export default function AboutPageClient() {
         borderBottom: '1px solid rgba(198,168,124,0.2)',
       }}>
         <Image
-          src="/images/restaurant/2.png"
+          src="/images/restaurant/2.webp"
           alt="Shadan's Biryani Express — Hubli"
           fill priority sizes="100vw"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -136,7 +136,7 @@ export default function AboutPageClient() {
                 border: '1px solid rgba(198,168,124,0.2)',
               }}>
                 <Image
-                  src="/images/restaurant/2.png"
+                  src="/images/restaurant/2.webp"
                   alt="Shadan's Biryani Express Dining Area"
                   fill sizes="(max-width:768px) 90vw, 45vw"
                   style={{ objectFit: 'cover' }}
@@ -323,7 +323,7 @@ export default function AboutPageClient() {
                 position: 'relative', aspectRatio: '4/3',
               }}>
                 <Image
-                  src="/images/restaurant/4.png"
+                  src="/images/restaurant/4.webp"
                   alt="Shadan's Biryani Express — Hubli"
                   fill
                   sizes="(max-width:768px) 90vw, 45vw"

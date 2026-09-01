@@ -7,10 +7,10 @@ import { useBookingModal } from '@/contexts/BookingModalContext'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 const photos = [
-  { src: '/images/restaurant/1.png', alt: 'Biryani Express Dining Area' },
-  { src: '/images/restaurant/2.png', alt: 'Biryani Express Family Dining' },
-  { src: '/images/restaurant/3.png', alt: 'Biryani Express Entrance' },
-  { src: '/images/restaurant/4.png', alt: 'Biryani Express Warm Ambience' },
+  { src: '/images/restaurant/1.webp', alt: 'Biryani Express Dining Area' },
+  { src: '/images/restaurant/2.webp', alt: 'Biryani Express Family Dining' },
+  { src: '/images/restaurant/3.webp', alt: 'Biryani Express Entrance' },
+  { src: '/images/restaurant/4.webp', alt: 'Biryani Express Warm Ambience' },
 ]
 
 export default function ReservationsTeaser() {

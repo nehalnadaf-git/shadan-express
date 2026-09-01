@@ -106,7 +106,7 @@ export default function AboutTeaser() {
               boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(198,168,124,0.18)',
             }}>
               <Image
-                src="/images/restaurant/our-story.png"
+                src="/images/restaurant/our-story.webp"
                 alt="Shadan's Biryani Express — Our Story"
                 fill
                 sizes="(max-width: 768px) 90vw, 45vw"
